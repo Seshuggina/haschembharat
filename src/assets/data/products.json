@@ -1,0 +1,1913 @@
+[
+    {
+     "S.No": 1,
+     "Impurity Name": "Dorzolamide Impurity-C",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Dorzolamide",
+     "Leadtime": "5-6 Weeks"
+    },
+    {
+     "S.No": 2,
+     "Impurity Name": "Acyclovir Impurity-R",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Acyclovir",
+     "Leadtime": "5-6 Weeks"
+    },
+    {
+     "S.No": 3,
+     "Impurity Name": "Acyclovir Impurity N",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Acyclovir",
+     "Leadtime": "3-4 Weeks"
+    },
+    {
+     "S.No": 4,
+     "Impurity Name": "Rac-Desmethyl Irinotecan",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Irinotecan",
+     "Leadtime": "8-9 Weeks"
+    },
+    {
+     "S.No": 5,
+     "Impurity Name": "Iohexol EP Impurity-C",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Iohexol",
+     "Leadtime": "Discontinued"
+    },
+    {
+     "S.No": 6,
+     "Impurity Name": "Cetrazine Lactose ester",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Cetrazine ~ 70%",
+     "Leadtime": "3-4 Weeks"
+    },
+    {
+     "S.No": 7,
+     "Impurity Name": "N-Des-2-methylpropan-2-ol Docetaxel",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Docetaxel",
+     "Leadtime": "8 Weeks"
+    },
+    {
+     "S.No": 8,
+     "Impurity Name": "2-Desbenzoyl-2-tiglyl Docetaxel",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Docetaxel",
+     "Leadtime": "8 Weeks"
+    },
+    {
+     "S.No": 9,
+     "Impurity Name": "7-Epi Docetaxel",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Docetaxel",
+     "Leadtime": "8 Weeks"
+    },
+    {
+     "S.No": 10,
+     "Impurity Name": "3-Desbromo-3-chloro-Chlorantraniliprole",
+     "Cas No": "500008-62-8",
+     "Ready stock": "NO",
+     "Parent API": "Chlorantraniliprole",
+     "Leadtime": "4 weeks"
+    },
+    {
+     "S.No": 11,
+     "Impurity Name": "5-Bromo-N-methyl-1H-pyrazole-3-carboxamide",
+     "Cas No": "1328893-13-5",
+     "Ready stock": "NO",
+     "Leadtime": "2 weeks"
+    },
+    {
+     "S.No": 12,
+     "Impurity Name": "(Z)-Mycophenolic Acid",
+     "Cas No": "483-60-3",
+     "Ready stock": "NO",
+     "Parent API": "Mycophenolicacid",
+     "Leadtime": "5 Weeks"
+    },
+    {
+     "S.No": 13,
+     "Impurity Name": "Desloratadine related compound A",
+     "Cas No": "117796-50-6",
+     "Ready stock": "NO",
+     "Parent API": "Desloratadine",
+     "Leadtime": "4 weeks"
+    },
+    {
+     "S.No": 14,
+     "Impurity Name": "Duloxetine Releated compound H",
+     "Cas No": "199191-66-7",
+     "Ready stock": "NO",
+     "Parent API": "Duloxetine",
+     "Leadtime": "1 Week"
+    },
+    {
+     "S.No": 15,
+     "Impurity Name": "Nicergoline EP Impurity A",
+     "Cas No": "38536-28-6",
+     "Ready stock": "NO",
+     "Parent API": "Nicergoline",
+     "Leadtime": "3-4 Weeks"
+    },
+    {
+     "S.No": 16,
+     "Impurity Name": "Nicergoline EP Impurity C",
+     "Cas No": "35155-28-3",
+     "Ready stock": "NO",
+     "Parent API": "Nicergoline",
+     "Leadtime": "2-3  weeks"
+    },
+    {
+     "S.No": 17,
+     "Impurity Name": "Nicergoline EP Impurity E",
+     "Cas No": "57935-66-7",
+     "Ready stock": "NO",
+     "Parent API": "Nicergoline",
+     "Leadtime": "5-6 Weeks"
+    },
+    {
+     "S.No": 18,
+     "Impurity Name": "Nicergoline EP Impurity G",
+     "Cas No": "57935-65-6",
+     "Ready stock": "NO",
+     "Parent API": "Nicergoline",
+     "Leadtime": "2 Weeks"
+    },
+    {
+     "S.No": 19,
+     "Impurity Name": "Nicergoline EP Impurity H",
+     "Cas No": "192504-81-7",
+     "Ready stock": "NO",
+     "Parent API": "Nicergoline",
+     "Leadtime": "5-6 Weeks"
+    },
+    {
+     "S.No": 20,
+     "Impurity Name": "Nicergoline API",
+     "Cas No": "27848-84-6",
+     "Ready stock": "NO",
+     "Parent API": "Nicergoline",
+     "Leadtime": "3 Weeks"
+    },
+    {
+     "S.No": 21,
+     "Impurity Name": "L-Threo-Phenylserine",
+     "Cas No": "6254-48-4",
+     "Ready stock": "NO",
+     "Leadtime": "3 Weeks"
+    },
+    {
+     "S.No": 22,
+     "Impurity Name": "(Z)-Thiothixene",
+     "Cas No": "3313-26-6",
+     "Ready stock": "NO",
+     "Parent API": "API",
+     "Leadtime": "9-10 weeks"
+    },
+    {
+     "S.No": 23,
+     "Impurity Name": "Methylergonovine maleate salt",
+     "Cas No": "57432-61-8",
+     "Ready stock": "NO",
+     "Parent API": "API",
+     "Leadtime": "2-3 weeks"
+    },
+    {
+     "S.No": 24,
+     "Impurity Name": "Erythromycin Impurity D",
+     "Cas No": "23893-13-2",
+     "Ready stock": "NO",
+     "Parent API": "Erythomycin"
+    },
+    {
+     "S.No": 25,
+     "Impurity Name": "Erythromycin Impurity B",
+     "Cas No": "992-62-1",
+     "Ready stock": "NO",
+     "Parent API": "Erythomycin"
+    },
+    {
+     "S.No": 26,
+     "Impurity Name": "Pseudo Erythromycin A",
+     "Cas No": "105882-69-7",
+     "Ready stock": "NO",
+     "Parent API": "Erythomycin"
+    },
+    {
+     "S.No": 27,
+     "Impurity Name": "(E)-Erythromycin A oxime",
+     "Cas No": "111321-02-9",
+     "Ready stock": "NO",
+     "Parent API": "Erythomycin"
+    },
+    {
+     "S.No": 28,
+     "Impurity Name": "Erythromycin A 6,9 Imino Ether",
+     "Cas No": "99290-97-8",
+     "Ready stock": "NO",
+     "Parent API": "Erythomycin"
+    },
+    {
+     "S.No": 29,
+     "Impurity Name": "Flurithromycin",
+     "Cas No": "82664-20-8",
+     "Ready stock": "NO",
+     "Parent API": "Erythomycin"
+    },
+    {
+     "S.No": 30,
+     "Impurity Name": "Erythromycin Impurity E",
+     "Cas No": "33396-29-1",
+     "Ready stock": "NO",
+     "Parent API": "Erythomycin"
+    },
+    {
+     "S.No": 31,
+     "Impurity Name": "Docetaxel Trihydrate Imp C",
+     "Cas No": "153381-68-1",
+     "Ready stock": "NO",
+     "Parent API": "Docetaxel"
+    },
+    {
+     "S.No": 32,
+     "Impurity Name": "Docetaxel EP Imp B",
+     "Cas No": "167074-97-7",
+     "Ready stock": "NO",
+     "Parent API": "Docetaxel"
+    },
+    {
+     "S.No": 33,
+     "Impurity Name": "10-Methyl Docetaxel",
+     "Cas No": "160084-81-1",
+     "Ready stock": "NO",
+     "Parent API": "Docetaxel"
+    },
+    {
+     "S.No": 34,
+     "Impurity Name": " Primidone impurity F",
+     "Cas No": "1189504-46-8",
+     "Ready stock": "NO",
+     "Parent API": "Primidone"
+    },
+    {
+     "S.No": 35,
+     "Impurity Name": " 1-Amino-3-nitroadamantane",
+     "Cas No": "243145-00-8",
+     "Ready stock": "NO"
+    },
+    {
+     "S.No": 36,
+     "Impurity Name": "15-keto Bimatoprost",
+     "Cas No": "1163135-96-3",
+     "Ready stock": "NO",
+     "Parent API": "Bimatoprost",
+     "Leadtime": "1 week"
+    },
+    {
+     "S.No": 37,
+     "Impurity Name": "15-Acetyl Bimatoprost",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Bimatoprost",
+     "Leadtime": "10 days"
+    },
+    {
+     "S.No": 38,
+     "Impurity Name": "N-Nitroso sitagliptin impurity",
+     "Cas No": "2892260-32-9",
+     "Ready stock": "NO",
+     "Parent API": "Sitagliptin"
+    },
+    {
+     "S.No": 39,
+     "Impurity Name": "Pyridine-4-sulfonyl chloride",
+     "Cas No": "134479-04-2",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "1 week"
+    },
+    {
+     "S.No": 40,
+     "Impurity Name": "Bromobenzyl cyanide",
+     "Cas No": "5798-79-8",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "1 week"
+    },
+    {
+     "S.No": 41,
+     "Impurity Name": "4-hydroxy-6-nitro-2H-chromen-2-one",
+     "Cas No": "1641-03-8",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "1 week"
+    },
+    {
+     "S.No": 42,
+     "Impurity Name": "Bis(4-methoxyphenyl)iodonium bromide",
+     "Cas No": "19231-06-2",
+     "Ready stock": "NO",
+     "Parent API": "CRO (Kg Level)",
+     "Leadtime": "10 days"
+    },
+    {
+     "S.No": 43,
+     "Impurity Name": "2-(2-hydroxy-3-methoxypropyl)isoindoline-1,3-dione",
+     "Cas No": "872815-02-6",
+     "Ready stock": "NO",
+     "Parent API": "Rivarxaban impurity"
+    },
+    {
+     "S.No": 44,
+     "Impurity Name": "2-(Dimethylamino)ethanethiol Hydrochloride",
+     "Cas No": "13242-44-9",
+     "Ready stock": "NO",
+     "Parent API": "Cysteamine hydrochloride impurity"
+    },
+    {
+     "S.No": 45,
+     "Impurity Name": "Berberine Tannate",
+     "Cas No": "2086-83-1",
+     "Ready stock": "NO",
+     "Parent API": "Berberine",
+     "Leadtime": "10 - 14 days"
+    },
+    {
+     "S.No": 46,
+     "Impurity Name": "(E)-2-(3-(Trimethylsilyl)allyl)-1,3,6,2-dioxazaborocane",
+     "Cas No": "774597-13-6",
+     "Ready stock": "NO",
+     "Parent API": "CRO"
+    },
+    {
+     "S.No": 47,
+     "Impurity Name": "Paliperidone Related Compound A",
+     "Cas No": "849903-79-3",
+     "Ready stock": "NO",
+     "Parent API": "Paliperidone ",
+     "Leadtime": "10 days"
+    },
+    {
+     "S.No": 48,
+     "Impurity Name": "3,6-Dichloropicolinonitrile",
+     "Cas No": "1702-18-7",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "2 weeks"
+    },
+    {
+     "S.No": 49,
+     "Impurity Name": "3-(2-fluoro-benzyl)-4-(2-fluoro-benzyloxy)-benzaldehyde",
+     "Cas No": "1000370-25-1",
+     "Ready stock": "NO",
+     "Parent API": "Safinamide "
+    },
+    {
+     "S.No": 50,
+     "Impurity Name": "Methyldopa impurity-B",
+     "Cas No": "35026-10-9",
+     "Ready stock": "NO",
+     "Parent API": "Methyldopa",
+     "Leadtime": "2 weeks"
+    },
+    {
+     "S.No": 51,
+     "Impurity Name": "2-isopropenyl-5-methyl-4-hexenal",
+     "Cas No": "75697-98-2",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "2-3 weeks"
+    },
+    {
+     "S.No": 52,
+     "Impurity Name": "ethyl 5-methyl-2-(prop-1-en-2-yl)hex-4-enoate",
+     "Cas No": "1845-54-1",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "2-3 weeks"
+    },
+    {
+     "S.No": 53,
+     "Impurity Name": "4-Hexen-1-ol, 5-methyl-2-(1-methylethenyl)-",
+     "Cas No": "58461-27-1",
+     "Ready stock": "NO",
+     "Parent API": "Lavandulol",
+     "Leadtime": "2-3 weeks"
+    },
+    {
+     "S.No": 54,
+     "Impurity Name": "Diprenyl ether",
+     "Cas No": "26902-25-0",
+     "Ready stock": "NO",
+     "Parent API": "CRO (~ 80-90% Purity)",
+     "Leadtime": "2-3 weeks"
+    },
+    {
+     "S.No": 55,
+     "Impurity Name": "3-(mercaptomethyl)quinuclidin-3-ol",
+     "Cas No": "107220-26-8",
+     "Ready stock": "NO",
+     "Parent API": "Cevimeline"
+    },
+    {
+     "S.No": 56,
+     "Impurity Name": "3-(hydroxymethyl)quinuclidin-3-ol",
+     "Cas No": "61573-79-3",
+     "Ready stock": "NO",
+     "Parent API": "Cevimeline"
+    },
+    {
+     "S.No": 57,
+     "Impurity Name": "(2R,2'R,3'S)-2'-methyl-4-azaspiro[bicyclo[2.2.2]octane-2,5'-[1,3]oxathiolane] 3'-oxide",
+     "Cas No": "124751-36-6",
+     "Ready stock": "NO",
+     "Parent API": "Cevimeline"
+    },
+    {
+     "S.No": 58,
+     "Impurity Name": "Cevimeline N-Oxide impurity",
+     "Cas No": "469890-14-0",
+     "Ready stock": "NO",
+     "Parent API": "Cevimeline"
+    },
+    {
+     "S.No": 59,
+     "Impurity Name": "2-(2-methoxyphenoxy)-N-methylethan-1-amine",
+     "Cas No": "72955-82-9",
+     "Ready stock": "NO",
+     "Parent API": "Carvedilol"
+    },
+    {
+     "S.No": 60,
+     "Impurity Name": "N-Methyl carvedilol impurity",
+     "Cas No": "72956-35-5",
+     "Ready stock": "NO",
+     "Parent API": "Carvedilol"
+    },
+    {
+     "S.No": 61,
+     "Impurity Name": "Sapropterin Dihydrochloride Impurity A",
+     "Cas No": "5752-25-0",
+     "Ready stock": "NO",
+     "Parent API": "Sapropterin",
+     "Leadtime": "1 week"
+    },
+    {
+     "S.No": 62,
+     "Impurity Name": "PiPeric acid",
+     "Cas No": "136-72-1",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "4 days"
+    },
+    {
+     "S.No": 63,
+     "Impurity Name": "Cyclobenzaprine 5-Hydroxy Impurity,Cyclobenzaprine Related Compound A",
+     "Cas No": "18029-54-4",
+     "Ready stock": "NO",
+     "Parent API": "Cyclobenzaprine "
+    },
+    {
+     "S.No": 64,
+     "Impurity Name": "1,1-Dichloroethene",
+     "Cas No": "75-35-4",
+     "Ready stock": "NO",
+     "Parent API": "Agro chemical standard",
+     "Leadtime": "10 days"
+    },
+    {
+     "S.No": 65,
+     "Impurity Name": "Voxelotor dimer impurity",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Voxelotor",
+     "Leadtime": "14 days"
+    },
+    {
+     "S.No": 66,
+     "Impurity Name": "rac O-Demethyl Ambrisentan",
+     "Cas No": "1106685-85-1",
+     "Ready stock": "NO",
+     "Parent API": "Ambrisentan",
+     "Leadtime": "14 days"
+    },
+    {
+     "S.No": 67,
+     "Impurity Name": "Perindopril Impurity ",
+     "Cas No": "145513-91-3",
+     "Ready stock": "NO",
+     "Parent API": "Perindopril",
+     "Leadtime": "6 days"
+    },
+    {
+     "S.No": 68,
+     "Impurity Name": "S)-2-[[3-(3-Fluorobenzyl)-4-[(3-fluorobenzyl)oxy]benzyl]amino]propanamide",
+     "Cas No": "1000370-27-3",
+     "Ready stock": "NO",
+     "Parent API": "Safinamide ",
+     "Leadtime": "10 days"
+    },
+    {
+     "S.No": 69,
+     "Impurity Name": "3-Chlorobenzotrichloride",
+     "Cas No": "2136-81-4",
+     "Ready stock": "NO",
+     "Parent API": "Clotrimazole",
+     "Leadtime": "1 week"
+    },
+    {
+     "S.No": 70,
+     "Impurity Name": "2,5-BISCHLOROMETHYL-1,3,4-OXADIAZOLE",
+     "Cas No": "541540-90-3",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "2 weeks"
+    },
+    {
+     "S.No": 71,
+     "Impurity Name": "5-[(2,4-dinitrophenyl)amino]penta-2,4-dienal",
+     "Cas No": "53405-99-5",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "2 weeks"
+    },
+    {
+     "S.No": 72,
+     "Impurity Name": "N-Nitroso Safinamide Acid",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Safinamide ",
+     "Leadtime": "1 week"
+    },
+    {
+     "S.No": 73,
+     "Impurity Name": "2,4,6-trinitrobenzenesulfonic acid",
+     "Cas No": "2508-19-2",
+     "Ready stock": "NO",
+     "Parent API": "CRO, 1M in water or 5% in water ",
+     "Leadtime": "1 week"
+    },
+    {
+     "S.No": 74,
+     "Impurity Name": "2,4-dichloro-5-(trichloromethyl)pyridine",
+     "Cas No": "95234-75-6",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "2 weeks"
+    },
+    {
+     "S.No": 75,
+     "Impurity Name": "R Safinamide",
+     "Cas No": "174756-44-6",
+     "Ready stock": "NO",
+     "Parent API": "Safinamide ",
+     "Leadtime": "2-3 weeks"
+    },
+    {
+     "S.No": 76,
+     "Impurity Name": "4-Chloro-1,2-benzisothiazole",
+     "Cas No": "25380-61-4",
+     "Ready stock": "NO",
+     "Parent API": "CRO ",
+     "Leadtime": "1 week"
+    },
+    {
+     "S.No": 77,
+     "Impurity Name": "trans-Cyclopropane-1,2,3-tricarboxylic acid",
+     "Cas No": "705-35-1",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "2-3 weeks"
+    },
+    {
+     "S.No": 78,
+     "Impurity Name": "1-cyclopropyl-5-methyl-1H-pyrazol-4-amine",
+     "Cas No": "2152414-62-3",
+     "Ready stock": "NO",
+     "Parent API": "CRO",
+     "Leadtime": "2-3 weeks"
+    },
+    {
+     "S.No": 79,
+     "Impurity Name": "Crisaborole Impurity C",
+     "Cas No": "1187187-01-4",
+     "Ready stock": "NO",
+     "Parent API": "Crisaborole",
+     "Leadtime": "2-3 weeks"
+    },
+    {
+     "S.No": 80,
+     "Impurity Name": "N-Nitroso desloratadine ",
+     "Cas No": "1246819-22-6",
+     "Ready stock": "Yes",
+     "Parent API": "Des Loratadine",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 81,
+     "Impurity Name": "Famotadine impurity-D",
+     "Cas No": "76824-16-3",
+     "Ready stock": "Yes",
+     "Parent API": "Famotadine",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 82,
+     "Impurity Name": "Valporic acid",
+     "Cas No": "99-66-1",
+     "Ready stock": "Yes",
+     "Parent API": "Devalproex",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 83,
+     "Impurity Name": "Velaric acid",
+     "Cas No": "109-52-4",
+     "Ready stock": "Yes",
+     "Parent API": "Devalproex",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 84,
+     "Impurity Name": "2-Methyl velaric acid",
+     "Cas No": "97-61-0",
+     "Ready stock": "Yes",
+     "Parent API": "Devalproex",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 85,
+     "Impurity Name": "R-3-(Bromomethyl) hexanoic acid",
+     "Cas No": "1942054-60-5",
+     "Ready stock": "Yes",
+     "Parent API": "Brivatracetam",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 86,
+     "Impurity Name": "R-4-Propyldihydrofuran-2(3H)one",
+     "Cas No": "63095-51-2",
+     "Ready stock": "Yes",
+     "Parent API": "Brivatracetam",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 87,
+     "Impurity Name": "2,6-dichloro phenyl gunadine",
+     "Cas No": "39075-78-0",
+     "Ready stock": "Yes",
+     "Parent API": "Clonidine",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 88,
+     "Impurity Name": "Desmethyl desvenalofaxin",
+     "Cas No": "NA",
+     "Ready stock": "Yes",
+     "Parent API": "desvenalofaxin",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 89,
+     "Impurity Name": "Quetiapine Impurity-A",
+     "Cas No": "844639-07-2",
+     "Ready stock": "Yes",
+     "Parent API": "Quetiapine",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 90,
+     "Impurity Name": "QUETIAPINE EP IMPURITY D",
+     "Cas No": "945668-94-0",
+     "Ready stock": "Yes",
+     "Parent API": "Quetiapine",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 91,
+     "Impurity Name": "Quetiapine EP Impurity P",
+     "Cas No": "1011758-03-4",
+     "Ready stock": "Yes",
+     "Parent API": "Quetiapine",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 92,
+     "Impurity Name": "Quetiapine EP Impurity E",
+     "Cas No": "1371638-05-9",
+     "Ready stock": "Yes",
+     "Parent API": "Quetiapine",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 93,
+     "Impurity Name": "S-Clopidogrel N-Methyl Impurity",
+     "Cas No": "NA",
+     "Ready stock": "Yes",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 94,
+     "Impurity Name": "Clopidogrel USP Related Compound C",
+     "Cas No": "120202-69-9",
+     "Ready stock": "Yes",
+     "Parent API": "Clopidogrel",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 95,
+     "Impurity Name": "TELMISARTAN EP IMPURITY E",
+     "Cas No": "884330-12-5",
+     "Ready stock": "Yes",
+     "Parent API": "TELMISARTAN",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 96,
+     "Impurity Name": "TELMISARTAN EP IMPURITY F",
+     "Cas No": " 915124-86-6",
+     "Ready stock": "Yes",
+     "Parent API": "TELMISARTAN",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 97,
+     "Impurity Name": "2-(2-Bromo-acetylamino)-5-chloro-benzophenone",
+     "Cas No": "32580-26-0",
+     "Ready stock": "Yes",
+     "Parent API": "Alprazolam",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 98,
+     "Impurity Name": "N-Nitroso N-Methyl Urea",
+     "Cas No": "684-93-5",
+     "Ready stock": "Yes",
+     "Parent API": "Nitroso impurity",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 99,
+     "Impurity Name": "2-(2,3-dihydroxypropyl)isoindoline-1,3-dione",
+     "Cas No": "62457-35-6",
+     "Ready stock": "Yes",
+     "Parent API": "Rivaroxaban",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 100,
+     "Impurity Name": "Clavulanate potassium (stanndard)",
+     "Cas No": "61177-45-5",
+     "Ready stock": "Yes",
+     "Parent API": "Clavulanate",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 101,
+     "Impurity Name": "N-Nitroso Acebutolol",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "ACEBUTOLOL"
+    },
+    {
+     "S.No": 102,
+     "Impurity Name": "N-Nitroso Adrenalone",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "ADRENALONE"
+    },
+    {
+     "S.No": 103,
+     "Impurity Name": "N-Nitroso Amoxapine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "AMOXAPINE"
+    },
+    {
+     "S.No": 104,
+     "Impurity Name": "N-Nitroso Anabasine (R, S)",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "ANABASINE"
+    },
+    {
+     "S.No": 105,
+     "Impurity Name": "N-Nitroso (R)-Anabasine (95%EE)",
+     "Cas No": "1795786-06-9",
+     "Ready stock": "NO",
+     "Parent API": "ANABASINE"
+    },
+    {
+     "S.No": 106,
+     "Impurity Name": "N-Nitroso (S)-Anabasine(70%EE)",
+     "Cas No": "1133-64-8",
+     "Ready stock": "NO",
+     "Parent API": "ANABASINE"
+    },
+    {
+     "S.No": 107,
+     "Impurity Name": "(R)-N-Nitroso Anatabine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "ANATABINE"
+    },
+    {
+     "S.No": 108,
+     "Impurity Name": "(S)-N-Nitroso Anatabine",
+     "Cas No": "71267-22-6",
+     "Ready stock": "NO",
+     "Parent API": "ANATABINE"
+    },
+    {
+     "S.No": 109,
+     "Impurity Name": "N-Nitroso Anatabine",
+     "Cas No": "887407-16-1",
+     "Ready stock": "NO",
+     "Parent API": "ANATABINE"
+    },
+    {
+     "S.No": 110,
+     "Impurity Name": "N-2,3-xylyl-N-nitrosoanthranilic Acid",
+     "Cas No": "2114-63-8",
+     "Ready stock": "NO",
+     "Parent API": "ANTHRANILIC ACID"
+    },
+    {
+     "S.No": 111,
+     "Impurity Name": "Methyl N-Methyl-N-Nitrosoanthranilate",
+     "Cas No": "68061-82-5",
+     "Ready stock": "NO",
+     "Parent API": "ANTHRANILIC ACID"
+    },
+    {
+     "S.No": 112,
+     "Impurity Name": "N1-Nitroso Articaine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "ARTICAINE"
+    },
+    {
+     "S.No": 113,
+     "Impurity Name": "N-Nitroso Atenolol",
+     "Cas No": "134720-04-0",
+     "Ready stock": "NO",
+     "Parent API": "ATENOLOL"
+    },
+    {
+     "S.No": 114,
+     "Impurity Name": "N-Nitroso Atomoxetine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "ATOMOXETINE"
+    },
+    {
+     "S.No": 115,
+     "Impurity Name": "N-Nitroso-Betaxolol",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "BETAXOLOL"
+    },
+    {
+     "S.No": 116,
+     "Impurity Name": "N-Nitroso Binimetinib",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "BINIMETINIB"
+    },
+    {
+     "S.No": 117,
+     "Impurity Name": "N-Nitroso Bisoprolol",
+     "Cas No": "2820170-76-9",
+     "Ready stock": "NO",
+     "Parent API": "BISOPROLOL"
+    },
+    {
+     "S.No": 118,
+     "Impurity Name": "N-Nitroso Brinzolamide",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "BRINZOLAMIDE"
+    },
+    {
+     "S.No": 119,
+     "Impurity Name": "N-Nitroso Desmethyl Dexbrompheniramine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "BROMPHENIRAMINE"
+    },
+    {
+     "S.No": 120,
+     "Impurity Name": "N-Nitroso Desmethyl Carbinoxamine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "CARBINOXAMINE"
+    },
+    {
+     "S.No": 121,
+     "Impurity Name": "N-Nitroso Carteolol",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "CARTEOLOL"
+    },
+    {
+     "S.No": 122,
+     "Impurity Name": "N-Nitroso Chlorpromazine EP Impurity D",
+     "Cas No": "55855-44-2",
+     "Ready stock": "NO",
+     "Parent API": "CHLORPROMAZINE"
+    },
+    {
+     "S.No": 123,
+     "Impurity Name": "N-Nitroso Cilazapril",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "CILAZAPRIL"
+    },
+    {
+     "S.No": 124,
+     "Impurity Name": "N-Nitroso Cinacalcet",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "CINACALCET"
+    },
+    {
+     "S.No": 125,
+     "Impurity Name": "N-Nitroso N-Desmethyl Citalopram",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "CITALOPRAM"
+    },
+    {
+     "S.No": 126,
+     "Impurity Name": "N-Nitroso Clozapine",
+     "Cas No": "156632-03-0",
+     "Ready stock": "NO",
+     "Parent API": "CLOZAPINE"
+    },
+    {
+     "S.No": 127,
+     "Impurity Name": "N-Nitroso Cytisine",
+     "Cas No": "19634-60-7",
+     "Ready stock": "NO",
+     "Parent API": "CYTISINE"
+    },
+    {
+     "S.No": 128,
+     "Impurity Name": "N-Nitroso Delapril",
+     "Cas No": "1027955-20-9",
+     "Ready stock": "NO",
+     "Parent API": "DELAPRIL"
+    },
+    {
+     "S.No": 129,
+     "Impurity Name": "N-Nitroso Diclofenac",
+     "Cas No": "66505-80-4",
+     "Ready stock": "NO",
+     "Parent API": "DICLOFENAC"
+    },
+    {
+     "S.No": 130,
+     "Impurity Name": "N-Nitroso Dihexylamine",
+     "Cas No": "6949-28-6",
+     "Ready stock": "NO",
+     "Parent API": "DIHEXYLAMINE"
+    },
+    {
+     "S.No": 131,
+     "Impurity Name": "N-Nitroso Diphenhydramine EP Impurity A ",
+     "Cas No": "55855-43-1",
+     "Ready stock": "NO",
+     "Parent API": "DIPHENHYDRAMINE"
+    },
+    {
+     "S.No": 132,
+     "Impurity Name": "N-Nitroso Dobutamine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "DOBUTAMINE"
+    },
+    {
+     "S.No": 133,
+     "Impurity Name": "N-Nitroso Dorzolamide",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "DORZOLAMIDE"
+    },
+    {
+     "S.No": 134,
+     "Impurity Name": "N-Nitroso-N-Desmethyl Doxycycline",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "DOXYCYCLINE"
+    },
+    {
+     "S.No": 135,
+     "Impurity Name": "N-Nitroso-N-Desmethyl Doxylamine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "DOXYLAMINE"
+    },
+    {
+     "S.No": 136,
+     "Impurity Name": "N-Nitroso rac-Duloxetine",
+     "Cas No": "2680527-91-5",
+     "Ready stock": "NO",
+     "Parent API": "DULOXETINE"
+    },
+    {
+     "S.No": 137,
+     "Impurity Name": "N-Nitroso Enalapril",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "ENALAPRIL"
+    },
+    {
+     "S.No": 138,
+     "Impurity Name": "N-Nitroso Flecainide",
+     "Cas No": "2901109-58-6",
+     "Ready stock": "NO",
+     "Parent API": "FLECAINIDE"
+    },
+    {
+     "S.No": 139,
+     "Impurity Name": "N-Nitroso Formoterol",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "FORMOTEROL"
+    },
+    {
+     "S.No": 140,
+     "Impurity Name": "N-Nitroso Frovatriptan",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "FROVATRIPTAN"
+    },
+    {
+     "S.No": 141,
+     "Impurity Name": "N-Nitroso Furosemide EP Impurity A (80%)",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "FUROSEMIDE"
+    },
+    {
+     "S.No": 142,
+     "Impurity Name": "N’-Nitro-N-Nitroso-N-Methyl-Guanidine",
+     "Cas No": "70-25-7",
+     "Ready stock": "NO",
+     "Parent API": "GUANIDINE"
+    },
+    {
+     "S.No": 143,
+     "Impurity Name": "N-Nitroso Labetalol (Mixture of Diastereomers)",
+     "Cas No": "2820170-74-7",
+     "Ready stock": "NO",
+     "Parent API": "LABETALOL"
+    },
+    {
+     "S.No": 144,
+     "Impurity Name": "N-Nitroso Lisinopril",
+     "Cas No": "519175-80-5",
+     "Ready stock": "NO",
+     "Parent API": "LISINOPRIL"
+    },
+    {
+     "S.No": 145,
+     "Impurity Name": "N-Nitroso Desloratadine",
+     "Cas No": "1246819-22-6",
+     "Ready stock": "NO",
+     "Parent API": "LORATADINE"
+    },
+    {
+     "S.No": 146,
+     "Impurity Name": "N-Nitroso Mefloquine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "MEFLOQUINE"
+    },
+    {
+     "S.No": 147,
+     "Impurity Name": "N-Nitroso Melphalan EP Impurity K",
+     "Cas No": "55-18-5",
+     "Ready stock": "NO",
+     "Parent API": "MELPHALAN"
+    },
+    {
+     "S.No": 148,
+     "Impurity Name": "N-Nitroso Metolazone",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "METOLAZONE"
+    },
+    {
+     "S.No": 149,
+     "Impurity Name": "N-Nitroso Mirabegron",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "MIRABEGRON"
+    },
+    {
+     "S.No": 150,
+     "Impurity Name": "N-Nitroso Moexipril",
+     "Cas No": "1026879-47-9",
+     "Ready stock": "NO",
+     "Parent API": "MOEXIPRIL"
+    },
+    {
+     "S.No": 151,
+     "Impurity Name": "N-Nitroso Moxifloxacin",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "MOXIFLOXACIN"
+    },
+    {
+     "S.No": 152,
+     "Impurity Name": "N1-Nitroso Moxonidine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "MOXONIDINE"
+    },
+    {
+     "S.No": 153,
+     "Impurity Name": "N-Nitrosodibenzylamine",
+     "Cas No": "5336-53-8",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 154,
+     "Impurity Name": "N-Nitroso-L-Proline",
+     "Cas No": "7519-36-0",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 155,
+     "Impurity Name": "N-Nitroso-N-Methylaniline",
+     "Cas No": "614-00-6",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 156,
+     "Impurity Name": "N-Nitrosodimethylamine",
+     "Cas No": "62-75-9",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 157,
+     "Impurity Name": "N-Nitrosodiisopropyl Amine",
+     "Cas No": "601-77-4",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 158,
+     "Impurity Name": "N-Nitroso-N,N-di-(7-methylocytyl)amine",
+     "Cas No": "643014-99-7",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 159,
+     "Impurity Name": "N-Nitroso-N-methyl-N-dodecylamine",
+     "Cas No": "55090-44-3",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 160,
+     "Impurity Name": "N-Nitroso(2-hydroxyethyl)glycine",
+     "Cas No": "80556-89-4",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 161,
+     "Impurity Name": "N-nitroso-N-(phosphonomethyl)glycine",
+     "Cas No": "56516-72-4",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 162,
+     "Impurity Name": "N-Nitroso-N-Methyl-4-Aminobutyric Acid Methyl ester",
+     "Cas No": "51938-17-1",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 163,
+     "Impurity Name": "N-Nitroso-N-Methyl-3-Aminopropionic Acid",
+     "Cas No": "10478-42-9",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 164,
+     "Impurity Name": "N-Nitroso-N-Methyl-4-Aminobutyric Acid",
+     "Cas No": "61445-55-4",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 165,
+     "Impurity Name": "N-Nitrosomethylisopropylamine",
+     "Cas No": "30533-08-5",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 166,
+     "Impurity Name": "N4-Nitroso Hydrochlorothiazide",
+     "Cas No": "63779-86-2",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 167,
+     "Impurity Name": "N-Nitroso-N,N-Dicyclohexylamine",
+     "Cas No": "947-92-2",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 168,
+     "Impurity Name": "N-Nitrosodimethylamine(5.0mg in Methanol)",
+     "Cas No": "62-75-9",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 169,
+     "Impurity Name": "N-Ethyl-N-Nitroso-2-Propanamine ",
+     "Cas No": "16339-04-1",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 170,
+     "Impurity Name": "N-Nitrosopendimethalin",
+     "Cas No": "68897-50-7",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 171,
+     "Impurity Name": "N-Nitroso Iminostilbene",
+     "Cas No": "38652-29-8",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 172,
+     "Impurity Name": "N-Nitroso N-propyl urea (35%water + 2.5%Acetic acid)",
+     "Cas No": "816-57-9",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 173,
+     "Impurity Name": "N-Nitroso N-ethyl  urea (35%water + 2.5%Acetic acid)",
+     "Cas No": "759-73-9",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 174,
+     "Impurity Name": "N-nitroso-N-ethylaniline",
+     "Cas No": "612-64-6",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 175,
+     "Impurity Name": "N-Nitrosotris-(2-chloroethyl)urea (90%)",
+     "Cas No": "69113-01-5",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 176,
+     "Impurity Name": "N-Nitroso-L-azetidine-2-Carboxylic Acid",
+     "Cas No": "30248-47-6",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 177,
+     "Impurity Name": "N-Nitroso Bis(2-Oxopropyl)amine",
+     "Cas No": "60599-38-4",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 178,
+     "Impurity Name": "N-Nitroso Bis(2-Hydroxypropyl)amine",
+     "Cas No": "53609-64-6",
+     "Ready stock": "NO",
+     "Parent API": "N-NITROSO COMPOUNDS"
+    },
+    {
+     "S.No": 179,
+     "Impurity Name": "N-Nitroso Nadolol (Mixture of Diastereomers)",
+     "Cas No": "134720-06-2",
+     "Ready stock": "NO",
+     "Parent API": "NADOLOL"
+    },
+    {
+     "S.No": 180,
+     "Impurity Name": "N-Nitroso Naphazoline",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "NAPHAZOLINE"
+    },
+    {
+     "S.No": 181,
+     "Impurity Name": "N-Nitroso-Guvacolin",
+     "Cas No": "55557-02-3",
+     "Ready stock": "NO",
+     "Parent API": "NIPECOTIC ACID"
+    },
+    {
+     "S.No": 182,
+     "Impurity Name": "N-Nitroso Guvacine ",
+     "Cas No": "55557-01-2",
+     "Ready stock": "NO",
+     "Parent API": "NIPECOTIC ACID"
+    },
+    {
+     "S.No": 183,
+     "Impurity Name": "N-Nitroso-N-Desmethyl Olopatadine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "OLOPATADINE"
+    },
+    {
+     "S.No": 184,
+     "Impurity Name": "N-Nitroso Paroxetine",
+     "Cas No": "2361294-43-9",
+     "Ready stock": "NO",
+     "Parent API": "PAROXETINE"
+    },
+    {
+     "S.No": 185,
+     "Impurity Name": "N-Nitroso Perindopril",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "PERINDOPRIL"
+    },
+    {
+     "S.No": 186,
+     "Impurity Name": "N-Nitroso N-Methyl-Phenethylamine",
+     "Cas No": "13256-11-6",
+     "Ready stock": "NO",
+     "Parent API": "PHENETHYLAMINE"
+    },
+    {
+     "S.No": 187,
+     "Impurity Name": "N1-Nitroso Pindolol",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "PINDOLOL"
+    },
+    {
+     "S.No": 188,
+     "Impurity Name": "N-Nitroso Pipecolic Acid",
+     "Cas No": "4515-18-8",
+     "Ready stock": "NO",
+     "Parent API": "PIPECOLIC ACID"
+    },
+    {
+     "S.No": 189,
+     "Impurity Name": "N-Nitrosopiperidine",
+     "Cas No": "100-75-4",
+     "Ready stock": "NO",
+     "Parent API": "PIPERIDINE"
+    },
+    {
+     "S.No": 190,
+     "Impurity Name": "N-Nitroso Pramipexole",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "PRAMIPEXOLE"
+    },
+    {
+     "S.No": 191,
+     "Impurity Name": "N1-Nitroso Prilocaine (N1-Nitroso Propitocaine)",
+     "Cas No": "211490-46-9",
+     "Ready stock": "NO",
+     "Parent API": "PRILOCAINE"
+    },
+    {
+     "S.No": 192,
+     "Impurity Name": "N-Nitroso-D-Proline",
+     "Cas No": "42022-03-7",
+     "Ready stock": "NO",
+     "Parent API": "PROLINE"
+    },
+    {
+     "S.No": 193,
+     "Impurity Name": "N-Nitroso Promethazine EP Impurity C",
+     "Cas No": "94511-44-1",
+     "Ready stock": "NO",
+     "Parent API": "PROMETHAZINE"
+    },
+    {
+     "S.No": 194,
+     "Impurity Name": "N-Nitroso Propafenone",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "PROPAFENONE"
+    },
+    {
+     "S.No": 195,
+     "Impurity Name": "N-Nitroso Propranolol",
+     "Cas No": "84418-35-9",
+     "Ready stock": "NO",
+     "Parent API": "PROPRANOLOL"
+    },
+    {
+     "S.No": 196,
+     "Impurity Name": "N-Nitroso Pseudoephedrine (N-Nitroso Ephedrine HCl EP Impurity B)",
+     "Cas No": "1850-88-0",
+     "Ready stock": "NO",
+     "Parent API": "PSEUDOEPHEDRINE"
+    },
+    {
+     "S.No": 197,
+     "Impurity Name": "N-Nitroso Quinapril",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "QUINAPRIL"
+    },
+    {
+     "S.No": 198,
+     "Impurity Name": "N-Nitroso Ramipril",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "RAMIPRIL"
+    },
+    {
+     "S.No": 199,
+     "Impurity Name": "N-Nitroso Ritalinic Acid",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "RITALINIC ACID"
+    },
+    {
+     "S.No": 200,
+     "Impurity Name": "N-Nitroso-N-Monodesmethyl Rizatriptan",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "RIZATRIPTAN"
+    },
+    {
+     "S.No": 201,
+     "Impurity Name": "N-Nitroso Salbutamol (N-Nitroso Albuterol)",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "SALBUTAMOL"
+    },
+    {
+     "S.No": 202,
+     "Impurity Name": "N-Nitroso Salmeterol",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "SALMETEROL"
+    },
+    {
+     "S.No": 203,
+     "Impurity Name": "N-Nitroso Sarcosine",
+     "Cas No": "13256-22-9",
+     "Ready stock": "NO",
+     "Parent API": "SARCOSINE"
+    },
+    {
+     "S.No": 204,
+     "Impurity Name": "N-Nitroso Sertraline",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "SERTRALINE"
+    },
+    {
+     "S.No": 205,
+     "Impurity Name": "N-Nitroso Silodosin",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "SILODOSIN"
+    },
+    {
+     "S.No": 206,
+     "Impurity Name": "N-Nitroso Sotalol",
+     "Cas No": "134720-07-3",
+     "Ready stock": "NO",
+     "Parent API": "SOTALOL"
+    },
+    {
+     "S.No": 207,
+     "Impurity Name": "N-Nitroso-N-Desmethyl Spinosyn A",
+     "Cas No": "252575-85-2",
+     "Ready stock": "NO",
+     "Parent API": "SPINOSAD"
+    },
+    {
+     "S.No": 208,
+     "Impurity Name": "N-Nitroso Sumatriptan EP Impurity B",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "SUMATRIPTAN"
+    },
+    {
+     "S.No": 209,
+     "Impurity Name": "N-Nitroso-N-Desmethyl Tamoxifen",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "TAMOXIFEN"
+    },
+    {
+     "S.No": 210,
+     "Impurity Name": "N-Nitroso Tamsulosin",
+     "Cas No": "2892260-31-8",
+     "Ready stock": "NO",
+     "Parent API": "TAMSULOSIN"
+    },
+    {
+     "S.No": 211,
+     "Impurity Name": "N-Nitroso Temazepam EP Impurity A",
+     "Cas No": "51145-18-7",
+     "Ready stock": "NO",
+     "Parent API": "TEMAZEPAM"
+    },
+    {
+     "S.No": 212,
+     "Impurity Name": "N-Nitroso Terbutaline",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "TERBUTALINE"
+    },
+    {
+     "S.No": 213,
+     "Impurity Name": "N-Nitroso-N-Desmethyl Thonzylamine",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "THONZYLAMINE"
+    },
+    {
+     "S.No": 214,
+     "Impurity Name": "N-Nitroso Trandolapril",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "TRANDOLAPRIL"
+    },
+    {
+     "S.No": 215,
+     "Impurity Name": "N-Nitroso-N-Desmethyl Trimethobenzamide",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "TRIMETHOBENZAMIDE"
+    },
+    {
+     "S.No": 216,
+     "Impurity Name": "N-Nitroso Trimipramine EP Impurity B",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "TRIMIPRAMINE"
+    },
+    {
+     "S.No": 217,
+     "Impurity Name": "N-Nitroso Varenicline",
+     "Cas No": "2755871-02-2",
+     "Ready stock": "NO",
+     "Parent API": "VARENICLINE"
+    },
+    {
+     "S.No": 218,
+     "Impurity Name": "N-Nitroso Eltrombopag",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Eltrombopag",
+     "Leadtime": "2 days"
+    },
+    {
+     "S.No": 219,
+     "Impurity Name": "N-Nitroso Ambroxol",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Ambroxol",
+     "Leadtime": "4 Days"
+    },
+    {
+     "S.No": 220,
+     "Impurity Name": "4-Chloro Loratadine",
+     "Cas No": "165739-83-3",
+     "Ready stock": "NO",
+     "Parent API": "Loratadine",
+     "Leadtime": "2-3 Weeks"
+    },
+    {
+     "S.No": 221,
+     "Impurity Name": "Loratadine Impurity D",
+     "Cas No": "38089-93-9",
+     "Ready stock": "NO",
+     "Parent API": "Loratadine",
+     "Leadtime": "7 days"
+    },
+    {
+     "S.No": 222,
+     "Impurity Name": "Loratadine Imp. A (EP)",
+     "Cas No": "133284-74-9",
+     "Ready stock": "NO",
+     "Parent API": "Loratadine",
+     "Leadtime": "2 weeks"
+    },
+    {
+     "S.No": 223,
+     "Impurity Name": "4'-(azidomethyl)-[1,1'-biphenyl]-2-carboxylic acid",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Valsartan",
+     "Leadtime": "2 weeks"
+    },
+    {
+     "S.No": 224,
+     "Impurity Name": "L-Phenylalanine-d8",
+     "Cas No": "29909-00-0",
+     "Ready stock": "NO",
+     "Parent API": "L-Phenylalanine",
+     "Leadtime": "4-5 Weeks"
+    },
+    {
+     "S.No": 225,
+     "Impurity Name": "(Z)-Methyl 2-(3-Nitrobenzylidene)-3-oxobutanoate",
+     "Cas No": "119128-13-1",
+     "Ready stock": "NO",
+     "Parent API": "Manidipine",
+     "Leadtime": "2-3 days"
+    },
+    {
+     "S.No": 226,
+     "Impurity Name": "Loratadine Releated compound-A",
+     "Cas No": "100643-71-8",
+     "Ready stock": "Yes",
+     "Parent API": "Loratadine",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 227,
+     "Impurity Name": "Loratadine Related compound-B",
+     "Cas No": "38092-89-6",
+     "Ready stock": "Yes",
+     "Parent API": "Loratadine",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 228,
+     "Impurity Name": "Saflufenacil",
+     "Cas No": "372137-35-4",
+     "Ready stock": "NO",
+     "Parent API": "Saflufenacil",
+     "Leadtime": "6 weeks"
+    },
+    {
+     "S.No": 229,
+     "Impurity Name": "Mirtazapine Impurity C",
+     "Cas No": "191546-96-0",
+     "Ready stock": "NO",
+     "Parent API": "Mitrazapine",
+     "Leadtime": "6-7 weeks"
+    },
+    {
+     "S.No": 230,
+     "Impurity Name": "Moxifloaxacin EP Impurity D",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Moxifloaxacin ",
+     "Leadtime": "5-6 weeks"
+    },
+    {
+     "S.No": 231,
+     "Impurity Name": "ent-Moxifloxacin Hydrochloride",
+     "Cas No": "1346603-25-5",
+     "Ready stock": "NO",
+     "Parent API": "Moxifloaxacin ",
+     "Leadtime": "6 weeks"
+    },
+    {
+     "S.No": 232,
+     "Impurity Name": "Rosuvastatin EP Impurity G Sodium Salt",
+     "Cas No": "NA",
+     "Ready stock": "NO",
+     "Parent API": "Rosuvastatin",
+     "Leadtime": "7 weeks"
+    },
+    {
+     "S.No": 233,
+     "Impurity Name": "Rosuvastatin Calcium Imp. D (EP)",
+     "Cas No": "503610-43-3",
+     "Ready stock": "NO",
+     "Parent API": "Rosuvastatin",
+     "Leadtime": "10 days"
+    },
+    {
+     "S.No": 234,
+     "Impurity Name": "Rosuvastatin Calcium Imp. C (EP)",
+     "Cas No": "1422619-13-3",
+     "Ready stock": "NO",
+     "Parent API": "Rosuvastatin",
+     "Leadtime": "2-3 Weeks"
+    },
+    {
+     "S.No": 235,
+     "Impurity Name": "Rosuvastatin Calcium Imp. A (EP)",
+     "Cas No": "1714147-47-3",
+     "Ready stock": "NO",
+     "Parent API": "Rosuvastatin",
+     "Leadtime": "3 weeks"
+    },
+    {
+     "S.No": 236,
+     "Impurity Name": "tert-butyl (R)-3-methyl-1,4-diazepane-1-carboxylate",
+     "Cas No": " 223644-10-8",
+     "Ready stock": "NO",
+     "Parent API": "Ripasudil",
+     "Leadtime": "4 weeks"
+    },
+    {
+     "S.No": 237,
+     "Impurity Name": "(S)-tert-Butyl 3-methyl-1,4-diazepane-1-carboxylate",
+     "Cas No": "194032-32-1",
+     "Ready stock": "NO",
+     "Parent API": "Ripasudil",
+     "Leadtime": "4 weeks"
+    },
+    {
+     "S.No": 238,
+     "Impurity Name": "(Z)-Thiothixene  ",
+     "Cas No": "3313-26-6",
+     "Ready stock": "NO",
+     "Parent API": "Thiothixene",
+     "Leadtime": "7 weeks"
+    },
+    {
+     "S.No": 239,
+     "Impurity Name": "Betamethasone EP impurity G",
+     "Cas No": "85700-75-0",
+     "Ready stock": "NO",
+     "Parent API": "Betamethasone",
+     "Leadtime": "7 Weeks"
+    },
+    {
+     "S.No": 240,
+     "Impurity Name": "Dapagliflozin Furanose Isomer",
+     "Cas No": "1469910-70-0",
+     "Ready stock": "Yes",
+     "Parent API": "Dapagliflozin",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 241,
+     "Impurity Name": "Dapagliflozin USP Related Compound A",
+     "Cas No": "1807632-95-6",
+     "Ready stock": "Yes",
+     "Parent API": "Dapagliflozin",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 242,
+     "Impurity Name": "Hydroxy-Dapagliflozin Impurity",
+     "Cas No": "1204222-85-4",
+     "Ready stock": "Yes",
+     "Parent API": "Dapagliflozin",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 243,
+     "Impurity Name": "O-Desethyl Dapagliflozin",
+     "Cas No": "864070-37-1",
+     "Ready stock": "Yes",
+     "Parent API": "Dapagliflozin",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 244,
+     "Impurity Name": "Dapagliflozin Hydroxy Impurity",
+     "Cas No": "960404-86-8",
+     "Ready stock": "Yes",
+     "Parent API": "Dapagliflozin",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 245,
+     "Impurity Name": "Dapagliflozin Ortho Impurity",
+     "Cas No": "2040305-05-1",
+     "Ready stock": "Yes",
+     "Parent API": "Dapagliflozin",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 246,
+     "Impurity Name": 246,
+     "Cas No": "1204222-85-4",
+     "Ready stock": "Yes",
+     "Parent API": "Dapagliflozin",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 247,
+     "Impurity Name": "Empagliflozin Impurity C",
+     "Cas No": "864070-43-9",
+     "Ready stock": "Yes",
+     "Parent API": "Empagliflozin",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 248,
+     "Impurity Name": "Empagliflozin S-Furanose",
+     "Cas No": "1620758-32-8",
+     "Ready stock": "Yes",
+     "Parent API": "Empagliflozin",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 249,
+     "Impurity Name": "1-Methoxy Empagliflozin",
+     "Cas No": "1279691-36-9",
+     "Ready stock": "Yes",
+     "Parent API": "Empagliflozin",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 250,
+     "Impurity Name": "OP1118",
+     "Cas No": "1030825-28-5",
+     "Ready stock": "No",
+     "Parent API": "Fidaxomicin",
+     "Leadtime": "2 weeks"
+    },
+    {
+     "S.No": 251,
+     "Impurity Name": "O-Desmethyl venlafaxine",
+     "Cas No": "93413-62-8",
+     "Ready stock": "Yes",
+     "Parent API": "Venlafaxine",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 252,
+     "Impurity Name": "N-Nitroso Desmethyl Desvenlafaxine",
+     "Cas No": "NA",
+     "Ready stock": "Yes",
+     "Parent API": "Venlafaxine",
+     "Leadtime": "Ready stock"
+    },
+    {
+     "S.No": 253,
+     "Impurity Name": "Glucosone",
+     "Cas No": "1854-25-7",
+     "Ready stock": "No",
+     "Parent API": "Glucose",
+     "Leadtime": "2-3 weeks"
+    },
+    {
+     "S.No": 254,
+     "Impurity Name": "3-Deoxy-D-glucosone",
+     "Cas No": "4084-27-9",
+     "Ready stock": "No",
+     "Parent API": "Glucose",
+     "Leadtime": "3-4 weeks"
+    },
+    {
+     "S.No": 255,
+     "Impurity Name": "3-deoxy Galactosone",
+     "Cas No": "4134-97-8",
+     "Ready stock": "No",
+     "Parent API": "Glucose",
+     "Leadtime": "3-4 weeks"
+    },
+    {
+     "S.No": 256,
+     "Impurity Name": "3,4-di-deoxyglucosone-3-ene",
+     "Cas No": "252006-38-5",
+     "Ready stock": "No",
+     "Parent API": "Glucose",
+     "Leadtime": "5-6 weeks"
+    },
+    {
+     "S.No": 257,
+     "Impurity Name": "Dehydro loratadine isomer-B",
+     "Cas No": "133330-56-0",
+     "Ready stock": "No",
+     "Parent API": "Loratadine",
+     "Leadtime": "4-5 weeks"
+    }
+   ]

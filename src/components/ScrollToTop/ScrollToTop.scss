@@ -1,0 +1,15 @@
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  margin-right: 10px;
+  border: none;
+  right: 20px;
+}
+.scrollToTop:before {
+  content: "";
+  position: absolute;
+  inset: 30%;
+  transform: translateY(20%) rotate(-45deg);
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+}

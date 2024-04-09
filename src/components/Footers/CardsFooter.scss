@@ -1,0 +1,65 @@
+.copyright {
+  background-color: #131f40;
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: white;
+  a {
+    color: rgb(166, 178, 248);
+  }
+}
+
+.footer {
+  ul#menu-footer-quick-links li {
+    display: block;
+    padding: 0px 0px 8px 0;
+    position: relative;
+    a {
+      display: inline-block;
+      transition: all 0.6s;
+      padding-left: 15px;
+      &::before {
+        position: absolute;
+        content: "-";
+        top: 3px;
+        left: 0;
+        font-weight: bold;
+        font-size: 14px;
+        transition: all 0.4s;
+      }
+    }
+  }
+
+  .widget_img_gellary ul li {
+    display: inline-block;
+    max-width: 33.21%;
+    padding: 3px;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+  }
+  .social-icons {
+    div a {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 5px;
+      border: 1px solid #333;
+      text-align: center;
+      display: block;
+      font-size: 14px;
+      color: #fff;
+      border-color: transparent;
+    }
+    .btn-wrapper {
+      display: inline-flex;
+      padding-left: 20px;
+    }
+  }
+}
