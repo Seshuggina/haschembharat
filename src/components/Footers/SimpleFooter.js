@@ -28,7 +28,7 @@ import {
   Col,
   UncontrolledTooltip,
 } from "reactstrap";
-import "./CardsFooter.scss";
+import "./Footer.scss";
 
 class SimpleFooter extends React.Component {
   render() {

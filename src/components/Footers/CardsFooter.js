@@ -32,7 +32,7 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-class CardsFooter extends React.Component {
+class Footer extends React.Component {
   render() {
     return (
       <>
@@ -40,36 +40,36 @@ class CardsFooter extends React.Component {
           <div className="headroom--not-top">
             <Container>
               <Row>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
-                  <div class="widget widget_text clearfix">
-                    <div class="footer-logo">
+                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
+                  <div className="widget widget_text clearfix">
+                    <div className="footer-logo">
                       <img
                         id="footer-logo-img"
-                        class="img-fluid auto_size"
+                        className="img-fluid auto_size"
                         height="46"
                         width="170"
                         src="https://haschembharat.com/utilities/frontend/images/logo2.png"
                         alt="image"
                       />
                     </div>
-                    <div class="textwidget widget-text">
+                    <div className="textwidget widget-text">
                       <p>
                         Our Genesis In 2023, HASCHEM Bharat was born in the
                         heart of Hyderabad, a city renowned for its
                         pharmaceutical prowess.
                       </p>
                       <a
-                        class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor"
+                        className="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor"
                         href="https://haschembharat.com/contact-us"
                       >
-                        Contact Us <i class="fa fa-chevron-right"></i>
+                        Contact Us <i className="fa fa-chevron-right"></i>
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 widget-area">
-                  <div class="widget widget_nav_menu clearfix">
-                    <h3 class="widget-title">Links</h3>
+                <div className="col-xs-12 col-sm-6 col-md-6 col-lg-2 widget-area">
+                  <div className="widget widget_nav_menu clearfix">
+                    <h3 className="widget-title">Links</h3>
                     <ul
                       id="menu-footer-quick-links"
                       className="list-unstyled menu"
@@ -100,9 +100,9 @@ class CardsFooter extends React.Component {
                     </ul>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
-                  <div class="widget widget_img_gellary clearfix">
-                    <h3 class="widget-title">Our Gallery</h3>
+                <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
+                  <div className="widget widget_img_gellary clearfix">
+                    <h3 className="widget-title">Our Gallery</h3>
                     <ul className="list-unstyled">
                       <li>
                         <a
@@ -111,7 +111,7 @@ class CardsFooter extends React.Component {
                           data-rel="prettyPhoto"
                         >
                           <img
-                            class="img-fluid"
+                            className="img-fluid"
                             src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
                             alt=""
                           />
@@ -124,7 +124,7 @@ class CardsFooter extends React.Component {
                           data-rel="prettyPhoto"
                         >
                           <img
-                            class="img-fluid"
+                            className="img-fluid"
                             src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
                             alt=""
                           />
@@ -137,7 +137,7 @@ class CardsFooter extends React.Component {
                           data-rel="prettyPhoto"
                         >
                           <img
-                            class="img-fluid"
+                            className="img-fluid"
                             src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
                             alt=""
                           />
@@ -150,7 +150,7 @@ class CardsFooter extends React.Component {
                           data-rel="prettyPhoto"
                         >
                           <img
-                            class="img-fluid"
+                            className="img-fluid"
                             src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
                             alt=""
                           />
@@ -163,7 +163,7 @@ class CardsFooter extends React.Component {
                           data-rel="prettyPhoto"
                         >
                           <img
-                            class="img-fluid"
+                            className="img-fluid"
                             src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
                             alt=""
                           />
@@ -176,7 +176,7 @@ class CardsFooter extends React.Component {
                           data-rel="prettyPhoto"
                         >
                           <img
-                            class="img-fluid"
+                            className="img-fluid"
                             src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
                             alt=""
                           />
@@ -185,27 +185,27 @@ class CardsFooter extends React.Component {
                     </ul>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 widget-area">
-                  <div class="widget widget_cta clearfix">
-                    <h3 class="widget-title">Quick Contacts</h3>
+                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 widget-area">
+                  <div className="widget widget_cta clearfix">
+                    <h3 className="widget-title">Quick Contacts</h3>
                     <p>If you have any questions or need help</p>
-                    <div class="d-flex">
-                      <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs margin_right15 margin_bottom15 ">
-                        <i class="flaticon flaticon-call"></i>
+                    <div className="d-flex">
+                      <div className="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs margin_right15 margin_bottom15 ">
+                        <i className="flaticon flaticon-call"></i>
                       </div>
                       <h4>
                         <a href="tel:+917816003510">+91 7816 00 3510</a>
                         </h4>
                     </div>
                     <p>#Ameerpet, Hyderabad, TS - 5000032</p>
-                    <div class="d-flex align-items-center justify-content-between">
+                    <div className="d-flex align-items-center justify-content-between">
                       <a
-                        class="ttm-btn btn-inline ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor margin_right40 margin_bottom5"
+                        className="ttm-btn btn-inline ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor margin_right40 margin_bottom5"
                         href="#"
                       >
-                        Get direction <i class="fa fa-chevron-right"></i>
+                        Get direction <i className="fa fa-chevron-right"></i>
                       </a>
-                      <div class="social-icons d-inline-flex margin_top10 margin_bottom10">
+                      <div className="social-icons d-inline-flex margin_top10 margin_bottom10">
                         <Col className="text-lg-center btn-wrapper">
                           <Button
                             className="btn-icon-only rounded-circle"
@@ -285,4 +285,4 @@ class CardsFooter extends React.Component {
   }
 }
 
-export default CardsFooter;
+export default Footer;

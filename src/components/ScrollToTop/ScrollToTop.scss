@@ -4,6 +4,10 @@
   margin-right: 10px;
   border: none;
   right: 20px;
+  z-index: 2;
+  &:hover .icon-shape-success {
+    background-color: rgba(84, 218, 161, 0.9);;
+  }
 }
 .scrollToTop:before {
   content: "";

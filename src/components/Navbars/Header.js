@@ -20,7 +20,9 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-class DemoNavbar extends React.Component {
+import "./Header.scss";
+
+class HeaderNavbar extends React.Component {
   componentDidMount() {
     let headroom = new Headroom(document.getElementById("navbar-main"));
     // initialise
@@ -52,11 +54,12 @@ class DemoNavbar extends React.Component {
             expand="lg"
             id="navbar-main"
           >
-            <Container>
+            <Container className="fullwidth">
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
+                {/* logo CHANGE */}
                 <img
                   alt="..."
-                  src={require("assets/img/brand/argon-react-white.png")}
+                  src={require("assets/img/brand/ham_logo_bg.png")}
                 />
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">
@@ -75,7 +78,7 @@ class DemoNavbar extends React.Component {
                       <Link to="/">
                         <img
                           alt="..."
-                          src={require("assets/img/brand/argon-react.png")}
+                          src={require("assets/img/brand/ham_logo_bg.png")}
                         />
                       </Link>
                     </Col>
@@ -89,14 +92,9 @@ class DemoNavbar extends React.Component {
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
                   <NavItem className="ml-lg-4">
-                    <NavLink className="nav-link" href="#">
+                    <Link className="nav-link" to="/">
                       Home
-                    </NavLink>
-                  </NavItem>
-                  <NavItem className="ml-lg-4">
-                    <NavLink className="nav-link" href="#">
-                      AboutUs
-                    </NavLink>
+                    </Link>
                   </NavItem>
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
@@ -162,7 +160,22 @@ class DemoNavbar extends React.Component {
                       </div>
                     </DropdownMenu>
                   </UncontrolledDropdown>
-                  <UncontrolledDropdown nav>
+                  <NavItem className="ml-lg-4">
+                    <Link className="nav-link" to="/services">
+                      Services
+                    </Link>
+                  </NavItem>
+                  <NavItem className="ml-lg-4">
+                    <Link className="nav-link" to="/about-us">
+                      AboutUs
+                    </Link>
+                  </NavItem>
+                  <NavItem className="ml-lg-4">
+                    <Link className="nav-link" to="/contact-us">
+                      Contact Us
+                    </Link>
+                  </NavItem>
+                  {/* <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-collection d-lg-none mr-1" />
                       <span className="nav-link-inner--text">Services</span>
@@ -181,7 +194,7 @@ class DemoNavbar extends React.Component {
                         Register
                       </DropdownItem>
                     </DropdownMenu>
-                  </UncontrolledDropdown>
+                  </UncontrolledDropdown> */}
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem className="d-none d-lg-block ">
@@ -232,22 +245,6 @@ class DemoNavbar extends React.Component {
                       Follow us on Twitter
                     </UncontrolledTooltip>
                   </NavItem>
-                  <NavItem className="d-none d-lg-block ">
-                    <NavLink
-                      className="nav-link-icon"
-                      href="https://github.com/creativetimofficial/argon-design-system-react"
-                      id="tooltip112445449"
-                      target="_blank"
-                    >
-                      <i className="fa fa-github" />
-                      <span className="nav-link-inner--text d-lg-none ml-2">
-                        Github
-                      </span>
-                    </NavLink>
-                    <UncontrolledTooltip delay={0} target="tooltip112445449">
-                      Star us on Github
-                    </UncontrolledTooltip>
-                  </NavItem>
                   {/* <NavItem className="d-none d-lg-block ml-lg-4">
                     <Button
                       className="btn-neutral btn-icon"
@@ -270,12 +267,16 @@ class DemoNavbar extends React.Component {
                 <input
                   type="search"
                   className="form-control"
-                  placeholder="Type query"
+                  placeholder="Enter #CAS No, Name, Formula Name"
                   aria-label="Search"
                 />
-                <Button color="primary" type="button">
+                <Button
+                  color="primary"
+                  type="button"
+                  className="boder-left-radius-0"
+                >
                   <span className="btn-inner--icon">
-                    <i className="fa fa-search mr-2" />
+                    <i className="fa fa-search mr-2 fa-1x" />
                   </span>
                 </Button>
                 {/* <Button
@@ -295,4 +296,4 @@ class DemoNavbar extends React.Component {
   }
 }
 
-export default DemoNavbar;
+export default HeaderNavbar;

@@ -1,0 +1,32 @@
+#navbar-main {
+    > .fullwidth {
+        max-width: 100%;    
+    }
+}
+.navbar-main {
+    background-color: #172b4d !important;
+    .input-group {
+        .btn-primary {
+            padding: 0;
+            .fa-search {
+                font-size: 25px;
+                padding-left: 10px;
+                padding-right: 5px;
+            }
+        }
+    }
+    form {
+        max-width: 600px;
+        padding-left: 20px;
+        flex-grow: 2;
+    }
+}
+
+.navbar-main {
+    
+    // background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
+}
+
+.pt-88 {
+    padding-top: 88px;
+}

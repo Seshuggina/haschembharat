@@ -31,6 +31,7 @@ View [example pages here](https://demos.creative-tim.com/argon-design-system-rea
 - `git clone https://github.com/Seshuggina/haschembharat`
 - `npm install`
 - `npm start`
+- `Page opens in your default browser or Enter the following URL in the browser - http://localhost:3000/`
 - [Download from Github](https://github.com/Seshuggina/haschembharat).
 - Clone the repo: `git clone https://github.com/Seshuggina/haschembharat`.
 
@@ -88,10 +89,10 @@ Argon Design System React
     │           └── fonts
     ├── components
     │   ├── Footers
-    │   │   ├── CardsFooter.js
+    │   │   ├── Footer.js
     │   │   └── SimpleFooter.js
     │   └── Navbars
-    │       └── DemoNavbar.js
+    │       └── Header.js
     ├── index.js
     └── views
         ├── Index.js

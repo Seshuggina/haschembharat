@@ -31,7 +31,7 @@ function ScrollToTopButton() {
       onClick={scrollToTop}
       style={{ display: isVisible ? "block" : "none" }}
     >
-      {/* <i class="ni ni-settings-gear-65"></i> */}
+      {/* <i className="ni ni-settings-gear-65"></i> */}
     </button>
    
   );
