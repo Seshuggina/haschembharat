@@ -20,8 +20,10 @@ import { Products } from "./pages/Products/Products.js";
 import { AboutUs } from "pages/About/AboutUs.js";
 import { Services } from "pages/Services/Services.js";
 import Home from "pages/index.js";
-
+import { Career } from "pages/career/Career.js";
+import { ProductDetails } from "pages/ProductDetails/ProductDetails.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 
 root.render(
   <BrowserRouter>
@@ -39,6 +41,8 @@ root.render(
           <Route path="/services" exact element={<Services />} />
           <Route path="/contact-us" exact element={<ContactUs />} />
           <Route path="/products" exact element={<Products />} />
+          <Route path="/productDetails" exact element={<ProductDetails />} />
+          <Route path="/career" exact element={<Career />} />
           {/* <Route path="*" element={<Navigate to="/" replace />} />8 */}
           
         </Routes>

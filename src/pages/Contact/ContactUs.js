@@ -244,7 +244,7 @@ class ContactUs extends React.Component {
                           <div className="featured-title">
                             <h4 className="margin_bottom0 fs-20">
                               <i
-                                class="fa fa-map-marker fa-2x align-middle"
+                                className="fa fa-map-marker fa-2x align-middle"
                                 aria-hidden="true"
                               ></i>
                               &nbsp; We Reached Here
@@ -265,7 +265,7 @@ class ContactUs extends React.Component {
                           <div className="featured-title">
                             <h4 className="margin_bottom0 fs-20">
                               <i
-                                class="fa fa-whatsapp fa-2x align-middle"
+                                className="fa fa-whatsapp fa-2x align-middle"
                                 aria-hidden="true"
                               ></i>
                               &nbsp;{" "}

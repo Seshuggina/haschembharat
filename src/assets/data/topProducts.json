@@ -1,0 +1,66 @@
+[
+    {
+     "SNo": 1,
+     "impurityName": "Dorzolamide Impurity-C",
+     "casNo": "NA",
+     "readyStock": "NO",
+     "parentAPI": "Dorzolamide",
+     "leadTime": "5-6 Weeks"
+    },
+    {
+     "SNo": 2,
+     "impurityName": "Acyclovir Impurity-R",
+     "casNo": "NA",
+     "readyStock": "NO",
+     "parentAPI": "Acyclovir",
+     "leadTime": "5-6 Weeks"
+    },
+    {
+     "SNo": 3,
+     "impurityName": "Acyclovir Impurity N",
+     "casNo": "NA",
+     "readyStock": "NO",
+     "parentAPI": "Acyclovir",
+     "leadTime": "3-4 Weeks"
+    },
+    {
+     "SNo": 4,
+     "impurityName": "Rac-Desmethyl Irinotecan",
+     "casNo": "NA",
+     "readyStock": "NO",
+     "parentAPI": "Irinotecan",
+     "leadTime": "8-9 Weeks"
+    },
+    {
+     "SNo": 5,
+     "impurityName": "Iohexol EP Impurity-C",
+     "casNo": "NA",
+     "readyStock": "NO",
+     "parentAPI": "Iohexol",
+     "leadTime": "Discontinued"
+    },
+    {
+     "SNo": 6,
+     "impurityName": "Cetrazine Lactose ester",
+     "casNo": "NA",
+     "readyStock": "NO",
+     "parentAPI": "Cetrazine ~ 70%",
+     "leadTime": "3-4 Weeks"
+    },
+    {
+     "SNo": 7,
+     "impurityName": "N-Des-2-methylpropan-2-ol Docetaxel",
+     "casNo": "NA",
+     "readyStock": "NO",
+     "parentAPI": "Docetaxel",
+     "leadTime": "8 Weeks"
+    },
+    {
+     "SNo": 8,
+     "impurityName": "2-Desbenzoyl-2-tiglyl Docetaxel",
+     "casNo": "NA",
+     "readyStock": "NO",
+     "parentAPI": "Docetaxel",
+     "leadTime": "8 Weeks"
+    }
+   ]

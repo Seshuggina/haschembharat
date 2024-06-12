@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from "react";
+import React, { memo, useEffect } from "react";
 
 // reactstrap components
 import {
@@ -6,23 +6,22 @@ import {
   Button,
   Card,
   CardBody,
-  CardImg,
-  FormGroup,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
-  Container,
-  Row,
   Col,
 } from "reactstrap";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const Product = memo(({ product, thumbnailColor }) => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <>
-      <Col lg="4 mb-4">
-        <Card className="card-lift--hover shadow border-0">
-          <CardBody className="py-5">
+      <Col lg="3 mb-4" data-aos="fade-up">
+        <Card className="card-lift--hover shadow border-0 card-border">
+          <CardBody className="py-3">
             <div
               className={
                 "icon icon-shape rounded-circle mb-4 icon-shape-" +
@@ -50,7 +49,7 @@ export const Product = memo(({ product, thumbnailColor }) => {
               href="#pablo"
               onClick={(e) => e.preventDefault()}
             >
-              Learn more
+              Explore
             </Button>
           </CardBody>
         </Card>
