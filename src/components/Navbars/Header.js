@@ -19,6 +19,7 @@ import {
   Col,
   UncontrolledTooltip,
 } from "reactstrap";
+import {TypeaheadSearch} from "./../TypeaheadSearch/TypeaheadSearch";
 
 import "./Header.scss";
 
@@ -44,11 +45,17 @@ const HeaderNavbar = () => {
   const handleChange = (event) => {
     setSearchQuery(event.target.value);
   };
+  
+  const handleSelection = (value) => {
+    setSearchQuery(value);
+    console.log("Handle Selection");
+    handleSubmit();
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Navigate to the products page with the search query
-    if(searchQuery) {
+    if (searchQuery) {
       navigate(`/products?q=${encodeURIComponent(searchQuery)}`);
     }
   };
@@ -234,31 +241,32 @@ const HeaderNavbar = () => {
                 </NavItem>
               </Nav>
               {/* Search Functionality */}
-              
             </UncontrolledCollapse>
-            <form
-                className="d-flex input-group w-auto"
-                onSubmit={handleSubmit}
+            <form className="d-flex input-group w-auto" onSubmit={handleSubmit}>
+              {/* <input
+                type="search"
+                className="form-control"
+                placeholder="Enter #CAS No, Name, Formula Name"
+                aria-label="Search"
+                onChange={handleChange}
+              /> */}
+              <TypeaheadSearch onChange={handleChange} onSelection={handleSelection}></TypeaheadSearch>
+              <Button
+                color="primary"
+                type="submit"
+                className="boder-left-radius-0"
               >
-                <input
-                  type="search"
-                  className="form-control"
-                  placeholder="Enter #CAS No, Name, Formula Name"
-                  aria-label="Search"
-                  onChange={handleChange}
-                />
-                <Button
-                  color="primary"
-                  type="submit"
-                  className="boder-left-radius-0"
-                >
-                  <span className="btn-inner--icon">
-                    <i className="fa fa-search mr-2 fa-1x" />
-                  </span>
-                </Button>
-              </form>
+                <span className="btn-inner--icon">
+                  <i className="fa fa-search mr-2 fa-1x" />
+                </span>
+              </Button>
+            </form>
           </Container>
         </Navbar>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/react-bootstrap-typeahead/css/Typeahead.css"
+        />
       </header>
     </>
   );

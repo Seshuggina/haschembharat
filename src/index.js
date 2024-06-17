@@ -29,7 +29,7 @@ root.render(
   <BrowserRouter>
     <HeaderNavbar />
     <main className="position-relative">
-      <section className="pb-250">
+      <section>
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/login-page" exact element={<Login />} />

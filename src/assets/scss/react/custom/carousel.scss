@@ -68,8 +68,11 @@
 
 .home-carousel {
   .carousel-inner {
-    height: 70vh;
+    height: 50vh;
     min-height: 400px;
+    @media (max-width: 768px) {
+      height: 40vh;
+    }
     .carousel-item {
       height: 100%;
       background-size: cover;
@@ -93,17 +96,35 @@
       }
 
       h3 {
-        font-size: 5rem;
-        color:  white;
+        font-size: 3rem;
+        color: white;
         font-weight: 600;
         transform: translateY(-20px);
       }
       p {
         font-size: 1.5rem;
-        color:  white;
+        color: white;
         font-weight: 500;
         transform: translateY(-60px);
         opacity: 0;
+      }
+      @media (max-width: 768px) {
+        .carousel-caption {
+          display: block !important;
+        }
+        h3 {
+          font-size: 2rem;
+          color: white;
+          font-weight: 600;
+          transform: translateY(-20px);
+        }
+        p {
+          font-size: 1rem;
+          color: white;
+          font-weight: 500;
+          transform: translateY(-60px);
+          opacity: 0;
+        }
       }
       &.active {
         h3 {
@@ -115,7 +136,6 @@
           transition: all linear 250ms;
           opacity: 1;
         }
-        
       }
     }
   }

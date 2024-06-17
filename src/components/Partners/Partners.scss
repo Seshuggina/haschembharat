@@ -1,0 +1,24 @@
+.our-partners {
+  a {
+    height: 180px;
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    img {
+      max-height: 100%;
+      object-fit: cover;
+    }
+    @media(max-width: 500px) {
+        height: 280px;
+        img {
+            max-height: 95%;
+            max-width: 95%;
+            object-fit: cover;
+          }
+    }
+  }
+  .owl-item {
+    border: none transparent;
+  }
+}
