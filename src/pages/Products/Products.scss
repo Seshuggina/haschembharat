@@ -234,3 +234,16 @@ $grid-container: '.wrap';
   @include print-2d($grid);
   background: #111;
 }
+
+
+.responsive-blocks {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  button {
+    &:hover,
+    &:active {
+      color: white !important;
+    }
+  }
+}

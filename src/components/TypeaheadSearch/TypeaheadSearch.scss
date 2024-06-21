@@ -1,6 +1,14 @@
-.typeaheadSearch .form-control {
-  &:focus {
-    background-color: white;
+.typeaheadSearch {
+  .form-control {
+    &:focus {
+      background-color: white;
+      border-color: white;
+    }
+  } 
+  @media (max-width: 991.98px) {
+    .dropdown-menu.show {
+      position: absolute !important;
+    }
   }
 }
 .clearButton {
