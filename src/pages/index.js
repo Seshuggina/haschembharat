@@ -13,18 +13,18 @@ import HeaderNavbar from "components/Navbars/Header.js";
 
 const items = [
   {
-    caption: "Slider 1 Caption 1",
-    header: "Slider 1 Header 1",
+    caption: "Our mission is to deliver premium-grade API impurities and Reference standards, setting the benchmark for quality and reliability in the industry.",
+    header: "API Impurities/Reference Standards",
     className: "slide1",
   },
   {
-    caption: "Slider 2 Caption 2",
-    header: "Slider 2 Header 2",
+    caption: "Our experienced team of Ph.D. chemists specializes in meticulously crafting optimal synthetic pathways for both novel and established compounds.",
+    header: "CUSTOM SYNTHESIS",
     className: "slide2",
   },
   {
-    caption: "Slider 3 Caption 3",
-    header: "Slider 3 Header 3",
+    caption: "We offer an extensive array of services encompassing drug discovery, development, and manufacturing. Our commitment is to deliver innovative solutions tailored to meet the diverse needs of our clients",
+    header: "CRO/CDMO services",
     className: "slide3",
   },
   {

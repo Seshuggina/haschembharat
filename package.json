@@ -60,6 +60,7 @@
   "devDependencies": {
     "@types/markerclustererplus": "2.1.33",
     "@types/react": "18.2.6",
+    "ajv": "^7.2.4",
     "eslint-plugin-flowtype": "8.0.3",
     "jquery": "^3.7.0",
     "typescript": "5.0.4"

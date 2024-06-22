@@ -110,10 +110,15 @@ const HeaderNavbar = () => {
                     Home
                   </Link>
                 </NavItem>
+                <NavItem className="ml-lg-2">
+                  <Link className="nav-link" to="/services">
+                    Products
+                  </Link>
+                </NavItem>
                 <UncontrolledDropdown nav>
                   <DropdownToggle nav>
                     <i className="ni ni-ui-04 d-lg-none mr-1" />
-                    <span className="nav-link-inner--text">Products</span>
+                    <span className="nav-link-inner--text">Services</span>
                   </DropdownToggle>
                   <DropdownMenu className="dropdown-menu-xl">
                     <div className="dropdown-menu-inner">
@@ -127,7 +132,7 @@ const HeaderNavbar = () => {
                         </div>
                         <Media body className="ml-3">
                           <h6 className="heading text-primary mb-md-1">
-                            Getting started
+                            API Impurities/Reference standards
                           </h6>
                           <p className="description d-none d-md-inline-block mb-0">
                             Learn how to use Argon compiling Scss, change brand
