@@ -11,6 +11,7 @@ import {
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 export const Product = memo(({ product, thumbnailColor }) => {
 
   useEffect(() => {
@@ -28,6 +29,12 @@ export const Product = memo(({ product, thumbnailColor }) => {
                 thumbnailColor
               }
             >
+              <img
+                className="img-fluid"
+                loading="lazy"
+                src={`./../../assets/img/products/${product.productImage}`}
+                alt=""
+              />
               <i className="ni ni-check-bold" />
             </div>
             <h6 className="text-primary text-uppercase">{product.parentAPI}</h6>
