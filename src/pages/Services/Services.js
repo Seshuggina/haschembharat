@@ -47,7 +47,7 @@ export const Services = () => {
           <Row className="justify-content-center">
             <Col lg="12">
               <Row className="row-grid">
-                
+                Test
               </Row>
             </Col>
           </Row>

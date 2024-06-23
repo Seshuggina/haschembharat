@@ -41,7 +41,7 @@ root.render(
           <Route path="/services" exact element={<Services />} />
           <Route path="/contact-us" exact element={<ContactUs />} />
           <Route path="/products" exact element={<Products />} />
-          <Route path="/productDetails" exact element={<ProductDetails />} />
+          <Route path="/productDetails/:id" exact element={<ProductDetails />} />
           <Route path="/career" exact element={<Career />} />
           {/* <Route path="*" element={<Navigate to="/" replace />} />8 */}
           

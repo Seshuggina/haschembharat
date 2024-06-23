@@ -1,5 +1,5 @@
 import React, { memo, useEffect } from "react";
-
+import { Link } from 'react-router-dom';
 // reactstrap components
 import {
   Badge,
@@ -50,14 +50,13 @@ export const Product = memo(({ product, thumbnailColor }) => {
                 {product.readyStock}
               </Badge>
             </div>
-            <Button
+            <Link
               className="mt-4"
               color={thumbnailColor}
-              href="#pablo"
-              onClick={(e) => e.preventDefault()}
+              as={Link} to={`/productDetails/${product.Sno}`}
             >
               Explore
-            </Button>
+            </Link>
           </CardBody>
         </Card>
       </Col>
