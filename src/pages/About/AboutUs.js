@@ -38,11 +38,11 @@ export const AboutUs = () => {
         </div>
         <section className="contactus-banner"></section>
         <Container className="pt-lg-7">
-          <h1>About US</h1>
+          <h1 className="text-white">About US</h1>
           <Row className="justify-content-center"></Row>
         </Container>
       </section>
-      <section className="section section-lg pt-lg-0 mt--200">
+      <section className="shape shape-style-1 bg-gradient-default">
         <Container>
           <Row className="justify-content-center">
             <Col lg="12">

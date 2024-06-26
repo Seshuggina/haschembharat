@@ -19,7 +19,7 @@ import {
   Col,
   UncontrolledTooltip,
 } from "reactstrap";
-import {TypeaheadSearch} from "./../TypeaheadSearch/TypeaheadSearch";
+import { TypeaheadSearch } from "./../TypeaheadSearch/TypeaheadSearch";
 
 import "./Header.scss";
 
@@ -45,12 +45,12 @@ const HeaderNavbar = () => {
   const handleChange = (event) => {
     setSearchQuery(event.target.value);
   };
-  
+
   const handleSelection = (value) => {
     setSearchQuery(value);
     console.log("Handle Selection");
     handleSubmit();
-  }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -58,6 +58,12 @@ const HeaderNavbar = () => {
     if (searchQuery) {
       navigate(`/products?q=${encodeURIComponent(searchQuery)}`);
     }
+  };
+
+  const navigateToServices = (event) => {
+    event.preventDefault();
+    // Navigate to the products page with the search query
+    navigate(`/services`);
   };
 
   return (
@@ -110,17 +116,77 @@ const HeaderNavbar = () => {
                     Home
                   </Link>
                 </NavItem>
-                <NavItem className="ml-lg-2">
-                  <Link className="nav-link" to="/services">
-                    Products
-                  </Link>
-                </NavItem>
+                <UncontrolledDropdown nav>
+                  <DropdownToggle nav>
+                    <i className="ni ni-ui-04 d-lg-none mr-1" />
+                    <span className="nav-link-inner--text">Products</span>
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem
+                      href="#pablo"
+                      onClick={(e) => navigateToServices(e)}
+                    >
+                      APIs
+                    </DropdownItem>
+                    <DropdownItem
+                      href="#pablo"
+                      onClick={(e) => navigateToServices(e)}
+                    >
+                      Impurities
+                    </DropdownItem>
+                    <DropdownItem
+                      href="#pablo"
+                      onClick={(e) => navigateToServices(e)}
+                    >
+                      Metabolities
+                    </DropdownItem>
+                    <DropdownItem
+                      href="#pablo"
+                      onClick={(e) => navigateToServices(e)}
+                    >
+                     Nitrosamines
+                    </DropdownItem>
+                    <DropdownItem
+                      href="#pablo"
+                      onClick={(e) => navigateToServices(e)}
+                    >
+                     Building blocks
+                    </DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
                 <UncontrolledDropdown nav>
                   <DropdownToggle nav>
                     <i className="ni ni-ui-04 d-lg-none mr-1" />
                     <span className="nav-link-inner--text">Services</span>
                   </DropdownToggle>
-                  <DropdownMenu className="dropdown-menu-xl">
+                  <DropdownMenu>
+                    <DropdownItem
+                      href="#pablo"
+                      onClick={(e) => navigateToServices(e)}
+                    >
+                      API Impurities/Reference Standards
+                    </DropdownItem>
+                    <DropdownItem
+                      href="#pablo"
+                      onClick={(e) => navigateToServices(e)}
+                    >
+                      CUSTOM SYNTHESIS
+                    </DropdownItem>
+                    <DropdownItem
+                      href="#pablo"
+                      onClick={(e) => navigateToServices(e)}
+                    >
+                      CRO/CDMO services
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem
+                      href="#pablo"
+                      onClick={(e) => navigateToServices(e)}
+                    >
+                      Todo - Update Link Text
+                    </DropdownItem>
+                  </DropdownMenu>
+                  {/* <DropdownMenu className="dropdown-menu-xl">
                     <div className="dropdown-menu-inner">
                       <Media
                         className="d-flex align-items-center"
@@ -140,50 +206,9 @@ const HeaderNavbar = () => {
                           </p>
                         </Media>
                       </Media>
-                      <Media
-                        className="d-flex align-items-center"
-                        href="https://demos.creative-tim.com/argon-design-system-react/#/documentation/colors?ref=adsr-navbar"
-                        target="_blank"
-                      >
-                        <div className="icon icon-shape bg-gradient-success rounded-circle text-white">
-                          <i className="ni ni-palette" />
-                        </div>
-                        <Media body className="ml-3">
-                          <h6 className="heading text-primary mb-md-1">
-                            Foundation
-                          </h6>
-                          <p className="description d-none d-md-inline-block mb-0">
-                            Learn more about colors, typography, icons and the
-                            grid system we used for Argon.
-                          </p>
-                        </Media>
-                      </Media>
-                      <Media
-                        className="d-flex align-items-center"
-                        href="https://demos.creative-tim.com/argon-design-system-react/#/documentation/alert?ref=adsr-navbar"
-                        target="_blank"
-                      >
-                        <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
-                          <i className="ni ni-ui-04" />
-                        </div>
-                        <Media body className="ml-3">
-                          <h5 className="heading text-warning mb-md-1">
-                            Components
-                          </h5>
-                          <p className="description d-none d-md-inline-block mb-0">
-                            Browse our 50 beautiful handcrafted components
-                            offered in the Free version.
-                          </p>
-                        </Media>
-                      </Media>
                     </div>
-                  </DropdownMenu>
+                  </DropdownMenu> */}
                 </UncontrolledDropdown>
-                <NavItem className="ml-lg-2">
-                  <Link className="nav-link" to="/services">
-                    Services
-                  </Link>
-                </NavItem>
                 <NavItem className="ml-lg-2">
                   <Link className="nav-link" to="/about-us">
                     AboutUs
@@ -255,7 +280,11 @@ const HeaderNavbar = () => {
                 aria-label="Search"
                 onChange={handleChange}
               /> */}
-              <TypeaheadSearch onChange={handleChange} onSelection={handleSelection}></TypeaheadSearch>
+              <TypeaheadSearch
+                id="typeaheadSearch"
+                onChange={handleChange}
+                onSelection={handleSelection}
+              ></TypeaheadSearch>
               <Button
                 color="primary"
                 type="submit"

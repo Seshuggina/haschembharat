@@ -2,42 +2,17 @@ import React from "react";
 // nodejs library that concatenates classes
 import { Product } from "./../components/product/product";
 import { Testimonials } from "./../components/testimonials/testimonials";
+import  CustomCarousel  from "./../components/Carousel/Carousel";
 import { Partners } from "./../components/Partners/Partners";
 import topProducts from "../assets/data/topProducts";
 import { OurServices } from "./../components/OurServices/OurServices"
 
 // reactstrap components
-import { Container, Row, Col, UncontrolledCarousel } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 // Core Components
 import HeaderNavbar from "components/Navbars/Header.js";
 
-const items = [
-  {
-    caption: "Our mission is to deliver premium-grade API impurities and Reference standards, setting the benchmark for quality and reliability in the industry.",
-    header: "API Impurities/Reference Standards",
-    className: "slide1",
-  },
-  {
-    caption: "Our experienced team of Ph.D. chemists specializes in meticulously crafting optimal synthetic pathways for both novel and established compounds.",
-    header: "CUSTOM SYNTHESIS",
-    className: "slide2",
-  },
-  {
-    caption: "We offer an extensive array of services encompassing drug discovery, development, and manufacturing. Our commitment is to deliver innovative solutions tailored to meet the diverse needs of our clients",
-    header: "CRO/CDMO services",
-    className: "slide3",
-  },
-  {
-    caption: "Slider 4 Caption 4",
-    header: "Slider 4 Header 4",
-    className: "slide4",
-  },
-  {
-    caption: "Slider 5 Caption 5",
-    header: "Slider 5 Header 5",
-    className: "slide5",
-  },
-];
+
 const Home = () => {
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
   return (
@@ -45,11 +20,7 @@ const Home = () => {
       <HeaderNavbar />
       <main>
         <section className="section section-shaped pb-0 pt-88 home-carousel">
-          <UncontrolledCarousel
-            items={items}
-            enableTouch={true}
-            interval={50000}
-          />
+          <CustomCarousel></CustomCarousel>
         </section>
         {/* Section 2 Popular products */}
         <section

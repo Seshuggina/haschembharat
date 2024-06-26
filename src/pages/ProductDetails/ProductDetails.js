@@ -144,7 +144,7 @@ export const ProductDetails = (product) => {
           </div>
         </div>
         <Container className="pt-lg-7">
-          <h1>Product Details</h1><h3>ID: {id}</h3>
+          <h1 className="text-white">Product Details</h1><h3>ID: {id}</h3>
         </Container>
       </section>
       <section className="section section-lg pt-lg-0 mt--200 product-details">

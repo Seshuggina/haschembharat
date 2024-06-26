@@ -163,7 +163,7 @@ export const Products = () => {
           </div>
         </div>
         <Container className="pt-lg-7">
-          <h1>Products</h1>
+          <h1 className="text-white">Products</h1>
         </Container>
       </section>
       <section className="my-4">
