@@ -60,10 +60,10 @@ const HeaderNavbar = () => {
     }
   };
 
-  const navigateToServices = (event) => {
+  const navigateToProducts = (event) => {
     event.preventDefault();
     // Navigate to the products page with the search query
-    navigate(`/services`);
+    navigate(`/products`);
   };
 
   return (
@@ -124,31 +124,31 @@ const HeaderNavbar = () => {
                   <DropdownMenu>
                     <DropdownItem
                       href="#pablo"
-                      onClick={(e) => navigateToServices(e)}
+                      onClick={(e) => navigateToProducts(e)}
                     >
                       APIs
                     </DropdownItem>
                     <DropdownItem
                       href="#pablo"
-                      onClick={(e) => navigateToServices(e)}
+                      onClick={(e) => navigateToProducts(e)}
                     >
                       Impurities
                     </DropdownItem>
                     <DropdownItem
                       href="#pablo"
-                      onClick={(e) => navigateToServices(e)}
+                      onClick={(e) => navigateToProducts(e)}
                     >
                       Metabolities
                     </DropdownItem>
                     <DropdownItem
                       href="#pablo"
-                      onClick={(e) => navigateToServices(e)}
+                      onClick={(e) => navigateToProducts(e)}
                     >
                      Nitrosamines
                     </DropdownItem>
                     <DropdownItem
                       href="#pablo"
-                      onClick={(e) => navigateToServices(e)}
+                      onClick={(e) => navigateToProducts(e)}
                     >
                      Building blocks
                     </DropdownItem>
@@ -161,29 +161,24 @@ const HeaderNavbar = () => {
                   </DropdownToggle>
                   <DropdownMenu>
                     <DropdownItem
-                      href="#pablo"
-                      onClick={(e) => navigateToServices(e)}
+                      href="/services#APIImpurities"
                     >
                       API Impurities/Reference Standards
                     </DropdownItem>
                     <DropdownItem
-                      href="#pablo"
-                      onClick={(e) => navigateToServices(e)}
+                      href="/services#CustomSynthesis"
                     >
                       CUSTOM SYNTHESIS
                     </DropdownItem>
                     <DropdownItem
-                      href="#pablo"
-                      onClick={(e) => navigateToServices(e)}
+                      href="/services#CROCDMOservices"
                     >
                       CRO/CDMO services
                     </DropdownItem>
-                    <DropdownItem divider />
                     <DropdownItem
-                      href="#pablo"
-                      onClick={(e) => navigateToServices(e)}
+                      href="/services#ChemicalSourcing"
                     >
-                      Todo - Update Link Text
+                      Chemical Sourcing
                     </DropdownItem>
                   </DropdownMenu>
                   {/* <DropdownMenu className="dropdown-menu-xl">

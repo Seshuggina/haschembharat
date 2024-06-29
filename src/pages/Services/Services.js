@@ -46,137 +46,79 @@ export const Services = () => {
         <Container>
           <Row className="justify-content-center">
             <Col lg="12">
-              <Row id="PharmaceuticalDistribution" className="row-grid">
+              <Row id="APIImpurities" className="row-grid">
                 <div className="card border-0 border-bottom border-primary  ">
                   <div className="card-body p-3 p-xxl-5">
-                    <h4>Pharmaceutical Distribution</h4>
+                    <h4>API Impurities/Reference Standards</h4>
                     <p>
-                      We specialize in the efficient and reliable distribution
-                      of a wide array of pharmaceutical products. Our extensive
-                      network ensures that medications reach healthcare
-                      providers, hospitals, and pharmacies promptly and
-                      securely. Our advanced logistics systems and strategic
-                      partnerships enable us to manage the supply chain
-                      effectively, minimizing delays and ensuring product
-                      integrity.
+                      Our quality impurity reference materials - including intermediates, by-products and degradation products - enable accuracy in both your qualitative and quantitative analysis, with the aim of helping you to create ever better, safer medicines.
                     </p>
+                    <h5>Our key product portfolio includes:</h5>
+                    <ul>
+                      <li>API Standards</li>
+                      <li>Impurity Standards</li>
+                      <li>Metabolites</li>
+                      <li>Nitrosamines</li>
+                    </ul>
+                    <p>We work hard to ensure our customers have a reliable and sustainable source of high-quality products. Every compound supplied by HASCHEM will be fully tested for quality using validated methods prior to delivering to our customers.</p>
+                    <p>At Haschem we believe in building long-term relationships-together, we can build solutions to address your specific challenges and requirements.</p>
                   </div>
                 </div>
               </Row>
 
-              <Row id="CustomManufacturing" className="row-grid">
+              <Row id="CustomSynthesis" className="row-grid">
                 <div className="card border-0 border-bottom border-primary  ">
                   <div className="card-body p-4 p-xxl-5">
-                    <h4>Custom Manufacturing</h4>
-                    <p>
-                      Our custom manufacturing services cater to the specific
-                      needs of our clients, offering tailored solutions for
-                      unique pharmaceutical formulations. We work closely with
-                      clients to develop and produce high-quality medications
-                      that meet exact specifications, adhering to stringent
-                      quality control standards throughout the manufacturing
-                      process.
-                    </p>
+                    <h4>Custom Synthesis</h4>
+                    <p>Hashem specializes in the production of high-quality products tailored for innovative research endeavors. Our objective is to furnish researchers within the global scientific community with indispensable tools and comprehensive support. Our product range including a diverse array of application areas, covering pharmaceutical and medicinal research and development, forensic science, and environmental analysis.</p>
+                    <p>Drawing upon our extensive expertise in synthetic organic chemistry, we excel in crafting optimal synthetic pathways for both novel and established compounds. Our commitment lies in delivering bespoke chemical solutions precisely tailored to your research requirements, regardless of their complexity or specificity.</p>
+                    <p>We are committed to ensuring that our customers have access to a dependable and sustainable supply of high-quality products. Each compound provided by HASCHEM undergoes rigorous quality testing using validated methods before reaching our customers.</p>
+                    <p>At Haschem we believe in building long-term relationships-together, we can build solutions to address your specific challenges and requirements.</p>
+                    <p>Please don't hesitate to contact us if you have any questions or concerns. We're here to help!</p>
                   </div>
                 </div>
               </Row>
 
-              <Row id="RegulatorySupportandCompliance" className="row-grid">
+              <Row id="CROCDMOservices" className="row-grid">
                 <div className="card border-0 border-bottom border-primary  ">
                   <div className="card-body p-4 p-xxl-5">
-                    <h4>Regulatory Support and Compliance</h4>
+                    <h4>CRO/CDMO services</h4>
                     <p>
-                      Navigating the complex regulatory landscape is crucial in
-                      the pharmaceutical industry. Our team of experts provides
-                      comprehensive regulatory support and compliance services,
-                      ensuring that our clients' products meet all necessary
-                      legal and safety requirements. We assist with
-                      documentation, submissions, and ongoing compliance to help
-                      our clients avoid regulatory pitfalls.
+                      At HASCHEM, our CDMO (Contract Development and Manufacturing Organization) services are dedicated to delivering tailored chemical synthesis solutions for active pharmaceutical ingredients, from initial concept to commercial production.
+                    </p>
+                    <h5>Our extensive range of services includes:</h5>
+                    <ul>
+                      <li>Expertise in synthesizing non-GMP drug substances for early-stage process development.</li>
+                      <li>Proficiency in scouting new routes and optimizing processes, effectively reducing the cycle time of API research.</li>
+                      <li>Capabilities in isolating, characterizing, synthesizing, and controlling impurities during process chemistry research and development.</li>
+                      <li>Full structural characterization and elucidation.</li>
+                      <li>Synthesis spanning from decagrams to kilograms to support phase III clinical studies.</li>
+                    </ul>
+                    <p>
+                      We are committed to ensuring that our customers have access to a dependable and sustainable supply of high-quality products. Each compound provided by HASCHEM undergoes rigorous quality testing using validated methods before reaching our customers.
+                    </p>
+                    <p>
+                      At HASCHEM, we prioritize building lasting relationships. By collaborating closely with our clients, we strive to develop tailored solutions that address their specific challenges and requirements effectively. 
+                    </p>
+                    <p>
+                      Please don't hesitate to contact us if you have any questions or concerns. We're here to help!
                     </p>
                   </div>
                 </div>
               </Row>
 
-              <Row id="ClinicalTrialSupplies" className="row-grid">
+              <Row id="ChemicalSourcing" className="row-grid">
                 <div className="card border-0 border-bottom border-primary  ">
                   <div className="card-body p-4 p-xxl-5">
-                    <h4>Clinical Trial Supplies</h4>
+                    <h4>Chemical Sourcing</h4>
                     <p>
-                      We support pharmaceutical and biotechnology companies with
-                      their clinical trials by supplying the necessary
-                      medications and materials. Our services include the
-                      sourcing, packaging, labeling, and distribution of
-                      clinical trial supplies, ensuring that trials run smoothly
-                      and efficiently. We prioritize accuracy and timeliness to
-                      support the successful execution of clinical studies.
+                      "The HASCHEM sourcing team has diligently cultivated relationships over several years with numerous partner organizations renowned for their specialized skills and technical prowess across India and China. Consequently, we boast unparalleled access to a wide range of premium-quality products.
                     </p>
-                  </div>
-                </div>
-              </Row>
-
-              <Row id="CustomManufacturing" className="row-grid">
-                <div className="card border-0 border-bottom border-primary">
-                  <div className="card-body p-4 p-xxl-5">
-                    <h4>Custom Manufacturing</h4>
-                    <p>
-                      Our custom manufacturing services cater to the specific
-                      needs of our clients, offering tailored solutions for
-                      unique pharmaceutical formulations. We work closely with
-                      clients to develop and produce high-quality medications
-                      that meet exact specifications, adhering to stringent
-                      quality control standards throughout the manufacturing
-                      process.
+                    <p>  
+                      We source top-quality active pharmaceutical ingredients (APIs) from trusted partners in India and China. Plus, we offer a wide selection of fine chemicals like carbohydrates, nucleotides, prostaglandins, and fermentation products.
                     </p>
-                  </div>
-                </div>
-              </Row>
-
-              <Row id="ConsultingServices" className="row-grid">
-                <div className="card border-0 border-bottom border-primary  ">
-                  <div className="card-body p-4 p-xxl-5">
-                    <h4>Consulting Services</h4>
                     <p>
-                      Our consulting services are designed to help clients
-                      optimize their operations and achieve their strategic
-                      goals. We offer expert advice on a range of topics,
-                      including market entry strategies, product development,
-                      regulatory affairs, and supply chain management. Our
-                      experienced consultants work closely with clients to
-                      develop customized solutions that drive success.
-                    </p>
-                  </div>
-                </div>
-              </Row>
-
-              <Row id="ResearchAndDevelopment" className="row-grid">
-                <div className="card border-0 border-bottom border-primary  ">
-                  <div className="card-body p-4 p-xxl-5">
-                    <h4>Research and Development Support</h4>
-                    <p>
-                      Innovation is at the heart of our business. We provide
-                      extensive support for research and development (R&D)
-                      initiatives, offering access to cutting-edge technologies,
-                      high-quality materials, and expert guidance. Our R&D
-                      support services help clients bring new therapies and
-                      products to market faster and more efficiently.
-                    </p>
-                  </div>
-                </div>
-              </Row>
-
-              <Row id="PharmacyServices" className="row-grid">
-                <div className="card border-0 border-bottom border-primary  ">
-                  <div className="card-body p-4 p-xxl-5">
-                    <h4>Pharmacy Services</h4>
-                    <p>
-                      Our pharmacy services cater to both retail and
-                      institutional pharmacies, providing a wide range of
-                      medications, supplies, and support. We help pharmacies
-                      manage their inventory, streamline operations, and deliver
-                      exceptional care to their customers. Our commitment to
-                      quality and service excellence ensures that pharmacies can
-                      rely on us for all their needs.
+                      Moreover, our portfolio extends to raw materials procurement and chemical synthesis services, facilitated through collaborations with established providers. This enables us to consistently deliver exceptional value and quality to our esteemed customers
                     </p>
                   </div>
                 </div>
