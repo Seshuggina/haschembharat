@@ -15,6 +15,7 @@ export const TypeaheadSearch = () => {
         placeholder="Search for a Product"
         selected={selected}
         ref={ref}
+        id="typeahead"
       />
       <Button className="clearButton" color="link" onClick={() => ref.current?.clear()}>&times;</Button>
     </>

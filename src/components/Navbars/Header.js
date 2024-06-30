@@ -20,6 +20,7 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 import { TypeaheadSearch } from "./../TypeaheadSearch/TypeaheadSearch";
+import { scroller } from "react-scroll";
 
 import "./Header.scss";
 
@@ -64,6 +65,17 @@ const HeaderNavbar = () => {
     event.preventDefault();
     // Navigate to the products page with the search query
     navigate(`/products`);
+  };
+
+  const handleNavigation = (section) => {
+    navigate("/services");
+    setTimeout(() => {
+      scroller.scrollTo(section, {
+        duration: 500,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    }, 500); // Delay to ensure the page has loaded
   };
 
   return (
@@ -144,13 +156,13 @@ const HeaderNavbar = () => {
                       href="#pablo"
                       onClick={(e) => navigateToProducts(e)}
                     >
-                     Nitrosamines
+                      Nitrosamines
                     </DropdownItem>
                     <DropdownItem
                       href="#pablo"
                       onClick={(e) => navigateToProducts(e)}
                     >
-                     Building blocks
+                      Building blocks
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
@@ -160,49 +172,42 @@ const HeaderNavbar = () => {
                     <span className="nav-link-inner--text">Services</span>
                   </DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem
-                      href="/services#APIImpurities"
+                    {/* <DropdownItem href="/services#APIImpurities">
+                      API Impurities/Reference Standards
+                    </DropdownItem> */}
+                    <Link
+                      className="nav-link dropdown-item"
+                      role="menuitem"
+                      to="/services"
+                      onClick={() => handleNavigation("APIImpurities")}
                     >
                       API Impurities/Reference Standards
-                    </DropdownItem>
-                    <DropdownItem
-                      href="/services#CustomSynthesis"
+                    </Link>
+                    <Link
+                      className="nav-link dropdown-item"
+                      role="menuitem"
+                      to="/services"
+                      onClick={() => handleNavigation("CustomSynthesis")}
                     >
                       CUSTOM SYNTHESIS
-                    </DropdownItem>
-                    <DropdownItem
-                      href="/services#CROCDMOservices"
+                    </Link>
+                    <Link
+                      className="nav-link dropdown-item"
+                      role="menuitem"
+                      to="/services"
+                      onClick={() => handleNavigation("CROCDMOservices")}
                     >
                       CRO/CDMO services
-                    </DropdownItem>
-                    <DropdownItem
-                      href="/services#ChemicalSourcing"
+                    </Link>
+                    <Link
+                      className="nav-link dropdown-item"
+                      role="menuitem"
+                      to="/services"
+                      onClick={() => handleNavigation("ChemicalSourcing")}
                     >
                       Chemical Sourcing
-                    </DropdownItem>
+                    </Link>
                   </DropdownMenu>
-                  {/* <DropdownMenu className="dropdown-menu-xl">
-                    <div className="dropdown-menu-inner">
-                      <Media
-                        className="d-flex align-items-center"
-                        href="https://demos.creative-tim.com/argon-design-system-react/#/documentation/overview?ref=adsr-navbar"
-                        target="_blank"
-                      >
-                        <div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
-                          <i className="ni ni-spaceship" />
-                        </div>
-                        <Media body className="ml-3">
-                          <h6 className="heading text-primary mb-md-1">
-                            API Impurities/Reference standards
-                          </h6>
-                          <p className="description d-none d-md-inline-block mb-0">
-                            Learn how to use Argon compiling Scss, change brand
-                            colors and more.
-                          </p>
-                        </Media>
-                      </Media>
-                    </div>
-                  </DropdownMenu> */}
                 </UncontrolledDropdown>
                 <NavItem className="ml-lg-2">
                   <Link className="nav-link" to="/about-us">

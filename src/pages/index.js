@@ -1,20 +1,21 @@
 import React from "react";
 // nodejs library that concatenates classes
 import { Product } from "./../components/product/product";
-import { Testimonials } from "./../components/testimonials/testimonials";
-import  CustomCarousel  from "./../components/Carousel/Carousel";
+import CustomCarousel from "./../components/Carousel/Carousel";
 import { Partners } from "./../components/Partners/Partners";
-import topProducts from "../assets/data/topProducts";
-import { OurServices } from "./../components/OurServices/OurServices"
+import products from "../assets/data/products.json";
 
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
 // Core Components
 import HeaderNavbar from "components/Navbars/Header.js";
 
-
 const Home = () => {
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
+  // const [newProducts, setNewProducts] = useState([]);
+  const newProducts = products.filter(
+    (product) => product.productStatus?.toLowerCase() === "new"
+  );
   return (
     <>
       <HeaderNavbar />
@@ -48,7 +49,7 @@ const Home = () => {
               </Col>
             </Row>
             <Row className="row-grid align-items-center">
-              {topProducts.map((topProduct, index) => (
+              {newProducts.map((topProduct, index) => (
                 <Product
                   product={topProduct}
                   thumbnailColor={thumbnailsColors[index % 5]}
@@ -59,65 +60,6 @@ const Home = () => {
           </Container>
         </section>
 
-        <section id="popularProduts" className="section pb-0">
-          <Container>
-            <Row className="row-grid align-items-center">
-              <Col>
-                <div className="d-flex px-3">
-                  <div>
-                    <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                      <i className="ni ni-building text-primary" />
-                    </div>
-                  </div>
-                  <div className="pl-3">
-                    <h4 className="display-3 mb-0">Our Services</h4>
-                    <p className="lead">
-                      At HASCHEMBHARAT, we offer a comprehensive range of
-                      services designed to meet the diverse needs of our clients
-                      in the healthcare and pharmaceutical sectors. Our
-                      commitment to quality, innovation, and customer
-                      satisfaction drives us to deliver exceptional service
-                      across all aspects of our operations. Here's an overview
-                      of the key services we provide:
-                    </p>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-            <Row className="row-grid align-items-center">
-             <OurServices></OurServices>
-            </Row>
-          </Container>
-        </section>
-
-        <section id="popularProduts" className="section pb-0 bg-success">
-          <Container>
-            <Row className="row-grid align-items-center">
-              <Col>
-                <div className="d-flex px-3">
-                  <div>
-                    <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-                      <i className="ni ni-building text-primary" />
-                    </div>
-                  </div>
-                  <div className="pl-3">
-                    <h4 className="display-3 text-white mb-0">
-                      Customers About HASCHEMBHARAT
-                    </h4>
-                    <p className="lead text-white">
-                      Our clients' success stories are a testament to our
-                      dedication and expertise. Here's what some of them have to
-                      say about working with us:
-                    </p>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-            <Row className="row-grid align-items-center">
-              <Testimonials></Testimonials>
-            </Row>
-          </Container>
-        </section>
         {/* Our Partners */}
         <section id="popularProduts" className="section pb-0">
           <Container>

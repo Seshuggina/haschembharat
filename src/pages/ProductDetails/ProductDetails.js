@@ -3,7 +3,7 @@ import { Routes, Route, useParams } from 'react-router-dom';
 import { Product } from "./../../components/product/product";
 import { ProductDetail } from "./../../components/productDetail/productDetail";
 import products from "./../../assets/data/products.json";
-import topProducts from "../../assets/data/topProducts";
+import topProducts from "../../assets/data/products.json";
 
 // reactstrap components
 import { Container, Row, Col, Badge, Button, Card, CardBody } from "reactstrap";
