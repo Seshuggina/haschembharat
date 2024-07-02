@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "assets/vendor/nucleo/css/nucleo.css";
 import "assets/vendor/font-awesome/css/font-awesome.min.css";
@@ -23,6 +23,7 @@ import Home from "pages/index.js";
 import { Career } from "pages/career/Career.js";
 import { ProductDetails } from "pages/ProductDetails/ProductDetails.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 
 
 root.render(

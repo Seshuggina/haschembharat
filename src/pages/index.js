@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // nodejs library that concatenates classes
 import { Product } from "./../components/product/product";
 import CustomCarousel from "./../components/Carousel/Carousel";
@@ -9,6 +9,8 @@ import products from "../assets/data/products.json";
 import { Container, Row, Col } from "reactstrap";
 // Core Components
 import HeaderNavbar from "components/Navbars/Header.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
@@ -16,6 +18,9 @@ const Home = () => {
   const newProducts = products.filter(
     (product) => product.productStatus?.toLowerCase() === "new"
   );
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <HeaderNavbar />
@@ -49,13 +54,17 @@ const Home = () => {
               </Col>
             </Row>
             <Row className="row-grid align-items-center">
-              {newProducts.map((topProduct, index) => (
-                <Product
-                  product={topProduct}
-                  thumbnailColor={thumbnailsColors[index % 5]}
-                  key={index}
-                ></Product>
-              ))}
+              <Col>
+                <div className="grid-items-equal-height">
+                  {newProducts.map((topProduct, index) => (
+                    <Product
+                      product={topProduct}
+                      thumbnailColor={thumbnailsColors[index % 5]}
+                      key={index}
+                    ></Product>
+                  ))}
+                </div>
+              </Col>
             </Row>
           </Container>
         </section>

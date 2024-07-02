@@ -204,17 +204,18 @@ export const Products = () => {
             <Col lg="8">
               <FormGroup>
                 <Input placeholder="Search Products" type="text" />
-                
               </FormGroup>
             </Col>
-            <Col lg="4"><Button>Search</Button></Col>
+            <Col lg="4">
+              <Button>Search</Button>
+            </Col>
           </Row>
         </Container>
       </section>
       <Container>
         <Row className="justify-content-center">
           <Col lg="12">
-            <Row className="row-grid">
+            <div className="grid-items-equal-height">
               {filteredProducts.map((product, index) => (
                 <Product
                   product={product}
@@ -222,7 +223,7 @@ export const Products = () => {
                   key={index}
                 ></Product>
               ))}
-            </Row>
+            </div>
           </Col>
         </Row>
       </Container>

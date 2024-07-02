@@ -8,7 +8,6 @@ import {
   DropdownItem,
   DropdownToggle,
   UncontrolledDropdown,
-  Media,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -26,7 +25,6 @@ import "./Header.scss";
 
 const HeaderNavbar = () => {
   const [collapseClasses, setCollapseClasses] = useState("");
-  const [collapseOpen, setCollapseOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
