@@ -1,17 +1,22 @@
 import React from "react";
-import { Routes, Route, useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import { Product } from "./../../components/product/product";
+import {EnquireForm} from "../../components/EnquireForm/EnquireForm";
 import { ProductDetail } from "./../../components/productDetail/productDetail";
 import products from "./../../assets/data/products.json";
-import topProducts from "../../assets/data/products.json";
 
 // reactstrap components
-import { Container, Row, Col, Badge, Button, Card, CardBody } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import "./ProductDetails.scss";
 
 export const ProductDetails = (product) => {
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
   let { id } = useParams();
+
+  const newProducts = products.filter(
+    (product) => product.productStatus?.toLowerCase() === "new"
+  );
+
   return (
     <>
       <section className="section section-shaped section-lg">
@@ -144,17 +149,18 @@ export const ProductDetails = (product) => {
           </div>
         </div>
         <Container className="pt-lg-7">
-          <h1 className="text-white">Product Details</h1><h3>ID: {id}</h3>
+          <h1 className="text-white">Product Details</h1>
+          <h3>ID: {id}</h3>
         </Container>
       </section>
       <section className="section section-lg pt-lg-0 mt--200 product-details">
         <Container>
           <Row className="justify-content-center">
-          <ProductDetail
+            <ProductDetail
               product={products[id]}
               thumbnailColor={thumbnailsColors[id % 5]}
               key={id}
-          ></ProductDetail>
+            ></ProductDetail>
           </Row>
         </Container>
       </section>
@@ -163,20 +169,22 @@ export const ProductDetails = (product) => {
         <Container>
           <h4>Related Products</h4>
           <Row className="justify-content-center">
-            <Col lg="12">
-              <Row className="row-grid align-items-center">
-                {topProducts.map((topProduct, index) => (
+            <Col>
+              <div className="grid-items-equal-height">
+                {newProducts.map((topProduct, index) => (
                   <Product
                     product={topProduct}
                     thumbnailColor={thumbnailsColors[index % 5]}
                     key={index}
                   ></Product>
                 ))}
-              </Row>
+              </div>
             </Col>
           </Row>
         </Container>
       </section>
+
+      <EnquireForm></EnquireForm>
 
       <section className="section section-lg pt-lg-0 product-details">
         <Container>

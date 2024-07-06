@@ -13,3 +13,19 @@
         font-weight: 500;
     }
 }
+
+.image-wrapper {
+    display: flex;
+}
+
+.image {
+    height: auto;
+    margin-right: 10px; 
+}
+.arrow-right {
+    width: auto; 
+    height: 30px; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-left: 10px solid black;
+  }

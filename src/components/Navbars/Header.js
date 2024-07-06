@@ -20,13 +20,14 @@ import {
 } from "reactstrap";
 import { TypeaheadSearch } from "./../TypeaheadSearch/TypeaheadSearch";
 import { scroller } from "react-scroll";
-
 import "./Header.scss";
+import useGlobalStore from "./../../store/global";
 
 const HeaderNavbar = () => {
   const [collapseClasses, setCollapseClasses] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
+  const updateProductsCategory = useGlobalStore((state) => state.updateProductsCategory);
 
   useEffect(() => {
     const headroom = new Headroom(document.getElementById("navbar-main"));
@@ -47,7 +48,6 @@ const HeaderNavbar = () => {
 
   const handleSelection = (value) => {
     setSearchQuery(value);
-    console.log("Handle Selection");
     handleSubmit();
   };
 
@@ -55,14 +55,9 @@ const HeaderNavbar = () => {
     event.preventDefault();
     // Navigate to the products page with the search query
     if (searchQuery) {
+      updateProductsCategory(searchQuery);
       navigate(`/products?q=${encodeURIComponent(searchQuery)}`);
     }
-  };
-
-  const navigateToProducts = (event) => {
-    event.preventDefault();
-    // Navigate to the products page with the search query
-    navigate(`/products`);
   };
 
   const handleNavigation = (section) => {
@@ -74,6 +69,11 @@ const HeaderNavbar = () => {
         smooth: "easeInOutQuart",
       });
     }, 500); // Delay to ensure the page has loaded
+  };
+
+  const navigateToProducts = (section) => {
+    updateProductsCategory(section);
+    navigate("/products");
   };
 
   return (
@@ -132,36 +132,46 @@ const HeaderNavbar = () => {
                     <span className="nav-link-inner--text">Products</span>
                   </DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem
-                      href="#pablo"
-                      onClick={(e) => navigateToProducts(e)}
+                    <Link
+                      className="nav-link dropdown-item"
+                      role="menuitem"
+                      to="/products"
+                      onClick={() => navigateToProducts("APIs")}
                     >
                       APIs
-                    </DropdownItem>
-                    <DropdownItem
-                      href="#pablo"
-                      onClick={(e) => navigateToProducts(e)}
+                    </Link>
+                    <Link
+                      className="nav-link dropdown-item"
+                      role="menuitem"
+                      to="/products"
+                      onClick={() => navigateToProducts("Impurities")}
                     >
                       Impurities
-                    </DropdownItem>
-                    <DropdownItem
-                      href="#pablo"
-                      onClick={(e) => navigateToProducts(e)}
+                    </Link>
+                    <Link
+                      className="nav-link dropdown-item"
+                      role="menuitem"
+                      to="/products"
+                      onClick={() => navigateToProducts("Metabolities")}
                     >
                       Metabolities
-                    </DropdownItem>
-                    <DropdownItem
-                      href="#pablo"
-                      onClick={(e) => navigateToProducts(e)}
+                    </Link>
+                    <Link
+                      className="nav-link dropdown-item"
+                      role="menuitem"
+                      to="/products"
+                      onClick={() => navigateToProducts("Nitrosamines")}
                     >
                       Nitrosamines
-                    </DropdownItem>
-                    <DropdownItem
-                      href="#pablo"
-                      onClick={(e) => navigateToProducts(e)}
+                    </Link>
+                    <Link
+                      className="nav-link dropdown-item"
+                      role="menuitem"
+                      to="/products"
+                      onClick={() => navigateToProducts("Building blocks")}
                     >
                       Building blocks
-                    </DropdownItem>
+                    </Link>
                   </DropdownMenu>
                 </UncontrolledDropdown>
                 <UncontrolledDropdown nav>

@@ -1,9 +1,14 @@
 import create from 'zustand';
 
 const useGlobalStore = create((set) => ({
-  count: 0,
-  increment: () => set((state) => ({ count: state.count + 1 })),
-  decrement: () => set((state) => ({ count: state.count - 1 })),
-}));
+  productsCategory: '',
+  serviceSection: '',
+  searchText:'',
+  selectedLetter:'',
+  updateProductsCategory: (productsCategory) => set(() => ({ productsCategory: productsCategory })),
+  updateServiceSection: (serviceSection) => set(() => ({ serviceSection: serviceSection })),
+  updateSearchText: (searchText) => set(() => ({ searchText: searchText })),
+  updateSelectedLetter: (selectedLetter) => set(() => ({ selectedLetter: selectedLetter })),
+}))
 
 export default useGlobalStore;

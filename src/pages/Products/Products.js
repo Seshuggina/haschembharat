@@ -1,16 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Product } from "./../../components/product/product";
 import products from "./../../assets/data/products.json";
-
-// reactstrap components
-import { Container, Row, Col, Button, FormGroup, Input } from "reactstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  FormGroup,
+  Input,
+  Badge,
+} from "reactstrap";
 import "./Products.scss";
+import useGlobalStore from "./../../store/global";
 
 export const Products = () => {
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
   const [selectedLetters, setSelectedLetters] = useState([]);
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  const categoryType = '';
+  const productsCategory = useGlobalStore((state) => state.productsCategory);
+  const updateProductsCategory = useGlobalStore((state) => state.updateProductsCategory);
+  console.log("productsCategory", productsCategory);
+
+  useEffect(() => {
+    filterItems();
+  }, [selectedLetters]);
 
   const handleLetterClick = (letter) => {
     setSelectedLetters((prevSelectedLetters) =>
@@ -21,145 +36,39 @@ export const Products = () => {
   };
 
   const filterItems = () => {
-    if (selectedLetters.length === 0) {
-      return filteredProducts;
+    let filteredItems = products;
+    // if (categoryType && !ignoreCategory) {
+    //   filteredItems = filteredItems.filter(
+    //     (product) =>
+    //       product.category.toLowerCase() === categoryType.toLowerCase()
+    //   );
+    // }
+    if (selectedLetters.length > 0) {
+      filteredItems = filteredItems.filter((item) =>
+        selectedLetters.includes(item.name.charAt(0).toUpperCase())
+      );
     }
-    return filteredProducts.filter((item) =>
-      selectedLetters.includes(item.name.charAt(0).toUpperCase())
-    );
+    setFilteredProducts(filteredItems);
   };
 
   const clearSelection = () => {
     setSelectedLetters([]);
   };
 
-  const clearFilter = () => {};
+  const clearCategory = () => {
+    updateProductsCategory('');
+  };
 
   return (
     <>
       <section className="section section-shaped section-lg">
         <div className="shape products-banner">
           <div className="wrap">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            {Array(100)
+              .fill()
+              .map((_, i) => (
+                <div key={i}></div>
+              ))}
           </div>
         </div>
         <Container className="pt-lg-7">
@@ -178,7 +87,7 @@ export const Products = () => {
                   className={`nav-link ${
                     selectedLetters.length === 0 ? "active" : ""
                   }`}
-                  onClick={() => clearSelection()}
+                  onClick={clearSelection}
                 >
                   All
                 </Button>
@@ -210,6 +119,24 @@ export const Products = () => {
               <Button>Search</Button>
             </Col>
           </Row>
+
+          <Row className="pt-4">
+            <Col lg="7">
+              <h5 className="mb-0">
+                Selected Category: &nbsp;
+                {productsCategory && (
+                  <Badge color="primary">
+                    {productsCategory} <span onClick={clearCategory}>&times;</span>
+                  </Badge>
+                )}
+              </h5>
+            </Col>
+            <Col lg="5">
+              <h5 className="mb-0 text-right">
+                Products Count: &nbsp; {filteredProducts.length}
+              </h5>
+            </Col>
+          </Row>
         </Container>
       </section>
       <Container>
@@ -219,9 +146,11 @@ export const Products = () => {
               {filteredProducts.map((product, index) => (
                 <Product
                   product={product}
-                  thumbnailColor={thumbnailsColors[index % 5]}
-                  key={index}
-                ></Product>
+                  thumbnailColor={
+                    thumbnailsColors[index % thumbnailsColors.length]
+                  }
+                  key={product.id}
+                />
               ))}
             </div>
           </Col>
