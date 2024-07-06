@@ -89,7 +89,7 @@ const HeaderNavbar = () => {
               {/* logo CHANGE */}
               <img
                 alt="..."
-                src={require("assets/img/brand/ham_logo_bg.png")}
+                src={require("assets/img/brand/logo2.png")}
               />
             </NavbarBrand>
             <button className="navbar-toggler" id="navbar_global">

@@ -6,8 +6,8 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./Partners.scss";
 // reactstrap components
 
-import  curia  from "./../../assets/img/partners/curia.svg";
-import drReddy from "./../../assets/img/partners/DrR.jpg";
+import  curia  from "./../../assets/img/partners/curia.png";
+import drReddy from "./../../assets/img/partners/drreddy.png";
 import  granules  from "./../../assets/img/partners/Granules_logo.png";
 import leepharma from "./../../assets/img/partners/l4.png";
 import natcopharma from "./../../assets/img/partners/nato.png";
