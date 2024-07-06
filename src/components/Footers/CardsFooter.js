@@ -60,132 +60,48 @@ class Footer extends React.Component {
                       </p>
                       <a
                         className="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor"
-                        href="https://haschembharat.com/contact-us"
+                        href="/contact-us"
                       >
                         Contact Us <i className="fa fa-chevron-right"></i>
                       </a>
                     </div>
                   </div>
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-6 col-lg-2 widget-area">
+                <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
                   <div className="widget widget_nav_menu clearfix">
-                    <h3 className="widget-title">Links</h3>
+                    <h3 className="widget-title">Quick Links</h3>
                     <ul
                       id="menu-footer-quick-links"
                       className="list-unstyled menu"
                     >
                       <li>
-                        <a href="https://haschembharat.com/">Home</a>
+                        <a href="/">Home</a>
                       </li>
                       <li>
-                        <a href="https://haschembharat.com/about-us">
+                        <a href="/about-us">
                           About Us
                         </a>
                       </li>
                       <li>
-                        <a href="https://haschembharat.com/products">
+                        <a href="/products">
                           Products
                         </a>
                       </li>
                       <li>
-                        <a href="https://haschembharat.com/services">
+                        <a href="/services">
                           Services
                         </a>
                       </li>
                       <li>
-                        <a href="https://haschembharat.com/contact-us">
+                        <a href="/contact-us">
                           Contact Us
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
-                  <div className="widget widget_img_gellary clearfix">
-                    <h3 className="widget-title">Our Gallery</h3>
-                    <ul className="list-unstyled">
-                      <li>
-                        <a
-                          href="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                          rel="prettyPhoto[coregallery]"
-                          data-rel="prettyPhoto"
-                        >
-                          <img
-                            className="img-fluid"
-                            src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                          rel="prettyPhoto[coregallery]"
-                          data-rel="prettyPhoto"
-                        >
-                          <img
-                            className="img-fluid"
-                            src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                          rel="prettyPhoto[coregallery]"
-                          data-rel="prettyPhoto"
-                        >
-                          <img
-                            className="img-fluid"
-                            src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                          rel="prettyPhoto[coregallery]"
-                          data-rel="prettyPhoto"
-                        >
-                          <img
-                            className="img-fluid"
-                            src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                          rel="prettyPhoto[coregallery]"
-                          data-rel="prettyPhoto"
-                        >
-                          <img
-                            className="img-fluid"
-                            src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                          rel="prettyPhoto[coregallery]"
-                          data-rel="prettyPhoto"
-                        >
-                          <img
-                            className="img-fluid"
-                            src="https://haschembharat.com/utilities/frontend/images/molecule.jpg"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 widget-area">
+                
+                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 widget-area">
                   <div className="widget widget_cta clearfix">
                     <h3 className="widget-title">Quick Contacts</h3>
                     <p>If you have any questions or need help</p>

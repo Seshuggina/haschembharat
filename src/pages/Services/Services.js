@@ -12,12 +12,16 @@ import {
   Input,
   InputGroupAddon,
   InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col,
 } from "reactstrap";
 import "./Services.scss";
+
+import impurities from "./../../assets/img/services/impurities.jpg";
+import croservices from "./../../assets/img/services/cro-services.jpg";
+import customsynthesys from "./../../assets/img/services/custom-synthesys-new.jpg";
+import sourcing from "./../../assets/img/services/sourcing.jpg";
 
 export const Services = () => {
   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -50,6 +54,12 @@ export const Services = () => {
                 <div className="card border-0 border-bottom border-primary  ">
                   <div className="card-body p-3 p-xxl-5">
                     <h4>API Impurities/Reference Standards</h4>
+                    <img
+                      className="img-fluid wrap-text"
+                      loading="lazy"
+                      src={impurities}
+                      alt=""
+                    />
                     <p>
                       Our quality impurity reference materials - including intermediates, by-products and degradation products - enable accuracy in both your qualitative and quantitative analysis, with the aim of helping you to create ever better, safer medicines.
                     </p>
@@ -70,6 +80,12 @@ export const Services = () => {
                 <div className="card border-0 border-bottom border-primary  ">
                   <div className="card-body p-4 p-xxl-5">
                     <h4>Custom Synthesis</h4>
+                    <img
+                      className="img-fluid wrap-text-left"
+                      loading="lazy"
+                      src={customsynthesys}
+                      alt=""
+                    />
                     <p>Hashem specializes in the production of high-quality products tailored for innovative research endeavors. Our objective is to furnish researchers within the global scientific community with indispensable tools and comprehensive support. Our product range including a diverse array of application areas, covering pharmaceutical and medicinal research and development, forensic science, and environmental analysis.</p>
                     <p>Drawing upon our extensive expertise in synthetic organic chemistry, we excel in crafting optimal synthetic pathways for both novel and established compounds. Our commitment lies in delivering bespoke chemical solutions precisely tailored to your research requirements, regardless of their complexity or specificity.</p>
                     <p>We are committed to ensuring that our customers have access to a dependable and sustainable supply of high-quality products. Each compound provided by HASCHEM undergoes rigorous quality testing using validated methods before reaching our customers.</p>
@@ -83,6 +99,12 @@ export const Services = () => {
                 <div className="card border-0 border-bottom border-primary  ">
                   <div className="card-body p-4 p-xxl-5">
                     <h4>CRO/CDMO services</h4>
+                    <img
+                      className="img-fluid wrap-text"
+                      loading="lazy"
+                      src={croservices}
+                      alt=""
+                    />
                     <p>
                       At HASCHEM, our CDMO (Contract Development and Manufacturing Organization) services are dedicated to delivering tailored chemical synthesis solutions for active pharmaceutical ingredients, from initial concept to commercial production.
                     </p>
@@ -111,6 +133,12 @@ export const Services = () => {
                 <div className="card border-0 border-bottom border-primary  ">
                   <div className="card-body p-4 p-xxl-5">
                     <h4>Chemical Sourcing</h4>
+                    <img
+                      className="img-fluid wrap-text-left"
+                      loading="lazy"
+                      src={sourcing}
+                      alt=""
+                    />
                     <p>
                       "The HASCHEM sourcing team has diligently cultivated relationships over several years with numerous partner organizations renowned for their specialized skills and technical prowess across India and China. Consequently, we boast unparalleled access to a wide range of premium-quality products.
                     </p>
