@@ -33,6 +33,7 @@ root.render(
       <section>
         <Routes>
           <Route path="/" exact element={<Home />} />
+          <Route path="/haschembharat" exact element={<Home />} />
           <Route path="/login-page" exact element={<Login />} />
           <Route path="/profile-page" exact element={<Profile />} />
           <Route path="/register-page" exact element={<Register />} />
