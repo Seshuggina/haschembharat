@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d36d612c.css",
+    "main.css": "/static/css/main.af0ad32f.css",
     "main.js": "/static/js/main.81c5c7bd.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/team-2-800x800.jpg": "/static/media/team-2-800x800.3e08ef145920c93bbe32.jpg",
@@ -41,7 +41,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.d36d612c.css",
+    "static/css/main.af0ad32f.css",
     "static/js/main.81c5c7bd.js"
   ]
 }
