@@ -17,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/argon-design-system-react/issues"
   },
-  "homepage": "https://demos.creative-tim.com/argon-design-system-react/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
