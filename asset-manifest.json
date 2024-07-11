@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/argon-design-system-react/static/css/main.f318ad5a.css",
+    "main.css": "/argon-design-system-react/static/css/main.2e6861de.css",
     "main.js": "/argon-design-system-react/static/js/main.7be219dc.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/argon-design-system-react/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/team-2-800x800.jpg": "/argon-design-system-react/static/media/team-2-800x800.3e08ef145920c93bbe32.jpg",
@@ -41,7 +41,7 @@
     "index.html": "/argon-design-system-react/index.html"
   },
   "entrypoints": [
-    "static/css/main.f318ad5a.css",
+    "static/css/main.2e6861de.css",
     "static/js/main.7be219dc.js"
   ]
 }
