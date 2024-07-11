@@ -18,9 +18,11 @@ export const Products = () => {
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
   const [selectedLetters, setSelectedLetters] = useState([]);
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-  const categoryType = '';
+  const categoryType = "";
   const productsCategory = useGlobalStore((state) => state.productsCategory);
-  const updateProductsCategory = useGlobalStore((state) => state.updateProductsCategory);
+  const updateProductsCategory = useGlobalStore(
+    (state) => state.updateProductsCategory
+  );
   console.log("productsCategory", productsCategory);
 
   useEffect(() => {
@@ -44,9 +46,13 @@ export const Products = () => {
     //   );
     // }
     if (selectedLetters.length > 0) {
-      filteredItems = filteredItems.filter((item) =>
-        selectedLetters.includes(item.name.charAt(0).toUpperCase())
-      );
+      filteredItems = filteredItems.filter((item) => {
+        console.log("item", item);
+        console.log("selectedLetters[0].toLowerCase()", selectedLetters[0].toLowerCase());
+        // item.impurityName
+        //   .toLowerCase()
+        //   .includes(selectedLetters[0].toLowerCase());
+      });
     }
     setFilteredProducts(filteredItems);
   };
@@ -56,7 +62,7 @@ export const Products = () => {
   };
 
   const clearCategory = () => {
-    updateProductsCategory('');
+    updateProductsCategory("");
   };
 
   return (
@@ -126,7 +132,8 @@ export const Products = () => {
                 Selected Category: &nbsp;
                 {productsCategory && (
                   <Badge color="primary">
-                    {productsCategory} <span onClick={clearCategory}>&times;</span>
+                    {productsCategory}{" "}
+                    <span onClick={clearCategory}>&times;</span>
                   </Badge>
                 )}
               </h5>
@@ -149,7 +156,7 @@ export const Products = () => {
                   thumbnailColor={
                     thumbnailsColors[index % thumbnailsColors.length]
                   }
-                  key={product.id}
+                  key={index + 1}
                 />
               ))}
             </div>

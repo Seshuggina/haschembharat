@@ -1,6 +1,5 @@
-import React, { useState, ref } from "react";
+import React, { useState, useRef } from "react";
 import { Typeahead, Menu, useItem, withItem } from "react-bootstrap-typeahead";
-import options from "./data";
 import { Button } from "reactstrap";
 import "./TypeaheadSearch.scss";
 import { Link } from "react-router-dom";
@@ -10,7 +9,8 @@ export const TypeaheadSearch = () => {
   const [selected, setSelected] = useState([]);
   const [selectedLetters, setSelectedLetters] = useState([]);
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-  const [options, setOptions] = useState(products)
+  const [options, setOptions] = useState(products);
+  const inputRef = useRef(null);
 
   const handleLetterClick = (letter) => {
     setSelectedLetters((prevSelectedLetters) =>
@@ -21,7 +21,7 @@ export const TypeaheadSearch = () => {
   };
 
   const handleSearch = (searchTxt) => {
-    const filteredProducts = products.filter(product =>
+    const filteredProducts = products.filter((product) =>
       product.impurityName.toLowerCase().includes(searchTxt.toLowerCase())
     );
     setOptions(filteredProducts);
@@ -29,6 +29,11 @@ export const TypeaheadSearch = () => {
 
   const clearSelection = () => {
     setSelectedLetters([]);
+  };
+  const clearFilter = () => {
+    if (inputRef.current) {
+      inputRef.current.clear();
+    }
   };
 
   return (
@@ -39,10 +44,10 @@ export const TypeaheadSearch = () => {
         options={options}
         placeholder="Search for a Product"
         selected={selected}
-        ref={ref}
+        ref={inputRef}
         id="typeahead"
         // onSearch={handleSearch}
-        filterBy={['impurityName']}
+        filterBy={["impurityName"]}
         renderMenu={(results, menuProps) => (
           <>
             <Menu {...menuProps}>
@@ -87,7 +92,7 @@ export const TypeaheadSearch = () => {
       <Button
         className="clearButton"
         color="link"
-        onClick={() => ref.current?.clear()}
+        onClick={() => clearFilter()}
       >
         &times;
       </Button>

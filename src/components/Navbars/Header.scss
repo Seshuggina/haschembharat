@@ -56,7 +56,9 @@
   }
 }
 .dropdown-menu .dropdown-item {
-  color: rgba(0, 0, 0, 0.5)  !important;
+  color: rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
   &:hover {
     color: rgba(0, 0, 0, 0.5) !important;
   }
