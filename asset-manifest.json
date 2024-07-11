@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/haschembharat/static/css/main.39fbd829.css",
+    "main.css": "/haschembharat/static/css/main.9c9666e0.css",
     "main.js": "/haschembharat/static/js/main.2b610448.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/haschembharat/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/team-2-800x800.jpg": "/haschembharat/static/media/team-2-800x800.3e08ef145920c93bbe32.jpg",
@@ -41,7 +41,7 @@
     "index.html": "/haschembharat/index.html"
   },
   "entrypoints": [
-    "static/css/main.39fbd829.css",
+    "static/css/main.9c9666e0.css",
     "static/js/main.2b610448.js"
   ]
 }
