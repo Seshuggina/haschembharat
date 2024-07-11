@@ -15,9 +15,9 @@ import 'aos/dist/aos.css';
 
 export const ProductDetail = memo(({ product, thumbnailColor }) => {
 
-  useEffect(() => {
-    AOS.init();
-  }, [])
+  // useEffect(() => {
+  //   AOS.init();
+  // }, [])
 
   return (
     <>

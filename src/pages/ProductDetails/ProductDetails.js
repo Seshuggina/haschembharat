@@ -165,9 +165,11 @@ export const ProductDetails = (product) => {
         </Container>
       </section>
 
-      <section className="section section-lg pt-lg-0 product-details">
+      <EnquireForm></EnquireForm>
+
+      <section className="pt-lg-0 product-details">
         <Container>
-          <h4>Related Products</h4>
+          <h4>Related Products:</h4>
           <Row className="justify-content-center">
             <Col>
               <div className="grid-items-equal-height">
@@ -184,11 +186,9 @@ export const ProductDetails = (product) => {
         </Container>
       </section>
 
-      <EnquireForm></EnquireForm>
-
       <section className="section section-lg pt-lg-0 product-details">
         <Container>
-          <h4>Contact</h4>
+          <h4>Contact:</h4>
           <Row className="justify-content-center">
             <Col>
               Do You Need Any Help? <br /> +91 7816 00 3510 <br />

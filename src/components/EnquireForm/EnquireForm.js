@@ -20,18 +20,20 @@ export const EnquireForm = () => {
       <section className="enquiry-form">
         <Container>
           <div className="justify-content-center">
-            <h2>Enquiry Form</h2>
+            <h2>Enquiry:</h2>
           </div>
           <Form>
-          <Label for="exampleyourname">Your Name</Label>
+          
             <Row>
               <Col md={6}>
                 <FormGroup>
+                <Label for="exampleyourname">First Name</Label>
                   <Input id="firstname" name="Name" placeholder="First Name" type="name" />
                 </FormGroup>
               </Col>
               <Col md={6}>
                 <FormGroup>
+                <Label for="exampleyourname">Last Name</Label>
                   <Input id="lastname" name="Name" placeholder="Last Name" type="name" />
                 </FormGroup>
               </Col>
@@ -52,7 +54,7 @@ export const EnquireForm = () => {
               </Col>
               <Col md={6}>
                 <FormGroup>
-                  <Label for="exampleName">Your E-mail Address</Label>
+                  <Label for="exampleName">E-mail</Label>
                   <Input
                     id="exampleEmail"
                     name="Name"
@@ -82,7 +84,7 @@ export const EnquireForm = () => {
                 </FormGroup>
               </Col>
             </Row>
-            <Button type="button" className="my-4 btn btn-primary" color="primary">Sign in</Button>
+            <Button type="button" className="mb-5 mb-2 btn btn-primary" color="primary">Register</Button>
           </Form>
         </Container>
       </section>

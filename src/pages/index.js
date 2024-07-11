@@ -19,7 +19,7 @@ const Home = () => {
     (product) => product.productStatus?.toLowerCase() === "new"
   );
   useEffect(() => {
-    AOS.init();
+    // AOS.init();
   }, []);
   return (
     <>

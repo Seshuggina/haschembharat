@@ -3,7 +3,9 @@ import { Typeahead, Menu, useItem, withItem } from "react-bootstrap-typeahead";
 import { Button } from "reactstrap";
 import "./TypeaheadSearch.scss";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import products from "./../../assets/data/products.json";
+import useGlobalStore from "./../../store/global";
 
 export const TypeaheadSearch = () => {
   const [selected, setSelected] = useState([]);
@@ -11,13 +13,18 @@ export const TypeaheadSearch = () => {
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   const [options, setOptions] = useState(products);
   const inputRef = useRef(null);
+  const navigate = useNavigate();
+  const updateSelectedLetter = useGlobalStore((state) => state.updateSelectedLetter);
 
   const handleLetterClick = (letter) => {
-    setSelectedLetters((prevSelectedLetters) =>
-      prevSelectedLetters.includes(letter)
-        ? prevSelectedLetters.filter((l) => l !== letter)
-        : [...prevSelectedLetters, letter]
-    );
+    // setSelectedLetters((prevSelectedLetters) =>
+    //   prevSelectedLetters.includes(letter)
+    //     ? prevSelectedLetters.filter((l) => l !== letter)
+    //     : [...prevSelectedLetters, letter]
+    // );
+    setSelectedLetters([letter])
+    updateSelectedLetter(letter);
+    navigate('/products'); 
   };
 
   const handleSearch = (searchTxt) => {
@@ -42,12 +49,13 @@ export const TypeaheadSearch = () => {
         className="typeaheadSearch"
         onChange={setSelected}
         options={options}
-        placeholder="Search for a Product"
+        placeholder="Enter #CAS No, Category, Product Status"
         selected={selected}
         ref={inputRef}
         id="typeahead"
         // onSearch={handleSearch}
-        filterBy={["impurityName"]}
+        filterBy={"impurityName"}
+        labelKey={option => `${option.impurityName} ${option.parentAPI} ${option.casNo}`}
         renderMenu={(results, menuProps) => (
           <>
             <Menu {...menuProps}>

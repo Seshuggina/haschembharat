@@ -15,47 +15,91 @@ import useGlobalStore from "./../../store/global";
 
 export const Products = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [searchText, setSearchText] = useState("");
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
   const [selectedLetters, setSelectedLetters] = useState([]);
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-  const categoryType = "";
-  const productsCategory = useGlobalStore((state) => state.productsCategory);
+  let productsCategory = useGlobalStore((state) => state.productsCategory);
+  let selectedLetter = useGlobalStore((state) => state.selectedLetter);
   const updateProductsCategory = useGlobalStore(
     (state) => state.updateProductsCategory
   );
   console.log("productsCategory", productsCategory);
+  console.log("selectedLetter", selectedLetter);
 
   useEffect(() => {
-    filterItems();
-  }, [selectedLetters]);
+    filterProducts();
+  }, [selectedLetters, productsCategory, selectedLetter, searchText]);
+
+  useEffect(() => {
+    setSelectedLetters([selectedLetter]);
+  }, [selectedLetter]);
 
   const handleLetterClick = (letter) => {
-    setSelectedLetters((prevSelectedLetters) =>
-      prevSelectedLetters.includes(letter)
+    setSelectedLetters((prevSelectedLetters) => {
+      // Check if the letter is already in the selected letters
+      const newSelectedLetters = prevSelectedLetters.includes(letter)
         ? prevSelectedLetters.filter((l) => l !== letter)
-        : [...prevSelectedLetters, letter]
-    );
+        : [...prevSelectedLetters, letter];
+
+      // Remove empty string if there are other letters selected
+      if (newSelectedLetters.includes("") && newSelectedLetters.length > 1) {
+        return newSelectedLetters.filter((l) => l !== "");
+      }
+
+      // Return the updated selected letters
+      return newSelectedLetters;
+    });
   };
 
-  const filterItems = () => {
-    let filteredItems = products;
-    // if (categoryType && !ignoreCategory) {
-    //   filteredItems = filteredItems.filter(
-    //     (product) =>
-    //       product.category.toLowerCase() === categoryType.toLowerCase()
-    //   );
-    // }
-    if (selectedLetters.length > 0) {
-      filteredItems = filteredItems.filter((item) => {
-        console.log("item", item);
-        console.log("selectedLetters[0].toLowerCase()", selectedLetters[0].toLowerCase());
-        // item.impurityName
-        //   .toLowerCase()
-        //   .includes(selectedLetters[0].toLowerCase());
-      });
+  // Filter the products
+  const filterProducts = () => {
+    let filteredProductsList = products.slice(0, 25);
+    // Filter By Category
+    if (productsCategory) {
+      filteredProductsList = filteredProductsList.filter(
+        (obj) => obj.category === productsCategory
+      );
     }
-    setFilteredProducts(filteredItems);
+    // Filter By Selected Letters
+    if (selectedLetters.length > 0) {
+      filteredProductsList = filterObjectsByCharacters(
+        filteredProductsList,
+        selectedLetters
+      );
+    }
+    // Filter by searched text
+    if (searchText) {
+      filteredProductsList = filteredProductsList.filter((obj) => {
+        const allProperties = JSON.stringify(obj).toLowerCase();
+        return allProperties.includes(searchText.toLowerCase());
+      });
+      console.log("searchText", searchText);
+    }
+
+    console.log("filteredProductsList", filteredProductsList);
+    setFilteredProducts(filteredProductsList);
   };
+
+  function filterObjectsByCharacters(productsList, characters) {
+    return productsList.filter((obj) => {
+      const propertiesToCheck = [
+        "casNo",
+        "impurityName",
+        "parentAPI",
+        "productStatus",
+        "category",
+      ];
+
+      // Combine values of specified properties into a single string
+      const combinedString = propertiesToCheck
+        .map((prop) => obj[prop] || "")
+        .join(" ");
+
+      // Check if any character in the character array is present in the combined string
+      return characters.some((char) => combinedString.includes(char));
+    });
+  }
 
   const clearSelection = () => {
     setSelectedLetters([]);
@@ -64,6 +108,11 @@ export const Products = () => {
   const clearCategory = () => {
     updateProductsCategory("");
   };
+
+  const searchProducts = (e) => {
+    setSearchText(e.target.value);
+    console.log("dasdas", searchText);
+  }
 
   return (
     <>
@@ -118,7 +167,12 @@ export const Products = () => {
           <Row className="justify-content-center pt-4">
             <Col lg="8">
               <FormGroup>
-                <Input placeholder="Search Products" type="text" />
+                <Input
+                  placeholder="Search Products"
+                  onChange={searchProducts}
+                  type="text"
+                  
+                />
               </FormGroup>
             </Col>
             <Col lg="4">
@@ -127,7 +181,7 @@ export const Products = () => {
           </Row>
 
           <Row className="pt-4">
-            <Col lg="7">
+            <Col lg="10">
               <h5 className="mb-0">
                 Selected Category: &nbsp;
                 {productsCategory && (
@@ -138,11 +192,11 @@ export const Products = () => {
                 )}
               </h5>
             </Col>
-            <Col lg="5">
+            {/* <Col lg="5">
               <h5 className="mb-0 text-right">
                 Products Count: &nbsp; {filteredProducts.length}
               </h5>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </section>
