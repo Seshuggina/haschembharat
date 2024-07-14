@@ -15,7 +15,7 @@ export const AboutUs = () => {
     <>
       <section className="section section-shaped section-sm">
         <section className="shape page-banner aboutus-banner"></section>
-        <Container className="pt-lg-7">
+        <Container className="pt-lg-7 pt-sm-7 pt-xs-7">
           <h1 className="text-white">About US</h1>
           <Row className="justify-content-center"></Row>
         </Container>

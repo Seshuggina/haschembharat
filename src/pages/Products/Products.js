@@ -144,7 +144,7 @@ export const Products = () => {
               ))}
           </div>
         </div>
-        <Container className="pt-lg-7">
+        <Container className="pt-lg-7 pt-sm-7 pt-xs-7">
           <h1 className="text-white">Products</h1>
         </Container>
       </section>

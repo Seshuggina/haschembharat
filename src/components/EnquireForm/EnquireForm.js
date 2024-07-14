@@ -131,7 +131,7 @@ export const EnquireForm = () => {
                         </InputGroupAddon>
                         <Input
                           id="exampleFormControlTextarea1"
-                          placeholder="Write a large text here ..."
+                          placeholder="Write Your Message Here."
                           rows="3"
                           type="textarea"
                         />

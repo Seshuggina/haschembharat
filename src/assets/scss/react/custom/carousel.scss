@@ -196,3 +196,9 @@ html {
     }
   }
 }
+
+@media (max-width: 576px) {
+  .pt-xs-7 {
+      padding-top: 6rem !important;
+  }
+}

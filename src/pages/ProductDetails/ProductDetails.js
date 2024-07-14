@@ -23,7 +23,7 @@ export const ProductDetails = (product) => {
         <div className="shape products-details-banner">
           
         </div>
-        <Container className="pt-lg-7">
+        <Container className="pt-lg-7 pt-sm-7">
           <h1 className="text-white">Product Details</h1>
         </Container>
       </section>

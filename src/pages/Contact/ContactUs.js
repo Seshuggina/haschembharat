@@ -24,7 +24,7 @@ class ContactUs extends React.Component {
       <>
         <section className="section section-shaped section-sm">
           <section className="shape page-banner contactus-banner"></section>
-          <Container className="pt-lg-7">
+          <Container className="pt-lg-7 pt-sm-7 pt-xs-7">
             <h1 className="text-white">Contact US</h1>
             <Row className="justify-content-center"></Row>
           </Container>
@@ -120,7 +120,7 @@ class ContactUs extends React.Component {
                           <Input
                             id="exampleFormControlTextarea1"
                             placeholder="Write a large text here ..."
-                            rows="3"
+                            rows="7"
                             type="textarea"
                           />
                         </InputGroup>
@@ -181,7 +181,7 @@ class ContactUs extends React.Component {
                             <i className="flaticon-address"></i>
                           </div>
                         </div>
-                        <div className="featured-content pt-5">
+                        <div className="featured-content pt-4">
                           <div className="featured-title">
                             <h4 className="margin_bottom0 fs-20">
                               <i
@@ -192,7 +192,9 @@ class ContactUs extends React.Component {
                             </h4>
                           </div>
                           <div className="featured-desc">
-                            #Ameerpet, Hyderabad, TS - 5000032
+                            <strong>#Storey Ave</strong>, San Francisco
+                            <br />
+                            CA 94129
                           </div>
                         </div>
                       </div>
@@ -202,21 +204,19 @@ class ContactUs extends React.Component {
                             <i className="themifyicon ti-themify-favicon"></i>
                           </div>
                         </div>
-                        <div className="featured-content pt-5">
+                        <div className="featured-content pt-3">
                           <div className="featured-title">
-                            <h4 className="margin_bottom0 fs-20">
-                              <i
-                                className="fa fa-whatsapp fa-2x align-middle"
-                                aria-hidden="true"
-                              ></i>
-                              &nbsp;{" "}
-                              <a
-                                target="_blank"
-                                href="https://wa.me/9885500044?text=Hi!"
-                              >
-                                Chat on WhatsApp
-                              </a>
-                            </h4>
+                            <i
+                              className="fa fa-whatsapp fa-2x align-middle"
+                              aria-hidden="true"
+                            ></i>
+                            &nbsp;{" "}
+                            <a
+                              target="_blank"
+                              href="https://wa.me/9885500044?text=Hi!"
+                            >
+                              Chat on WhatsApp
+                            </a>
                           </div>
                         </div>
                       </div>
