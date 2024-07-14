@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Product } from "./../../components/product/product";
 import products from "./../../assets/data/products.json";
 import {
@@ -10,25 +10,53 @@ import {
   Input,
   Badge,
 } from "reactstrap";
-import { FixedSizeGrid as Grid } from "react-window";
 import "./Products.scss";
 import useGlobalStore from "./../../store/global";
+import Multiselect from "multiselect-react-dropdown";
 
+const categoriesList = [
+  "APIs",
+  "Impurities",
+  "Metabolities",
+  "Nitrosamines",
+  "Building blocks",
+];
 export const Products = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [searchText, setSearchText] = useState("");
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
   const [selectedLetters, setSelectedLetters] = useState([]);
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   let productsCategory = useGlobalStore((state) => state.productsCategory);
   let selectedLetter = useGlobalStore((state) => state.selectedLetter);
+  let searchedTxt = useGlobalStore((state) => state.searchedText);
   const updateProductsCategory = useGlobalStore(
     (state) => state.updateProductsCategory
   );
+  const searchTextRef = useRef("");
+  const selectedCategoriesList = useRef([]);
 
   useEffect(() => {
+    if (searchedTxt) {
+      searchTextRef.current = searchedTxt;
+    }
     filterProducts();
-  }, [selectedLetters, productsCategory, selectedLetter, searchText]);
+  }, [selectedLetters, productsCategory, selectedLetter]);
+
+  useEffect(() => {
+    if (productsCategory.length > 0) {
+      selectedCategoriesList.current = productsCategory;
+    }
+    const unsubscribe = useGlobalStore.subscribe((state) => {
+      searchTextRef.current = state.searchedText;
+      filterProducts();
+    });
+
+    // Cleanup subscription on unmount
+    return () => {
+      unsubscribe();
+      updateProductsCategory([]);
+    };
+  }, []);
 
   useEffect(() => {
     setSelectedLetters([selectedLetter]);
@@ -50,9 +78,12 @@ export const Products = () => {
 
   const filterProducts = () => {
     let filteredProductsList = products.slice(0, 1000); // Fetch more products for better demo
-    if (productsCategory) {
-      filteredProductsList = filteredProductsList.filter(
-        (obj) => obj.category === productsCategory
+    if (
+      selectedCategoriesList.current &&
+      selectedCategoriesList.current.length > 0
+    ) {
+      filteredProductsList = filteredProductsList.filter((obj) =>
+        selectedCategoriesList.current.includes(obj.category)
       );
     }
     if (selectedLetters.length > 0) {
@@ -61,10 +92,10 @@ export const Products = () => {
         selectedLetters
       );
     }
-    if (searchText) {
+    if (searchTextRef.current) {
       filteredProductsList = filteredProductsList.filter((obj) => {
         const allProperties = JSON.stringify(obj).toLowerCase();
-        return allProperties.includes(searchText.toLowerCase());
+        return allProperties.includes(searchTextRef.current.toLowerCase());
       });
     }
 
@@ -74,11 +105,11 @@ export const Products = () => {
   function filterObjectsByCharacters(productsList, characters) {
     return productsList.filter((obj) => {
       const propertiesToCheck = [
-        "casNo",
+        // "casNo",
         "impurityName",
-        "parentAPI",
-        "productStatus",
-        "category",
+        // "parentAPI",
+        // "productStatus",
+        // "category",
       ];
       const combinedString = propertiesToCheck
         .map((prop) => obj[prop] || "")
@@ -91,33 +122,19 @@ export const Products = () => {
     setSelectedLetters([]);
   };
 
-  const clearCategory = () => {
-    updateProductsCategory("");
-  };
-
   const searchProducts = (e) => {
-    setSearchText(e.target.value);
+    searchTextRef.current = e.target.value;
+    filterProducts();
   };
-
-  const Cell = ({ columnIndex, rowIndex, style }) => {
-    const index = rowIndex * 3 + columnIndex;
-    if (index >= filteredProducts.length) return null;
-    const product = filteredProducts[index];
-
-    return (
-      <div style={style} className="d-flex justify-content-center">
-        <Product
-          product={product}
-          thumbnailColor={thumbnailsColors[index % thumbnailsColors.length]}
-          key={product.Sno}
-        />
-      </div>
-    );
+  const handleCategoriesSelect = (categories) => {
+    selectedCategoriesList.current = categories;
+    updateProductsCategory([...selectedCategoriesList.current]);
+    filterProducts();
   };
 
   return (
     <>
-      <section className="section section-shaped section-lg">
+      <section className="section section-shaped section-sm">
         <div className="shape products-banner">
           <div className="wrap">
             {Array(100)
@@ -172,6 +189,7 @@ export const Products = () => {
                   placeholder="Search Products"
                   onChange={searchProducts}
                   type="text"
+                  value={searchTextRef.current}
                 />
               </FormGroup>
             </Col>
@@ -182,15 +200,18 @@ export const Products = () => {
 
           <Row className="pt-4">
             <Col lg="10">
-              <h5 className="mb-0">
-                Selected Category: &nbsp;
-                {productsCategory && (
-                  <Badge color="primary">
-                    {productsCategory}{" "}
-                    <span onClick={clearCategory}>&times;</span>
-                  </Badge>
-                )}
-              </h5>
+              <div className="d-flex align-items-center">
+                <h5 className="mb-0">Selected Category: </h5>
+                &nbsp;
+                <Multiselect
+                  options={categoriesList} // Options to display in the dropdown
+                  selectedValues={selectedCategoriesList.current} // Preselected value to persist in dropdown
+                  onSelect={handleCategoriesSelect} // Function will trigger on select event
+                  onRemove={handleCategoriesSelect} // Function will trigger on remove event
+                  displayValue="name" // Property name to display in the dropdown options
+                  isObject={false}
+                />
+              </div>
             </Col>
           </Row>
         </Container>
@@ -198,17 +219,6 @@ export const Products = () => {
       <Container>
         <Row className="justify-content-center">
           <Col lg="12">
-            {/* <Grid
-              columnCount={3}
-              columnWidth={400}
-              height={800}
-              rowCount={Math.ceil(filteredProducts.length / 3)}
-              rowHeight={500}
-              width={1200}
-            >
-              {Cell}
-            </Grid> */}
-
             <div className="grid-items-equal-height">
               {filteredProducts.map((product, index) => (
                 <Product

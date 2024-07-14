@@ -185,3 +185,14 @@ html {
 //     box-sizing: border-box;
 //   }
 // }
+
+.whyworkwithus {
+  figure {
+    text-align: center;
+    overflow: hidden;
+    img {
+      max-width: 25% !important;
+      display: inline-block !important;
+    }
+  }
+}

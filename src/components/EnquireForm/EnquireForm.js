@@ -3,14 +3,20 @@ import { useParams } from "react-router-dom";
 
 // reactstrap components
 import {
+  Button,
+  Card,
+  CardHeader,
+  CardBody,
+  FormGroup,
+  Form,
+  Input,
+  InputGroupAddon,
+  InputGroupText,
+  InputGroup,
   Container,
   Row,
   Col,
   Label,
-  FormGroup,
-  Input,
-  Button,
-  Form,
 } from "reactstrap";
 
 export const EnquireForm = () => {
@@ -18,77 +24,135 @@ export const EnquireForm = () => {
   return (
     <>
       <section className="enquiry-form">
-        <Container>
-          <div className="justify-content-center">
-            <h2>Enquiry:</h2>
-          </div>
-          <Form>
-          
-            <Row>
-              <Col md={6}>
-                <FormGroup>
-                <Label for="exampleyourname">First Name</Label>
-                  <Input id="firstname" name="Name" placeholder="First Name" type="name" />
-                </FormGroup>
-              </Col>
-              <Col md={6}>
-                <FormGroup>
-                <Label for="exampleyourname">Last Name</Label>
-                  <Input id="lastname" name="Name" placeholder="Last Name" type="name" />
-                </FormGroup>
-              </Col>
-            </Row>
+        <Container className="mb-5">
+          <Row className="justify-content-center">
+            <Col lg="12">
+              <Card className="bg-secondary shadow border-0">
+                <CardHeader className="bg-white pb-2">
+                  <div className="text-muted text-center mb-2">
+                    <h2>Enquiry</h2>
+                  </div>
+                </CardHeader>
+                <CardBody className="px-lg-4 py-lg-4">
+                  <Form role="form">
+                    <Row>
+                      <Col lg="6">
+                        <FormGroup className="mb-3">
+                          <InputGroup className="input-group-alternative">
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText>
+                                <i className="fa fa-person" />
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <Input placeholder="First Name" type="Text" />
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
+                      <Col lg="6">
+                        <FormGroup className="mb-3">
+                          <InputGroup className="input-group-alternative">
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText>
+                                <i className="fa fa-person" />
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <Input placeholder="Last Name" type="Text" />
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
+                      <Col lg="6">
+                        <FormGroup className="mb-3">
+                          <InputGroup className="input-group-alternative">
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText>
+                                {/* <i className="ni ni-email-83" /> */}
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <Input placeholder="Phone Number" type="tel" />
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
+                      <Col lg="6">
+                        <FormGroup className="mb-3">
+                          <InputGroup className="input-group-alternative">
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText>
+                                {/* <i className="fa fa-person" /> */}
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <Input placeholder="Email" type="email" />
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
+                      <Col lg="6">
+                        <FormGroup className="mb-3">
+                          <InputGroup className="input-group-alternative">
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText>
+                                {/* <i className="ni ni-email-83" /> */}
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <Input placeholder="City" type="text" />
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
 
-            <Row>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="examplephonenumber">Phone Number</Label>
-                  <Input
-                    type="tel"
-                    inputMode="numeric"
-                    id="phone"
-                    name="phone"
-                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                  />
-                </FormGroup>
-              </Col>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="exampleName">E-mail</Label>
-                  <Input
-                    id="exampleEmail"
-                    name="Name"
-                    placeholder="ex:myname@example.com"
-                    type="name"
-                  />
-                </FormGroup>
-              </Col>
-            </Row>
-            <Row>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="exampleCity">City</Label>
-                  <Input id="exampleCity" name="city" />
-                </FormGroup>
-              </Col>
-              <Col md={4}>
-                <FormGroup>
-                  <Label for="exampleState">State</Label>
-                  <Input id="exampleState" name="state" />
-                </FormGroup>
-              </Col>
-              <Col md={2}>
-                <FormGroup>
-                  <Label for="exampleZip">Zip</Label>
-                  <Input id="exampleZip" name="zip" />
-                </FormGroup>
-              </Col>
-            </Row>
-            <Button type="button" className="mb-5 mb-2 btn btn-primary" color="primary">Register</Button>
-          </Form>
+                      <Col lg="4">
+                        <FormGroup className="mb-3">
+                          <InputGroup className="input-group-alternative">
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText>
+                                {/* <i className="ni ni-email-83" /> */}
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <Input placeholder="State" type="text" />
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
+
+                      <Col lg="2">
+                        <FormGroup className="mb-3">
+                          <InputGroup className="input-group-alternative">
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText>
+                                {/* <i className="ni ni-email-83" /> */}
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <Input placeholder="Zip" type="text" />
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    
+                    <FormGroup className="mb-3">
+                      <InputGroup className="input-group-alternative">
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText></InputGroupText>
+                        </InputGroupAddon>
+                        <Input
+                          id="exampleFormControlTextarea1"
+                          placeholder="Write a large text here ..."
+                          rows="3"
+                          type="textarea"
+                        />
+                      </InputGroup>
+                    </FormGroup>
+                    <div className="text-center">
+                      <Button
+                        className="mt-4 btn-block"
+                        color="primary"
+                        type="button"
+                      >
+                        Submit
+                      </Button>
+                    </div>
+                  </Form>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </section>
-
     </>
   );
 };

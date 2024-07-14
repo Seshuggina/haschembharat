@@ -1,13 +1,13 @@
 import create from 'zustand';
 
 const useGlobalStore = create((set) => ({
-  productsCategory: '',
+  productsCategory: [],
   serviceSection: '',
-  searchText:'',
+  searchedText:'',
   selectedLetter:'',
   updateProductsCategory: (productsCategory) => set(() => ({ productsCategory: productsCategory })),
   updateServiceSection: (serviceSection) => set(() => ({ serviceSection: serviceSection })),
-  updateSearchText: (searchText) => set(() => ({ searchText: searchText })),
+  updateSearchText: (searchedText) => set(() => ({ searchedText: searchedText })),
   updateSelectedLetter: (selectedLetter) => set(() => ({ selectedLetter: selectedLetter })),
 }))
 

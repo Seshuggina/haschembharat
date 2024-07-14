@@ -1,31 +1,6 @@
-.featured-icon-box {
-    .fa {
-        width: 34px;
-        text-align: center;
-    }
+.page-banner {
+    height: 300px;
 }
-
-.card-lift--hover {
-    h6 {
-        font-weight: 700;
-    }
-    .description {
-        font-weight: 500;
-    }
+.aboutus-banner {
+    background: url("./../../assets/img/aboutus/banner.jpeg") no-repeat center center/100%;
 }
-
-.image-wrapper {
-    display: flex;
-}
-
-.image {
-    height: auto;
-    margin-right: 10px; 
-}
-.arrow-right {
-    width: auto; 
-    height: 30px; 
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent; 
-    border-left: 10px solid black;
-  }

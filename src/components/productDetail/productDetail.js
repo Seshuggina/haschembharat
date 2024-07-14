@@ -1,24 +1,7 @@
-import React, { memo, useEffect } from "react";
-
-// reactstrap components
-import {
-  Badge,
-  Button,
-  Card,
-  CardBody,
-  Col,
-  Row
-} from "reactstrap";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
+import React, { memo } from "react";
+import { Badge, Card, CardBody, Col, Row } from "reactstrap";
 
 export const ProductDetail = memo(({ product, thumbnailColor }) => {
-
-  // useEffect(() => {
-  //   AOS.init();
-  // }, [])
-
   return (
     <>
       <Card className="shadow border-0 card-border w-100">
@@ -40,15 +23,18 @@ export const ProductDetail = memo(({ product, thumbnailColor }) => {
                 </p>
                 <p>
                   <i className="ni ni-vector"></i>&nbsp;
-                  <strong>Molecular Formula:</strong> {product.productDetails.molecularFormula}
+                  <strong>Molecular Formula:</strong>{" "}
+                  {product.productDetails.molecularFormula}
                 </p>
                 <p>
                   <i className="ni ni-vector"></i>&nbsp;
-                  <strong>Molecular Weight:</strong> {product.productDetails.molecularWeight}
+                  <strong>Molecular Weight:</strong>{" "}
+                  {product.productDetails.molecularWeight}
                 </p>
                 <p>
                   <i className="ni ni-vector"></i>&nbsp;
-                  <strong>Catlog Number:</strong> {product.productDetails.catlogNumber}
+                  <strong>Catlog Number:</strong>{" "}
+                  {product.productDetails.catlogNumber}
                 </p>
                 <p>
                   <i className="ni ni-vector"></i>&nbsp;

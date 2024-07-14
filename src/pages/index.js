@@ -9,18 +9,11 @@ import products from "../assets/data/products.json";
 import { Container, Row, Col } from "reactstrap";
 // Core Components
 import HeaderNavbar from "components/Navbars/Header.js";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 const Home = () => {
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
-  // const [newProducts, setNewProducts] = useState([]);
   const newProducts = products.filter(
     (product) => product.productStatus?.toLowerCase() === "new"
   );
-  useEffect(() => {
-    // AOS.init();
-  }, []);
   return (
     <>
       <HeaderNavbar />

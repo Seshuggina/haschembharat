@@ -29,18 +29,8 @@ export const Services = () => {
 
   return (
     <>
-      <section className="section section-shaped section-lg">
-        <div className="shape shape-style-1 bg-gradient-default">
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-        <section className="contactus-banner"></section>
+      <section className="section section-shaped section-sm">
+        <section className="shape page-banner services-banner"></section>
         <Container className="pt-lg-7">
           <h1 className="text-white">Services</h1>
           <Row className="justify-content-center"></Row>

@@ -3,40 +3,37 @@ import { Typeahead, Menu, useItem, withItem } from "react-bootstrap-typeahead";
 import { Button } from "reactstrap";
 import "./TypeaheadSearch.scss";
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import products from "./../../assets/data/products.json";
 import useGlobalStore from "./../../store/global";
 
-export const TypeaheadSearch = () => {
+export const TypeaheadSearch = (props) => {
+  const { onSubmit, onInputChange } = props;
   const [selected, setSelected] = useState([]);
-  const [selectedLetters, setSelectedLetters] = useState([]);
-  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   const [options, setOptions] = useState(products);
   const inputRef = useRef(null);
+  const [inputText, setInputText] = useState('');
   const navigate = useNavigate();
-  const updateSelectedLetter = useGlobalStore((state) => state.updateSelectedLetter);
 
-  const handleLetterClick = (letter) => {
-    // setSelectedLetters((prevSelectedLetters) =>
-    //   prevSelectedLetters.includes(letter)
-    //     ? prevSelectedLetters.filter((l) => l !== letter)
-    //     : [...prevSelectedLetters, letter]
-    // );
-    setSelectedLetters([letter])
-    updateSelectedLetter(letter);
-    navigate('/products'); 
+  const handleSelectionChange = (selectedOptions) => {
+    if (selectedOptions) {
+      navigate(`productDetails/${selectedOptions.Sno}`);
+    }
   };
 
-  const handleSearch = (searchTxt) => {
-    const filteredProducts = products.filter((product) =>
-      product.impurityName.toLowerCase().includes(searchTxt.toLowerCase())
-    );
-    setOptions(filteredProducts);
+  const handleInputChange = (text) => {
+    setInputText(text);
+    onInputChange(text);
   };
 
-  const clearSelection = () => {
-    setSelectedLetters([]);
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      console.log("Typed text:", inputText);
+      onSubmit(inputText);
+      // Perform any action you want with the input text here
+    }
   };
+
   const clearFilter = () => {
     if (inputRef.current) {
       inputRef.current.clear();
@@ -48,54 +45,40 @@ export const TypeaheadSearch = () => {
       <Typeahead
         className="typeaheadSearch"
         onChange={setSelected}
+        onInputChange={handleInputChange}
         options={options}
-        placeholder="Enter #CAS No, Category, Product Status"
+        placeholder="Enter #CAS No, Name, Category, Molecular Formula"
         selected={selected}
         ref={inputRef}
         id="typeahead"
-        // onSearch={handleSearch}
         filterBy={"impurityName"}
-        labelKey={option => `${option.impurityName} ${option.parentAPI} ${option.casNo}`}
+        labelKey={(option) =>
+          `${option.impurityName} ${option.parentAPI} ${option.casNo} ${option.category} ${option.molecularFormula} ${option.synonym}`
+        }
         renderMenu={(results, menuProps) => (
           <>
             <Menu {...menuProps}>
-              <div className="responsive-blocks px-2 pb-2 mb-2 border-bottom">
-                <Button
-                  color="primary"
-                  outline
-                  type="button"
-                  className={`nav-link ${
-                    selectedLetters.length === 0 ? "active" : ""
-                  }`}
-                  onClick={() => clearSelection()}
-                >
-                  All
-                </Button>
-                {alphabet.map((letter) => (
-                  <Button
-                    color="primary"
-                    outline
-                    type="button"
-                    key={letter}
-                    className={`nav-link ${
-                      selectedLetters.includes(letter) ? "active" : ""
-                    }`}
-                    onClick={() => handleLetterClick(letter)}
-                  >
-                    {letter}
-                  </Button>
-                ))}
-              </div>
               {results.map((result, index) => (
-                <li option={result} position={index}>
-                  <Link className="dropdown-item" to="/products">
-                    {result.impurityName}
-                  </Link>
+                <li
+                  key={index}
+                  className="dropdown-item cursor-pointer"
+                  option={result}
+                  position={index}
+                  onClick={() => handleSelectionChange(result)}
+                >
+                  <strong>{result.impurityName}</strong>,{" "}
+                  <span>{result.parentAPI}</span>{" "}
+                  <small>{`(${result.category})`}</small>
+                  <br />
+                  <span>{result.casNo}</span>,{" "}
+                  <span>{result.productDetails?.molecularFormula}</span>,{" "}
+                  <span>{result.productDetails?.synonym}</span>
                 </li>
               ))}
             </Menu>
           </>
         )}
+        onKeyDown={handleKeyDown}
       />
       <Button
         className="clearButton"

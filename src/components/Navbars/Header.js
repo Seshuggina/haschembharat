@@ -28,6 +28,7 @@ const HeaderNavbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
   const updateProductsCategory = useGlobalStore((state) => state.updateProductsCategory);
+  const updateSearchText = useGlobalStore((state) => state.updateSearchText);
 
   useEffect(() => {
     const headroom = new Headroom(document.getElementById("navbar-main"));
@@ -41,22 +42,17 @@ const HeaderNavbar = () => {
   const onExited = () => {
     setCollapseClasses("");
   };
-
-  const handleChange = (event) => {
-    setSearchQuery(event.target.value);
-  };
-
-  const handleSelection = (value) => {
-    setSearchQuery(value);
-    handleSubmit();
+  const handleChange = (inputText) => {
+    console.log("inputText", inputText);
+    setSearchQuery(inputText);
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     // Navigate to the products page with the search query
     if (searchQuery) {
-      updateProductsCategory(searchQuery);
-      navigate(`/products?q=${encodeURIComponent(searchQuery)}`);
+      updateSearchText(searchQuery);
+      navigate(`/products`);
     }
   };
 
@@ -72,7 +68,7 @@ const HeaderNavbar = () => {
   };
 
   const navigateToProducts = (section) => {
-    updateProductsCategory(section);
+    updateProductsCategory([section]);
     navigate("/products");
   };
 
@@ -281,17 +277,10 @@ const HeaderNavbar = () => {
               {/* Search Functionality */}
             </UncontrolledCollapse>
             <form className="d-flex input-group w-auto" onSubmit={handleSubmit}>
-              {/* <input
-                type="search"
-                className="form-control"
-                placeholder="Enter #CAS No, Name, Formula Name"
-                aria-label="Search"
-                onChange={handleChange}
-              /> */}
               <TypeaheadSearch
                 id="typeaheadSearch"
-                onChange={handleChange}
-                onSelection={handleSelection}
+                onSubmit={handleSubmit}
+                onInputChange={handleChange}
               ></TypeaheadSearch>
               <Button
                 color="primary"
