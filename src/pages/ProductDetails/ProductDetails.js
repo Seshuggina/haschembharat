@@ -12,7 +12,8 @@ import "./ProductDetails.scss";
 export const ProductDetails = (product) => {
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
   let { id } = useParams();
-
+  const selectedProduct = products?.find(product => product.Sno?.toString() === id);
+  
   const newProducts = products.filter(
     (product) => product.productStatus?.toLowerCase() === "new"
   );
@@ -31,8 +32,8 @@ export const ProductDetails = (product) => {
         <Container>
           <Row className="justify-content-center">
             <ProductDetail
-              product={products[id]}
-              thumbnailColor={thumbnailsColors[id % 5]}
+              product={selectedProduct}
+              thumbnailColor={thumbnailsColors[selectedProduct.Sno % 5]}
               key={id}
             ></ProductDetail>
           </Row>

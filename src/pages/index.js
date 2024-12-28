@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 // nodejs library that concatenates classes
 import { Product } from "./../components/product/product";
 import CustomCarousel from "./../components/Carousel/Carousel";

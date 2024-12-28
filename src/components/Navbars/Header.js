@@ -5,7 +5,7 @@ import {
   Button,
   UncontrolledCollapse,
   DropdownMenu,
-  DropdownItem,
+  // DropdownItem,
   DropdownToggle,
   UncontrolledDropdown,
   NavbarBrand,
@@ -22,13 +22,23 @@ import { TypeaheadSearch } from "./../TypeaheadSearch/TypeaheadSearch";
 import { scroller } from "react-scroll";
 import "./Header.scss";
 import useGlobalStore from "./../../store/global";
+import products from "../../assets/data/products.json";
 
 const HeaderNavbar = () => {
   const [collapseClasses, setCollapseClasses] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
-  const updateProductsCategory = useGlobalStore((state) => state.updateProductsCategory);
+  const updateProductsCategory = useGlobalStore(
+    (state) => state.updateProductsCategory
+  );
   const updateSearchText = useGlobalStore((state) => state.updateSearchText);
+  const uniqueCategories = [
+    ...new Set(products.flatMap((item) => item.category)),
+  ];
+  const updateProductsCategoryList = useGlobalStore(
+    (state) => state.updateProductsCategoryList
+  );
+  updateProductsCategoryList(uniqueCategories);
 
   useEffect(() => {
     const headroom = new Headroom(document.getElementById("navbar-main"));
@@ -83,10 +93,7 @@ const HeaderNavbar = () => {
           <Container className="fullwidth">
             <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
               {/* logo CHANGE */}
-              <img
-                alt="..."
-                src={require("assets/img/brand/logo2.png")}
-              />
+              <img alt="..." src={require("assets/img/brand/logo2.png")} />
             </NavbarBrand>
             <button className="navbar-toggler" id="navbar_global">
               <span className="navbar-toggler-icon" />
@@ -128,14 +135,17 @@ const HeaderNavbar = () => {
                     <span className="nav-link-inner--text">Products</span>
                   </DropdownToggle>
                   <DropdownMenu>
-                    <Link
-                      className="nav-link dropdown-item"
-                      role="menuitem"
-                      to="/products"
-                      onClick={() => navigateToProducts("APIs")}
-                    >
-                      APIs
-                    </Link>
+                    {uniqueCategories.map((category, index) => (
+                      <Link
+                        key={index}
+                        className="nav-link dropdown-item"
+                        role="menuitem"
+                        to="/products"
+                        onClick={() => navigateToProducts(category)}
+                      >
+                        {category}
+                      </Link>
+                    ))}
                     <Link
                       className="nav-link dropdown-item"
                       role="menuitem"
