@@ -26,6 +26,7 @@ export const Products = () => {
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
   const [selectedLetters, setSelectedLetters] = useState([]);
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  let categoriesList = useGlobalStore((state) => state.productsCategoryList);
   let productsCategory = useGlobalStore((state) => state.productsCategory);
   let selectedLetter = useGlobalStore((state) => state.selectedLetter);
   let searchedTxt = useGlobalStore((state) => state.searchedText);
@@ -77,21 +78,29 @@ export const Products = () => {
   };
 
   const filterProducts = () => {
-    let filteredProductsList = products.slice(0, 1000); // Fetch more products for better demo
+    let filteredProductsList = products; // Fetch more products for better demo
+
+    // Filter by categories
     if (
       selectedCategoriesList.current &&
       selectedCategoriesList.current.length > 0
     ) {
       filteredProductsList = filteredProductsList.filter((obj) =>
-        selectedCategoriesList.current.includes(obj.category)
+        obj.category.some((category) =>
+          selectedCategoriesList.current.includes(category)
+        )
       );
     }
+
+    // Filter by selected letters
     if (selectedLetters.length > 0) {
       filteredProductsList = filterObjectsByCharacters(
         filteredProductsList,
         selectedLetters
       );
     }
+
+    // Filter by search text
     if (searchTextRef.current) {
       filteredProductsList = filteredProductsList.filter((obj) => {
         const allProperties = JSON.stringify(obj).toLowerCase();
