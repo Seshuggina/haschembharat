@@ -19,22 +19,22 @@ export const ProductDetail = memo(({ product, thumbnailColor }) => {
               <div>
                 <p>
                   <i className="ni ni-vector"></i>&nbsp;
-                  <strong>Synonym:</strong> {product.productDetails.synonym}
+                  <strong>Synonym:</strong> {product.synonym}
                 </p>
                 <p>
                   <i className="ni ni-vector"></i>&nbsp;
                   <strong>Molecular Formula:</strong>{" "}
-                  {product.productDetails.molecularFormula}
+                  {product.molecularFormula}
                 </p>
                 <p>
                   <i className="ni ni-vector"></i>&nbsp;
                   <strong>Molecular Weight:</strong>{" "}
-                  {product.productDetails.molecularWeight}
+                  {product.molecularWeight}
                 </p>
                 <p>
                   <i className="ni ni-vector"></i>&nbsp;
                   <strong>Catlog Number:</strong>{" "}
-                  {product.productDetails.catlogNumber}
+                  {product.catlogNumber}
                 </p>
                 <p>
                   <i className="ni ni-vector"></i>&nbsp;
