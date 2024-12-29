@@ -16,9 +16,15 @@ export const ProductDetails = (product) => {
     (product) => product.Sno?.toString() === id
   );
 
-  const newProducts = products.filter(
-    (product) => product.productStatus?.toLowerCase() === "new"
-  );
+  const relatedProducts = products
+    .filter(
+      (product) =>
+        product.Sno !== selectedProduct.Sno && // Exclude the current product
+        product.category.some((category) =>
+          selectedProduct.category.includes(category)
+        )
+    )
+    .slice(0, 4); // Limit to the first 4 products
 
   return (
     <>
@@ -48,7 +54,7 @@ export const ProductDetails = (product) => {
           <Row className="justify-content-center">
             <Col>
               <div className="grid-items-equal-height">
-                {newProducts.map((topProduct, index) => (
+                {relatedProducts.map((topProduct, index) => (
                   <Product
                     product={topProduct}
                     thumbnailColor={thumbnailsColors[index % 5]}
