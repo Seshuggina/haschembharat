@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/haschembharat/static/css/main.a6005f34.css",
-    "main.js": "/haschembharat/static/js/main.9c0e95e2.js",
+    "main.css": "/haschembharat/static/css/main.f5664fb4.css",
+    "main.js": "/haschembharat/static/js/main.02125478.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/haschembharat/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/vision.jpg": "/haschembharat/static/media/vision.e35ed3ac93a86fdce1e8.jpg",
     "static/media/drug_fallback.jpg": "/haschembharat/static/media/drug_fallback.33dea4391f9ac08e377b.jpg",
@@ -84,7 +84,7 @@
     "index.html": "/haschembharat/index.html"
   },
   "entrypoints": [
-    "static/css/main.a6005f34.css",
-    "static/js/main.9c0e95e2.js"
+    "static/css/main.f5664fb4.css",
+    "static/js/main.02125478.js"
   ]
 }
