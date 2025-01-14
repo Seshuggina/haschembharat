@@ -13,32 +13,6 @@ import leepharma from "./../../assets/img/partners/l4.png";
 import natcopharma from "./../../assets/img/partners/nato.png";
 
 export const Partners = () => {
-  const customOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: true,
-    navSpeed: 700,
-    navText: ["Previous", "Next"],
-    autoplay: true,
-    autoplayTimeout: 500,
-    autoplayHoverPause: true,
-    margin: 30,
-    responsive: {
-      740: {
-        items: 1,
-      },
-      940: {
-        items: 2,
-      },
-      1199: {
-        items: 3,
-      },
-    },
-    nav: true,
-    loop: true,
-  };
   return (
     <>
       <OwlCarousel
@@ -66,7 +40,7 @@ export const Partners = () => {
         }}
         className="owl-theme our-partners"
       >
-        <a href="https://curiaglobal.com/" target="_blank">
+        <a href="https://curiaglobal.com/" target="_blank" rel="noreferrer">
           <img
             className="img-fluid"
             loading="lazy"
@@ -75,7 +49,7 @@ export const Partners = () => {
           />
         </a>
 
-        <a href="https://www.drreddys.com/" target="_blank">
+        <a href="https://www.drreddys.com/" target="_blank" rel="noreferrer">
           <img
             className="img-fluid"
             loading="lazy"
@@ -84,7 +58,7 @@ export const Partners = () => {
           />
         </a>
 
-        <a href="https://granulesindia.com/" target="_blank">
+        <a href="https://granulesindia.com/" target="_blank" rel="noreferrer">
           <img
             className="img-fluid"
             loading="lazy"
@@ -93,7 +67,7 @@ export const Partners = () => {
           />
         </a>
 
-        <a href="https://www.leepharma.com/" target="_blank">
+        <a href="https://www.leepharma.com/" target="_blank" rel="noreferrer">
           <img
             className="img-fluid"
             loading="lazy"
@@ -102,7 +76,7 @@ export const Partners = () => {
           />
         </a>
 
-        <a href="https://www.natcopharma.co.in/" target="_blank">
+        <a href="https://www.natcopharma.co.in/" target="_blank" rel="noreferrer">
           <img
             className="img-fluid"
             loading="lazy"
