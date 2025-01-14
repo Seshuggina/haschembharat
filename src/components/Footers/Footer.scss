@@ -46,20 +46,12 @@
   }
   .social-icons {
     div a {
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      border-radius: 5px;
-      border: 1px solid #333;
-      text-align: center;
-      display: block;
-      font-size: 14px;
-      color: #fff;
-      border-color: transparent;
-    }
-    .btn-wrapper {
-      display: inline-flex;
-      padding-left: 20px;
+      .fa-linkedin-square::before {
+        font-size: 20px;
+        top: 4px;
+        position: relative;
+        left: 1px;
+      }
     }
   }
 }

@@ -238,49 +238,17 @@ const HeaderNavbar = () => {
                 <NavItem className="d-none d-lg-block ">
                   <NavLink
                     className="nav-link-icon"
-                    href="https://www.facebook.com/creativetim"
+                    href="#"
                     id="tooltip333589074"
                     target="_blank"
                   >
-                    <i className="fa fa-facebook-square" />
+                    <i className="fa fa-linkedin-square" />
                     <span className="nav-link-inner--text d-lg-none ml-2">
-                      Facebook
+                      Facebook 1
                     </span>
                   </NavLink>
                   <UncontrolledTooltip delay={0} target="tooltip333589074">
-                    Like us on Facebook
-                  </UncontrolledTooltip>
-                </NavItem>
-                <NavItem className="d-none d-lg-block ">
-                  <NavLink
-                    className="nav-link-icon"
-                    href="https://www.instagram.com/creativetimofficial"
-                    id="tooltip356693867"
-                    target="_blank"
-                  >
-                    <i className="fa fa-instagram" />
-                    <span className="nav-link-inner--text d-lg-none ml-2">
-                      Instagram
-                    </span>
-                  </NavLink>
-                  <UncontrolledTooltip delay={0} target="tooltip356693867">
-                    Follow us on Instagram
-                  </UncontrolledTooltip>
-                </NavItem>
-                <NavItem className="d-none d-lg-block ">
-                  <NavLink
-                    className="nav-link-icon"
-                    href="https://twitter.com/creativetim"
-                    id="tooltip184698705"
-                    target="_blank"
-                  >
-                    <i className="fa fa-twitter-square" />
-                    <span className="nav-link-inner--text d-lg-none ml-2">
-                      Twitter
-                    </span>
-                  </NavLink>
-                  <UncontrolledTooltip delay={0} target="tooltip184698705">
-                    Follow us on Twitter
+                    Follow Us LinkedIn
                   </UncontrolledTooltip>
                 </NavItem>
               </Nav>

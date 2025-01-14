@@ -312,31 +312,7 @@ class Navbars extends React.Component {
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
-                      <i className="fa fa-facebook-square" />
-                      <span className="nav-link-inner--text d-lg-none">
-                        Facebook
-                      </span>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className="nav-link-icon"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-twitter" />
-                      <span className="nav-link-inner--text d-lg-none">
-                        Twitter
-                      </span>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className="nav-link-icon"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-google-plus" />
+                      <i className="fa fa-linked-in" />
                       <span className="nav-link-inner--text d-lg-none">
                         Google +
                       </span>
@@ -393,33 +369,9 @@ class Navbars extends React.Component {
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
-                      <i className="fa fa-facebook-square" />
+                      <i className="fa fa-linked-in" />
                       <span className="nav-link-inner--text d-lg-none">
                         Share
-                      </span>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className="nav-link-icon"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-twitter" />
-                      <span className="nav-link-inner--text d-lg-none">
-                        Tweet
-                      </span>
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className="nav-link-icon"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-pinterest" />
-                      <span className="nav-link-inner--text d-lg-none">
-                        Pin
                       </span>
                     </NavLink>
                   </NavItem>

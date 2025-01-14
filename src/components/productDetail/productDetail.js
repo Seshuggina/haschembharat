@@ -33,11 +33,7 @@ export const ProductDetail = memo(({ product, thumbnailColor }) => {
                 </p>
                 <p>
                   <i className="ni ni-vector"></i>&nbsp;
-                  <strong>Catlog Number:</strong> {product.catlogNumber}
-                </p>
-                <p>
-                  <i className="ni ni-vector"></i>&nbsp;
-                  <strong>cas No:</strong> {product.casNo}
+                  <strong>Cas No:</strong> {product.casNo}
                 </p>
                 <Badge color="primary" pill className="mr-1">
                   {product.readyStock}

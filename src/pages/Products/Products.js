@@ -1,26 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Product } from "./../../components/product/product";
 import products from "./../../assets/data/products.json";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  FormGroup,
-  Input,
-  Badge,
-} from "reactstrap";
+import { Container, Row, Col, Button, FormGroup, Input } from "reactstrap";
 import "./Products.scss";
 import useGlobalStore from "./../../store/global";
 import Multiselect from "multiselect-react-dropdown";
 
-const categoriesList = [
-  "APIs",
-  "Impurities",
-  "Metabolities",
-  "Nitrosamines",
-  "Building blocks",
-];
 export const Products = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
@@ -60,7 +45,9 @@ export const Products = () => {
   }, []);
 
   useEffect(() => {
-    setSelectedLetters([selectedLetter]);
+    if(selectedLetter) {
+      setSelectedLetters([selectedLetter]);
+    }
   }, [selectedLetter]);
 
   const handleLetterClick = (letter) => {
@@ -111,21 +98,52 @@ export const Products = () => {
     setFilteredProducts(filteredProductsList);
   };
 
-  function filterObjectsByCharacters(productsList, characters) {
+  // function filterObjectsByCharacters(productsList, characters) {
+  //   return productsList.filter((obj) => {
+  //     const propertiesToCheck = [
+  //       // "casNo",
+  //       "impurityName",
+  //       // "parentAPI",
+  //       // "productStatus",
+  //       // "category",
+  //     ];
+  //     const combinedString = propertiesToCheck
+  //       .map((prop) => obj[prop] || "")
+  //       .join(" ");
+  //     return characters.some((char) => combinedString.includes(char));
+  //   });
+  // }
+
+  function filterObjectsByCharacters(productsList, selectedCharacters) {
+    // Return all objects if selectedCharacters is empty or not provided
+    if (!selectedCharacters || selectedCharacters.length === 0) {
+      return productsList;
+    }
+  
     return productsList.filter((obj) => {
       const propertiesToCheck = [
-        // "casNo",
         "impurityName",
-        // "parentAPI",
-        // "productStatus",
-        // "category",
+        // Add other properties if needed
       ];
-      const combinedString = propertiesToCheck
-        .map((prop) => obj[prop] || "")
-        .join(" ");
-      return characters.some((char) => combinedString.includes(char));
+  
+      // Extract the first alphabetic character from impurityName (ignoring numbers and special characters)
+      const impurityName = obj.impurityName || "";
+      const firstAlphabeticChar = impurityName
+        .split("")
+        .find((char) => /^[a-zA-Z]$/.test(char)); // Find the first alphabetic character
+  
+      // Normalize case for comparison
+      const normalizedFirstChar = firstAlphabeticChar?.toLowerCase();
+      const normalizedCharacters = selectedCharacters.map((char) =>
+        char.toLowerCase()
+      );
+  
+      // Return true if the first alphabet matches any of the selected characters
+      return normalizedFirstChar && normalizedCharacters.includes(normalizedFirstChar);
     });
   }
+  
+  
 
   const clearSelection = () => {
     setSelectedLetters([]);

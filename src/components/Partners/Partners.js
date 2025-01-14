@@ -66,7 +66,7 @@ export const Partners = () => {
         }}
         className="owl-theme our-partners"
       >
-        <a href="#" target="_blank">
+        <a href="https://curiaglobal.com/" target="_blank">
           <img
             className="img-fluid"
             loading="lazy"
@@ -75,7 +75,7 @@ export const Partners = () => {
           />
         </a>
 
-        <a href="#" target="_blank">
+        <a href="https://www.drreddys.com/" target="_blank">
           <img
             className="img-fluid"
             loading="lazy"
@@ -84,7 +84,7 @@ export const Partners = () => {
           />
         </a>
 
-        <a href="#" target="_blank">
+        <a href="https://granulesindia.com/" target="_blank">
           <img
             className="img-fluid"
             loading="lazy"
@@ -93,7 +93,7 @@ export const Partners = () => {
           />
         </a>
 
-        <a href="#" target="_blank">
+        <a href="https://www.leepharma.com/" target="_blank">
           <img
             className="img-fluid"
             loading="lazy"
@@ -102,7 +102,7 @@ export const Partners = () => {
           />
         </a>
 
-        <a href="#" target="_blank">
+        <a href="https://www.natcopharma.co.in/" target="_blank">
           <img
             className="img-fluid"
             loading="lazy"

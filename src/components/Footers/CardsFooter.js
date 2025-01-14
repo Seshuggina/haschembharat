@@ -1,36 +1,15 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 /*eslint-disable*/
 import React from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Button,
-  Card,
-  CardImg,
-  NavItem,
-  NavLink,
-  Nav,
   Container,
   Row,
   Col,
   UncontrolledTooltip,
 } from "reactstrap";
+import "./Footer.scss";
 
 class Footer extends React.Component {
   render() {
@@ -110,7 +89,7 @@ class Footer extends React.Component {
                         <i className="flaticon flaticon-call"></i>
                       </div>
                       <h4>
-                        <a href="tel:+917816003510">+91 7816 00 3510</a>
+                        <a href="tel:+917816003510">+91 8121333007</a>
                         </h4>
                     </div>
                     <p>#Ameerpet, Hyderabad, TS - 5000032</p>
@@ -124,55 +103,21 @@ class Footer extends React.Component {
                       <div className="social-icons d-inline-flex margin_top10 margin_bottom10">
                         <Col className="text-lg-center btn-wrapper">
                           <Button
-                            className="btn-icon-only rounded-circle"
-                            color="twitter"
-                            href="https://twitter.com/creativetim"
-                            id="followUsTwitter"
-                            target="_blank"
-                          >
-                            <span className="btn-inner--icon">
-                              <i className="fa fa-twitter" />
-                            </span>
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="followUsTwitter"
-                          >
-                            Follow us
-                          </UncontrolledTooltip>
-                          <Button
                             className="btn-icon-only rounded-circle ml-1"
                             color="facebook"
-                            href="https://www.facebook.com/creativetim"
+                            href="#"
                             id="likeUsFacebook"
                             target="_blank"
                           >
                             <span className="btn-inner--icon">
-                              <i className="fa fa-facebook-square" />
+                              <i className="fa fa-linkedin-square" />
                             </span>
                           </Button>
                           <UncontrolledTooltip
                             delay={0}
                             target="likeUsFacebook"
                           >
-                            Like us
-                          </UncontrolledTooltip>
-                          <Button
-                            className="btn-icon-only rounded-circle ml-1"
-                            color="dribbble"
-                            href="https://dribbble.com/creativetim"
-                            id="followUsInsta"
-                            target="_blank"
-                          >
-                            <span className="btn-inner--icon">
-                              <i className="fa fa-instagram" />
-                            </span>
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="followUsInsta"
-                          >
-                            Follow us
+                            Follow Us on LinkedIn
                           </UncontrolledTooltip>
                         </Col>
                       </div>

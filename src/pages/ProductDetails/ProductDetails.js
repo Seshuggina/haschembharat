@@ -73,7 +73,7 @@ export const ProductDetails = (product) => {
             <h4>Reach Us Immediately:</h4>
             <Row className="justify-content-center">
               <Col>
-                +91 7816 00 3510 <br />
+                +91 8121333007 <br />
                 contactus@haschembharat.com
               </Col>
             </Row>

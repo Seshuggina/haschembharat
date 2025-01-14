@@ -159,7 +159,7 @@ class ContactUs extends React.Component {
                               className="fa fa-mobile icon-blue fa-3x align-middle"
                               aria-hidden="true"
                             ></i>
-                            <a href="tel:+917816003510"> +91 7816 00 3510</a>
+                            <a href="tel:+917816003510"> +91 8121333007</a>
                             <br />
                             <i
                               className="fa fa-envelope-o icon-blue fa-2x align-middle"
@@ -212,8 +212,9 @@ class ContactUs extends React.Component {
                             ></i>
                             &nbsp;{" "}
                             <a
+                              rel="noreferrer"
                               target="_blank"
-                              href="https://wa.me/9885500044?text=Hi!"
+                              href="https://wa.me/8121333007?text=Hi!"
                             >
                               Chat on WhatsApp
                             </a>
@@ -229,6 +230,7 @@ class ContactUs extends React.Component {
         </section>
         <section>
           <iframe
+            title="Google Maps"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12609.732281738927!2d-122.47286700000001!3d37.803324!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808586e6302615a1%3A0x86bd130251757c00!2sStorey%20Ave%2C%20San%20Francisco%2C%20CA%2094129!5e0!3m2!1sen!2sus!4v1713025871058!5m2!1sen!2sus"
             width="100%"
             height="450"
