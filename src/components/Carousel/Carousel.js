@@ -6,7 +6,7 @@ import {
   CarouselIndicators,
   Button,
 } from "reactstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
 
 const items = [

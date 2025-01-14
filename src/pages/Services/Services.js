@@ -1,17 +1,7 @@
-import React, { useState, useEffect } from "react";
-import products from "./../../assets/data/products.json";
+import React from "react";
 
 // Reactstrap Components
 import {
-  Badge,
-  Button,
-  Card,
-  CardBody,
-  CardImg,
-  FormGroup,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
   Container,
   Row,
   Col,
@@ -24,8 +14,7 @@ import customsynthesys from "./../../assets/img/services/custom-synthesys-new.jp
 import sourcing from "./../../assets/img/services/sourcing.jpg";
 
 export const Services = () => {
-  const [filteredProducts, setFilteredProducts] = useState(products);
-  const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
+  // const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
 
   return (
     <>

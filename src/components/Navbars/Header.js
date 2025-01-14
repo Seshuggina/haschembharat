@@ -187,7 +187,7 @@ const HeaderNavbar = () => {
                   </DropdownToggle>
                   <DropdownMenu>
                     {/* <DropdownItem href="/services#APIImpurities">
-                      API Impurities/Reference Standards
+                      API Impurities /Reference Standards
                     </DropdownItem> */}
                     <Link
                       className="nav-link dropdown-item"

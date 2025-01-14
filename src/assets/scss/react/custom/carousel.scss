@@ -73,6 +73,13 @@
     @media (max-width: 768px) {
       height: 40vh;
     }
+    @media (max-width: 400px) {
+      min-height: 420px;
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 12%;
+      }
+    }
     .carousel-item {
       height: 100%;
       background-size: cover;
@@ -124,6 +131,14 @@
           font-weight: 500;
           transform: translateY(-60px);
           opacity: 0;
+        }
+      }
+      @media (max-width: 400px) {
+        h3 {
+          font-size: 1.7rem;
+          color: white;
+          font-weight: 600;
+          transform: translateY(-20px);
         }
       }
       &.active {
@@ -199,6 +214,6 @@ html {
 
 @media (max-width: 576px) {
   .pt-xs-7 {
-      padding-top: 6rem !important;
+    padding-top: 6rem !important;
   }
 }
