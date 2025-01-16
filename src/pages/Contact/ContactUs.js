@@ -1,6 +1,4 @@
-import React from "react";
-
-// reactstrap components
+import React, { useState } from "react";
 import {
   Button,
   Card,
@@ -15,234 +13,245 @@ import {
   Container,
   Row,
   Col,
+  Alert,
 } from "reactstrap";
-import "./ContactUs.scss";
+import emailjs from "@emailjs/browser";
 
-class ContactUs extends React.Component {
-  render() {
-    return (
-      <>
-        <section className="section section-shaped section-sm">
-          <section className="shape page-banner contactus-banner"></section>
-          <Container className="pt-lg-7 pt-sm-7 pt-xs-7">
-            <h1 className="text-white">Contact US</h1>
-            <Row className="justify-content-center"></Row>
-          </Container>
-        </section>
-        <section className="section bg-secondary">
-          <Container>
-            <Row className="justify-content-center">
-              <div className="section-title title-style-center_text">
-                <div className="title-header">
-                  <h3 className="text-uppercase text-center">get in touch!</h3>
-                  <h2 className="title text-capitalize text-center">
-                    Have A Questions Drop Us Line?
-                  </h2>
-                </div>
-                <div className="title-desc text-center">
-                  <p className="lead">
-                    We take great pride in everything that we do, complete
-                    control over products allows us to ensure customers receive
-                    best service.
-                  </p>
-                </div>
-              </div>
-            </Row>
-          </Container>
-          <Container className="pt-lg-5">
-            <Row className="justify-content-center">
-              <Col lg="8">
-                <Card className="bg-secondary shadow border-0">
-                  <CardHeader className="bg-white pb-2">
-                    <div className="text-muted text-center mb-2">
-                      <h2>Send a Message</h2>
+const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState(""); // Success message state
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const trimFormData = () => {
+    // Trim all fields in the formData
+    return {
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim(),
+      subject: formData.subject.trim(),
+      message: formData.message.trim(),
+    };
+  };
+
+  const validateForm = (trimmedData) => {
+    const newErrors = {};
+
+    // Name validation
+    if (!trimmedData.name) {
+      newErrors.name = "Name is required.";
+    } else if (trimmedData.name.length < 3) {
+      newErrors.name = "Name must be at least 3 characters.";
+    }
+
+    // Email validation
+    if (!trimmedData.email) {
+      newErrors.email = "Email is required.";
+    } else if (
+      !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(trimmedData.email)
+    ) {
+      newErrors.email = "Please enter a valid email.";
+    }
+
+    // Subject validation
+    if (!trimmedData.subject) {
+      newErrors.subject = "Subject is required.";
+    } else if (trimmedData.subject.length < 3) {
+      newErrors.subject = "Subject must be at least 3 characters.";
+    }
+
+    // Message validation
+    if (!trimmedData.message) {
+      newErrors.message = "Message is required.";
+    } else if (trimmedData.message.length < 15) {
+      newErrors.message = "Message must be at least 15 characters.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Return true if no errors
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const trimmedData = trimFormData(); // Trim the input values
+    if (validateForm(trimmedData)) {
+      emailjs
+        .send(
+          "service_uknh1qg",
+          "template_hp51jrs",
+          trimmedData,
+          "5lTz9Hy5ZT1a9GGw4"
+        )
+        .then(
+          () => {
+            setSuccessMessage("Your message has been sent successfully!"); // Show success message
+            setFormData({ name: "", email: "", phone: "", subject: "", message: "" }); // Clear form
+            setErrors({}); // Clear errors
+            setTimeout(() => {
+              setSuccessMessage(""); // Clear success message after 5 seconds
+            }, 5000);
+          },
+          (error) => {
+            console.error("Email sending failed:", error.text);
+          }
+        );
+    }
+  };
+
+  return (
+    <>
+      <section className="section section-shaped section-sm">
+        <section className="shape page-banner contactus-banner"></section>
+        <Container className="pt-lg-7 pt-sm-7 pt-xs-7">
+          <h1 className="text-white">Contact US</h1>
+        </Container>
+      </section>
+      <section className="section bg-secondary">
+        <Container>
+          <Row className="justify-content-center">
+            <Col lg="8">
+              <Card className="bg-secondary shadow border-0">
+                <CardHeader className="bg-white pb-2">
+                  <div className="text-muted text-center mb-2">
+                    <h2>Send a Message</h2>
+                  </div>
+                </CardHeader>
+                <CardBody className="px-lg-4 py-lg-4">
+                  {/* Success message display */}
+                  {successMessage && (
+                    <Alert color="success" className="text-center">
+                      {successMessage}
+                    </Alert>
+                  )}
+                  <Form role="form" onSubmit={sendEmail}>
+                    <Row>
+                      <Col lg="6">
+                        <FormGroup className="mb-3">
+                          <InputGroup className="input-group-alternative">
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText>
+                                <i className="fa fa-person" />
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <Input
+                              placeholder="Your Name"
+                              type="text"
+                              name="name"
+                              value={formData.name}
+                              onChange={handleChange}
+                            />
+                          </InputGroup>
+                          {errors.name && (
+                            <small className="text-danger">{errors.name}</small>
+                          )}
+                        </FormGroup>
+                      </Col>
+                      <Col lg="6">
+                        <FormGroup className="mb-3">
+                          <InputGroup className="input-group-alternative">
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText />
+                            </InputGroupAddon>
+                            <Input
+                              placeholder="Email"
+                              type="email"
+                              name="email"
+                              value={formData.email}
+                              onChange={handleChange}
+                            />
+                          </InputGroup>
+                          {errors.email && (
+                            <small className="text-danger">{errors.email}</small>
+                          )}
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col lg="6">
+                        <FormGroup className="mb-3">
+                          <InputGroup className="input-group-alternative">
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText />
+                            </InputGroupAddon>
+                            <Input
+                              placeholder="Phone Number"
+                              type="text"
+                              name="phone"
+                              value={formData.phone}
+                              onChange={handleChange}
+                            />
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
+                      <Col lg="6">
+                        <FormGroup className="mb-3">
+                          <InputGroup className="input-group-alternative">
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText />
+                            </InputGroupAddon>
+                            <Input
+                              placeholder="Subject"
+                              type="text"
+                              name="subject"
+                              value={formData.subject}
+                              onChange={handleChange}
+                            />
+                          </InputGroup>
+                          {errors.subject && (
+                            <small className="text-danger">
+                              {errors.subject}
+                            </small>
+                          )}
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <FormGroup className="mb-3">
+                      <InputGroup className="input-group-alternative">
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText />
+                        </InputGroupAddon>
+                        <Input
+                          placeholder="Write a large text here ..."
+                          rows="7"
+                          type="textarea"
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                        />
+                      </InputGroup>
+                      {errors.message && (
+                        <small className="text-danger">{errors.message}</small>
+                      )}
+                    </FormGroup>
+                    <div className="text-center">
+                      <Button
+                        className="mt-4 btn-block"
+                        color="primary"
+                        type="submit"
+                      >
+                        SEND
+                      </Button>
                     </div>
-                  </CardHeader>
-                  <CardBody className="px-lg-4 py-lg-4">
-                    <Form role="form">
-                      <Row>
-                        <Col lg="6">
-                          <FormGroup className="mb-3">
-                            <InputGroup className="input-group-alternative">
-                              <InputGroupAddon addonType="prepend">
-                                <InputGroupText>
-                                  <i className="fa fa-person" />
-                                </InputGroupText>
-                              </InputGroupAddon>
-                              <Input placeholder="Your Name" type="Text" />
-                            </InputGroup>
-                          </FormGroup>
-                        </Col>
-                        <Col lg="6">
-                          <FormGroup className="mb-3">
-                            <InputGroup className="input-group-alternative">
-                              <InputGroupAddon addonType="prepend">
-                                <InputGroupText>
-                                  {/* <i className="ni ni-email-83" /> */}
-                                </InputGroupText>
-                              </InputGroupAddon>
-                              <Input placeholder="Email" type="email" />
-                            </InputGroup>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col lg="6">
-                          <FormGroup className="mb-3">
-                            <InputGroup className="input-group-alternative">
-                              <InputGroupAddon addonType="prepend">
-                                <InputGroupText>
-                                  {/* <i className="fa fa-person" /> */}
-                                </InputGroupText>
-                              </InputGroupAddon>
-                              <Input placeholder="Phone Number" type="text" />
-                            </InputGroup>
-                          </FormGroup>
-                        </Col>
-                        <Col lg="6">
-                          <FormGroup className="mb-3">
-                            <InputGroup className="input-group-alternative">
-                              <InputGroupAddon addonType="prepend">
-                                <InputGroupText>
-                                  {/* <i className="ni ni-email-83" /> */}
-                                </InputGroupText>
-                              </InputGroupAddon>
-                              <Input placeholder="Subject" type="text" />
-                            </InputGroup>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <FormGroup className="mb-3">
-                        <InputGroup className="input-group-alternative">
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText></InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            id="exampleFormControlTextarea1"
-                            placeholder="Write a large text here ..."
-                            rows="7"
-                            type="textarea"
-                          />
-                        </InputGroup>
-                      </FormGroup>
-                      <div className="text-center">
-                        <Button
-                          className="mt-4 btn-block"
-                          color="primary"
-                          type="button"
-                        >
-                          SEND
-                        </Button>
-                      </div>
-                    </Form>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col lg="4">
-                <Card className="bg-secondary shadow border-0">
-                  <CardHeader className="bg-white pb-2">
-                    <div className="text-muted text-center mb-2">
-                      <h2>Reach Us Directly</h2>
-                    </div>
-                  </CardHeader>
-                  <CardBody className="px-lg-4 py-lg-4">
-                    <div className="ttm-bgcolor-white p-30 border-rad_5 margin_top15">
-                      <div className="featured-icon-box icon-align-top-content margin_top0 margin_bottom25">
-                        <div className="featured-content">
-                          <div className="featured-title">
-                            <h4 className="margin_bottom0 fs-20">
-                              Let's Call or Email
-                            </h4>
-                          </div>
-                          <div className="featured-desc">
-                            <i
-                              className="fa fa-mobile icon-blue fa-3x align-middle"
-                              aria-hidden="true"
-                            ></i>
-                            <a href="tel:+917816003510"> +91 8121333007</a>
-                            <br />
-                            <i
-                              className="fa fa-envelope-o icon-blue fa-2x align-middle"
-                              aria-hidden="true"
-                            ></i>{" "}
-                            &nbsp;
-                            <a
-                              className=""
-                              href="mailto:contactus@haschembharat.com?subject=Subject Text"
-                            >
-                              <small>contactus@haschembharat.com</small>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="featured-icon-box icon-align-top-content margin_bottom25">
-                        <div className="featured-icon">
-                          <div className="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-lg">
-                            <i className="flaticon-address"></i>
-                          </div>
-                        </div>
-                        <div className="featured-content pt-4">
-                          <div className="featured-title">
-                            <h4 className="margin_bottom0 fs-20">
-                              <i
-                                className="fa fa-map-marker fa-2x align-middle"
-                                aria-hidden="true"
-                              ></i>
-                              &nbsp; We Reached Here
-                            </h4>
-                          </div>
-                          <div className="featured-desc">
-                            <strong>#Storey Ave</strong>, San Francisco
-                            <br />
-                            CA 94129
-                          </div>
-                        </div>
-                      </div>
-                      <div className="featured-icon-box icon-align-top-content margin_bottom10">
-                        <div className="featured-icon">
-                          <div className="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
-                            <i className="themifyicon ti-themify-favicon"></i>
-                          </div>
-                        </div>
-                        <div className="featured-content pt-3">
-                          <div className="featured-title">
-                            <i
-                              className="fa fa-whatsapp fa-2x align-middle"
-                              aria-hidden="true"
-                            ></i>
-                            &nbsp;{" "}
-                            <a
-                              rel="noreferrer"
-                              target="_blank"
-                              href="https://wa.me/8121333007?text=Hi!"
-                            >
-                              Chat on WhatsApp
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </section>
-        <section>
-          <iframe
-            title="Google Maps"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12609.732281738927!2d-122.47286700000001!3d37.803324!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808586e6302615a1%3A0x86bd130251757c00!2sStorey%20Ave%2C%20San%20Francisco%2C%20CA%2094129!5e0!3m2!1sen!2sus!4v1713025871058!5m2!1sen!2sus"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </section>
-      </>
-    );
-  }
-}
+                  </Form>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </>
+  );
+};
 
 export default ContactUs;
