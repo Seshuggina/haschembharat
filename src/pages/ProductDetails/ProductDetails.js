@@ -34,7 +34,7 @@ export const ProductDetails = (product) => {
           <h1 className="text-white">Product Details</h1>
         </Container>
       </section>
-      <section className="section pt-lg-0 mt--100 product-details">
+      <section className="pt-5 pt-lg-0 mt--100 product-details">
         <Container>
           <Row className="justify-content-center">
             <ProductDetail
@@ -45,10 +45,16 @@ export const ProductDetails = (product) => {
           </Row>
         </Container>
       </section>
+      {/* Enquire Form */}
+      <section className="pt-5 product-details">
+        <Container>
+          <div>
+            <EnquireForm></EnquireForm>
+          </div>
+        </Container>
+      </section>
 
-      <EnquireForm></EnquireForm>
-
-      <section className="pt-lg-0 product-details">
+      <section className="pt-5 product-details">
         <Container>
           <h4 className="mb-4">Related Products:</h4>
           <Row className="justify-content-center">
@@ -67,14 +73,19 @@ export const ProductDetails = (product) => {
         </Container>
       </section>
 
-      <section className="section section-lg pt-lg-0 product-details">
+      <section className="product-details">
         <Container>
           <div className="bg-secondary shadow border-0 card px-lg-4 py-lg-4">
             <h4>Reach Us Immediately:</h4>
             <Row className="justify-content-center">
               <Col>
-                +91 8121333007 <br />
-                contactus@haschembharat.com
+                <a href="tel:+917032925939">+91 7032925939</a> <br/>{" "}
+                <a className="mt-2" href="tel:+918121333007">
+                  +91 8121333007
+                </a><br/>{" "}
+                <a  className="mt-2" href="mailto:contactus@haschembharat.com">
+                  contactus@haschembharat.com
+                </a>
               </Col>
             </Row>
           </div>

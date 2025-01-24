@@ -59,7 +59,9 @@ const ContactUs = () => {
     if (!trimmedData.email) {
       newErrors.email = "Email is required.";
     } else if (
-      !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(trimmedData.email)
+      !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(
+        trimmedData.email
+      )
     ) {
       newErrors.email = "Please enter a valid email.";
     }
@@ -96,7 +98,13 @@ const ContactUs = () => {
         .then(
           () => {
             setSuccessMessage("Your message has been sent successfully!"); // Show success message
-            setFormData({ name: "", email: "", phone: "", subject: "", message: "" }); // Clear form
+            setFormData({
+              name: "",
+              email: "",
+              phone: "",
+              subject: "",
+              message: "",
+            }); // Clear form
             setErrors({}); // Clear errors
             setTimeout(() => {
               setSuccessMessage(""); // Clear success message after 5 seconds
@@ -120,7 +128,76 @@ const ContactUs = () => {
       <section className="section bg-secondary">
         <Container>
           <Row className="justify-content-center">
-            <Col lg="8">
+            <Col lg="12">
+              <Card className="bg-secondary shadow border-0">
+                <CardHeader className="bg-white pb-2">
+                  <div className="text-muted text-center mb-2">
+                    <h2>Contact a Immediately</h2>
+                  </div>
+                </CardHeader>
+                <CardBody className="px-lg-4 py-lg-4">
+                  <Row className="justify-content-center">
+                    <Col lg="6">
+                      <div className="d-flex">
+                        <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                          <i class="fa fa-address-card" aria-hidden="true"></i>
+                        </div>
+                        <div className="px-4">
+                          <h4 className="display-3">Address</h4>
+                          <p className="lead mt-0">
+                            Plot No. 27, Flat No. 402, Ramesh Towers, Ramesh
+                            Towers, Nizampet, Hyderabad, Telangana - 500090
+                          </p>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col lg="6">
+                      <div className="d-flex flex-column gap-2">
+                        <div className="d-flex flex-row align-items-center">
+                          <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary mb-3">
+                            <i className="fa fa-envelope" aria-hidden="true" />
+                          </div>
+                          <div className="ml-3" style={{ marginTop: "-15px" }}>
+                            <a href="mailto:contactus@haschembharat.com">
+                              contactus@haschembharat.com
+                            </a>
+                          </div>
+                        </div>
+                        <div className="d-flex flex-row">
+                          <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary mb-3">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                          </div>
+                          <div className="d-flex flex-column pl-3">
+                            <a href="tel:+917032925939">+91 7032925939</a>
+                            <a className="mt-2" href="tel:+918121333007">
+                              +91 8121333007
+                            </a>
+                          </div>
+                        </div>
+                        <a
+                          target=""
+                          href="https://api.whatsapp.com/send?phone=8121333007"
+                        >
+                          <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary mb-3">
+                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                          </div>
+                          <Button className="ml-3" color="success">
+                            Click to connect
+                          </Button>
+                        </a>
+                      </div>
+                    </Col>
+                  </Row>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      <section className="bg-secondary">
+        <Container>
+          <Row className="justify-content-center">
+            <Col lg="12">
               <Card className="bg-secondary shadow border-0">
                 <CardHeader className="bg-white pb-2">
                   <div className="text-muted text-center mb-2">
@@ -172,7 +249,9 @@ const ContactUs = () => {
                             />
                           </InputGroup>
                           {errors.email && (
-                            <small className="text-danger">{errors.email}</small>
+                            <small className="text-danger">
+                              {errors.email}
+                            </small>
                           )}
                         </FormGroup>
                       </Col>

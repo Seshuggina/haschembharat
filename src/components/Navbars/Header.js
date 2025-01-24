@@ -39,7 +39,6 @@ const HeaderNavbar = () => {
     (state) => state.updateProductsCategoryList
   );
   updateProductsCategoryList(uniqueCategories);
-
   useEffect(() => {
     const headroom = new Headroom(document.getElementById("navbar-main"));
     headroom.init();
@@ -135,6 +134,14 @@ const HeaderNavbar = () => {
                     <span className="nav-link-inner--text">Products</span>
                   </DropdownToggle>
                   <DropdownMenu>
+                    <Link
+                      className="nav-link dropdown-item"
+                      role="menuitem"
+                      to="/products"
+                      onClick={() => navigateToProducts('All')}
+                    >
+                      All
+                    </Link>
                     {uniqueCategories.map((category, index) => (
                       <Link
                         key={index}

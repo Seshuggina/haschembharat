@@ -29,7 +29,7 @@ export const Products = () => {
   }, [selectedLetters, productsCategory, selectedLetter]);
 
   useEffect(() => {
-    if (productsCategory.length > 0) {
+    if (productsCategory.length > 0 && !productsCategory.includes("All")) {
       selectedCategoriesList.current = productsCategory;
     }
     const unsubscribe = useGlobalStore.subscribe((state) => {
@@ -45,7 +45,7 @@ export const Products = () => {
   }, []);
 
   useEffect(() => {
-    if(selectedLetter) {
+    if (selectedLetter) {
       setSelectedLetters([selectedLetter]);
     }
   }, [selectedLetter]);
@@ -119,44 +119,49 @@ export const Products = () => {
     if (!selectedCharacters || selectedCharacters.length === 0) {
       return productsList;
     }
-  
+
     return productsList.filter((obj) => {
       const propertiesToCheck = [
         "impurityName",
         // Add other properties if needed
       ];
-  
+
       // Extract the first alphabetic character from impurityName (ignoring numbers and special characters)
       const impurityName = obj.impurityName || "";
       const firstAlphabeticChar = impurityName
         .split("")
         .find((char) => /^[a-zA-Z]$/.test(char)); // Find the first alphabetic character
-  
+
       // Normalize case for comparison
       const normalizedFirstChar = firstAlphabeticChar?.toLowerCase();
       const normalizedCharacters = selectedCharacters.map((char) =>
         char.toLowerCase()
       );
-  
+
       // Return true if the first alphabet matches any of the selected characters
-      return normalizedFirstChar && normalizedCharacters.includes(normalizedFirstChar);
+      return (
+        normalizedFirstChar &&
+        normalizedCharacters.includes(normalizedFirstChar)
+      );
     });
   }
-  
-  
 
   const clearSelection = () => {
     setSelectedLetters([]);
   };
 
-  const searchProducts = (e) => {
-    searchTextRef.current = e.target.value;
+  const searchProducts = (value) => {
+    searchTextRef.current = value;
     filterProducts();
   };
   const handleCategoriesSelect = (categories) => {
     selectedCategoriesList.current = categories;
     updateProductsCategory([...selectedCategoriesList.current]);
     filterProducts();
+  };
+
+  const clearCategory = () => {
+    handleCategoriesSelect([]);
   };
 
   return (
@@ -210,25 +215,25 @@ export const Products = () => {
           </Row>
 
           <Row className="justify-content-center pt-4">
-            <Col lg="8">
-              <FormGroup>
+            <Col lg="12">
+              <div className="d-flex align-items-center position-relative">
                 <Input
                   placeholder="Search Products"
-                  onChange={searchProducts}
+                  onChange={(event) => searchProducts(event.target.value)}
                   type="text"
                   value={searchTextRef.current}
                 />
-              </FormGroup>
-            </Col>
-            <Col lg="4">
-              <Button>Search</Button>
+                <Button className="position-within-input" disabled={!searchTextRef.current} color="danger" onClick={() => searchProducts("")}>
+                  x
+                </Button>
+              </div>
             </Col>
           </Row>
 
           <Row className="pt-4">
             <Col lg="10">
               <div className="d-flex align-items-center">
-                <h5 className="mb-0">Selected Category: </h5>
+                <h5 className="mb-0 text-nowrap">Selected Category: </h5>
                 &nbsp;
                 <Multiselect
                   options={categoriesList} // Options to display in the dropdown
@@ -238,6 +243,9 @@ export const Products = () => {
                   displayValue="name" // Property name to display in the dropdown options
                   isObject={false}
                 />
+                <Button color="danger" disabled={selectedCategoriesList.current.length ===0} className="ml-4" onClick={clearCategory}>
+                  CLEAR
+                </Button>
               </div>
             </Col>
           </Row>
