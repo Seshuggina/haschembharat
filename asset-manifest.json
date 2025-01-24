@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/haschembharat/static/css/main.278cac7b.css",
-    "main.js": "/haschembharat/static/js/main.d3b2efcb.js",
+    "main.css": "/haschembharat/static/css/main.353a152c.css",
+    "main.js": "/haschembharat/static/js/main.53e9d18e.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/haschembharat/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/vision.jpg": "/haschembharat/static/media/vision.e35ed3ac93a86fdce1e8.jpg",
     "static/media/drug_fallback.jpg": "/haschembharat/static/media/drug_fallback.33dea4391f9ac08e377b.jpg",
@@ -54,13 +54,11 @@
     "static/media/C363055.png": "/haschembharat/static/media/C363055.7a0020e053d06aa89a32.png",
     "static/media/15(3d).png": "/haschembharat/static/media/15(3d).57a286f0e5bdb92228f8.png",
     "static/media/4(3d).png": "/haschembharat/static/media/4(3d).d686de794d7b2662b22d.png",
-    "static/media/practices.png": "/haschembharat/static/media/practices.b015116ef0b98bdaec04.png",
     "static/media/6(3d).png": "/haschembharat/static/media/6(3d).a0749c2e3ea3fdbd3a5a.png",
     "static/media/39(3d).png": "/haschembharat/static/media/39(3d).8dd3e4a50eb1f72cc1dc.png",
     "static/media/10(3d).png": "/haschembharat/static/media/10(3d).497ea62fb095306293fc.png",
     "static/media/24(3d).png": "/haschembharat/static/media/24(3d).ecdd6c725dcd8bb268f3.png",
     "static/media/46(3d).png": "/haschembharat/static/media/46(3d).a0ae87829b41d8c652d4.png",
-    "static/media/dependable.png": "/haschembharat/static/media/dependable.293e960248b49fa7a9c4.png",
     "static/media/customer-service.png": "/haschembharat/static/media/customer-service.2256ed920a3ca01f28bf.png",
     "static/media/44(3d).png": "/haschembharat/static/media/44(3d).98ae7592130a9fc69f7b.png",
     "static/media/29(3d).png": "/haschembharat/static/media/29(3d).ac72283b1016acd8ad75.png",
@@ -70,23 +68,20 @@
     "static/media/43(3d).png": "/haschembharat/static/media/43(3d).07cdaddc18057de927e0.png",
     "static/media/35(3d).png": "/haschembharat/static/media/35(3d).ba135c7ebf38979f6e65.png",
     "static/media/l4.png": "/haschembharat/static/media/l4.83419990904ea1420670.png",
-    "static/media/innovation.png": "/haschembharat/static/media/innovation.e1670512fac838fedc5e.png",
     "static/media/11(3d).png": "/haschembharat/static/media/11(3d).557eac9676d15999a0fa.png",
     "static/media/awareness.png": "/haschembharat/static/media/awareness.531785f9bb0bacab461e.png",
-    "static/media/reputation.png": "/haschembharat/static/media/reputation.ae334bce14279aaf842b.png",
     "static/media/image_not_available.png": "/haschembharat/static/media/image_not_available.3dd89da2d91673f13bae.png",
     "static/media/nucleo-icons.eot": "/haschembharat/static/media/nucleo-icons.19abb5402a664606b14c.eot",
     "static/media/nucleo-icons.ttf": "/haschembharat/static/media/nucleo-icons.d6a66724e7a7bf1bba65.ttf",
-    "static/media/reach.png": "/haschembharat/static/media/reach.ccc3c004cbcd895ec7c6.png",
     "static/media/logo2.png": "/haschembharat/static/media/logo2.dfe7db5fbd1a45abb788.png",
     "static/media/nucleo-icons.woff": "/haschembharat/static/media/nucleo-icons.c82c9b7c40130b7116d3.woff",
     "static/media/nucleo-icons.woff2": "/haschembharat/static/media/nucleo-icons.cba267483aa6a7cb6e33.woff2",
     "index.html": "/haschembharat/index.html",
-    "main.278cac7b.css.map": "/haschembharat/static/css/main.278cac7b.css.map",
-    "main.d3b2efcb.js.map": "/haschembharat/static/js/main.d3b2efcb.js.map"
+    "main.353a152c.css.map": "/haschembharat/static/css/main.353a152c.css.map",
+    "main.53e9d18e.js.map": "/haschembharat/static/js/main.53e9d18e.js.map"
   },
   "entrypoints": [
-    "static/css/main.278cac7b.css",
-    "static/js/main.d3b2efcb.js"
+    "static/css/main.353a152c.css",
+    "static/js/main.53e9d18e.js"
   ]
 }
