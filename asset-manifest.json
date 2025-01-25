@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/haschembharat/static/css/main.36a787ac.css",
-    "main.js": "/haschembharat/static/js/main.05888785.js",
+    "main.css": "/haschembharat/static/css/main.e01b7337.css",
+    "main.js": "/haschembharat/static/js/main.ff8b2fb5.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/haschembharat/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/vision.jpg": "/haschembharat/static/media/vision.e35ed3ac93a86fdce1e8.jpg",
     "static/media/drug_fallback.jpg": "/haschembharat/static/media/drug_fallback.33dea4391f9ac08e377b.jpg",
     "static/media/banner_1.jpg": "/haschembharat/static/media/banner_1.74604290cff13dbeb858.jpg",
     "static/media/fontawesome-webfont.eot": "/haschembharat/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/haschembharat/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/banner.jpeg": "/haschembharat/static/media/banner.4c7b81e88368cc10e269.jpeg",
+    "static/media/banner.jpeg": "/haschembharat/static/media/banner.029f05a6d772c9d9e8ea.jpeg",
     "static/media/nucleo-icons.svg": "/haschembharat/static/media/nucleo-icons.01ebecaf50461162d4bc.svg",
     "static/media/banner_2.jpg": "/haschembharat/static/media/banner_2.10bc0f66e6a8cc37a8e3.jpg",
     "static/media/banner_2_2.jpg": "/haschembharat/static/media/banner_2_2.8ae6eac938ef0e4eb0b0.jpg",
@@ -77,11 +77,11 @@
     "static/media/nucleo-icons.woff": "/haschembharat/static/media/nucleo-icons.c82c9b7c40130b7116d3.woff",
     "static/media/nucleo-icons.woff2": "/haschembharat/static/media/nucleo-icons.cba267483aa6a7cb6e33.woff2",
     "index.html": "/haschembharat/index.html",
-    "main.36a787ac.css.map": "/haschembharat/static/css/main.36a787ac.css.map",
-    "main.05888785.js.map": "/haschembharat/static/js/main.05888785.js.map"
+    "main.e01b7337.css.map": "/haschembharat/static/css/main.e01b7337.css.map",
+    "main.ff8b2fb5.js.map": "/haschembharat/static/js/main.ff8b2fb5.js.map"
   },
   "entrypoints": [
-    "static/css/main.36a787ac.css",
-    "static/js/main.05888785.js"
+    "static/css/main.e01b7337.css",
+    "static/js/main.ff8b2fb5.js"
   ]
 }
