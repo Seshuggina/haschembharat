@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/haschembharat/static/css/main.7de738c5.css",
+    "main.css": "/haschembharat/static/css/main.36a787ac.css",
     "main.js": "/haschembharat/static/js/main.05888785.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/haschembharat/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/vision.jpg": "/haschembharat/static/media/vision.e35ed3ac93a86fdce1e8.jpg",
@@ -77,11 +77,11 @@
     "static/media/nucleo-icons.woff": "/haschembharat/static/media/nucleo-icons.c82c9b7c40130b7116d3.woff",
     "static/media/nucleo-icons.woff2": "/haschembharat/static/media/nucleo-icons.cba267483aa6a7cb6e33.woff2",
     "index.html": "/haschembharat/index.html",
-    "main.7de738c5.css.map": "/haschembharat/static/css/main.7de738c5.css.map",
+    "main.36a787ac.css.map": "/haschembharat/static/css/main.36a787ac.css.map",
     "main.05888785.js.map": "/haschembharat/static/js/main.05888785.js.map"
   },
   "entrypoints": [
-    "static/css/main.7de738c5.css",
+    "static/css/main.36a787ac.css",
     "static/js/main.05888785.js"
   ]
 }
