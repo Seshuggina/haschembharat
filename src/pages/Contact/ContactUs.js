@@ -132,7 +132,7 @@ const ContactUs = () => {
               <Card className="bg-secondary shadow border-0">
                 <CardHeader className="bg-white pb-2">
                   <div className="text-muted text-center mb-2">
-                    <h2>Contact a Immediately</h2>
+                    <h2>Contact</h2>
                   </div>
                 </CardHeader>
                 <CardBody className="px-lg-4 py-lg-4">
