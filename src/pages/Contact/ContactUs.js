@@ -16,6 +16,8 @@ import {
   Alert,
 } from "reactstrap";
 import emailjs from "@emailjs/browser";
+import "./ContactUs.scss";
+
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -122,7 +124,7 @@ const ContactUs = () => {
       <section className="section section-shaped section-sm">
         <section className="shape page-banner contactus-banner"></section>
         <Container className="pt-lg-7 pt-sm-7 pt-xs-7">
-          <h1 className="text-white">Reach Us Immediately</h1>
+          <h1 className="text-white">Contact</h1>
         </Container>
       </section>
       <section className="section bg-secondary">
@@ -132,7 +134,7 @@ const ContactUs = () => {
               <Card className="bg-secondary shadow border-0">
                 <CardHeader className="bg-white pb-2">
                   <div className="text-muted text-center mb-2">
-                    <h2>Contact</h2>
+                    <h2>Reach Us Immediately</h2>
                   </div>
                 </CardHeader>
                 <CardBody className="px-lg-4 py-lg-4">
