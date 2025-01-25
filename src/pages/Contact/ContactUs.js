@@ -122,7 +122,7 @@ const ContactUs = () => {
       <section className="section section-shaped section-sm">
         <section className="shape page-banner contactus-banner"></section>
         <Container className="pt-lg-7 pt-sm-7 pt-xs-7">
-          <h1 className="text-white">Contact US</h1>
+          <h1 className="text-white">Reach Us Immediately</h1>
         </Container>
       </section>
       <section className="section bg-secondary">
