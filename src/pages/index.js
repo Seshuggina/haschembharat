@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 // nodejs library that concatenates classes
 import { Product } from "./../components/product/product";
 import CustomCarousel from "./../components/Carousel/Carousel";
@@ -37,11 +37,6 @@ const Home = () => {
                   </div>
                   <div className="pl-4">
                     <h4 className="display-3 text-white">Top Products</h4>
-                    <p className="text-white lead">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever.
-                    </p>
                   </div>
                 </div>
               </Col>

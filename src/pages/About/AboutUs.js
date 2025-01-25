@@ -4,7 +4,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "./AboutUs.scss";
 import { OurServices } from "components/OurServices/OurServices";
-import {WhyWorkWithUs} from "components/WhyWorkWithUs/WhyWorkWithUs";
+import { WhyWorkWithUs } from "components/WhyWorkWithUs/WhyWorkWithUs";
 
 import impurities from "./../../assets/img/services/impurities.jpg";
 import vision from "./../../assets/img/aboutus/vision.jpg";
@@ -35,45 +35,29 @@ export const AboutUs = () => {
                       alt="About US"
                     />
                     <p>
-                      <strong>HASCHEM Bharat </strong>Labs operates out of
-                      Vancouver, Canada, and is helmed by distinguished
-                      professionals dedicated to delivering premium reference
-                      standards, research chemicals, and unparalleled services
-                      to the scientific community.
+                      At <strong>HASCHEM</strong>, we specialize in delivering
+                      highest quality API impurities and reference standards,
+                      ensuring unparalleled accuracy in both qualitative and
+                      quantitative analyses. Our extensive catalog of
+                      high-quality impurity reference materials includes
+                      intermediates, by-products, and degradation products, all
+                      designed to support the development of safer and more
+                      effective pharmaceuticals.
                     </p>
-
-                    <p>
-                      The leadership team at <strong>HASCHEM Bharat </strong>{" "}
-                      Labs includes seasoned scientists and business leaders who
-                      collectively bring over 20 years of experience to the
-                      table. Since its founding,{" "}
-                      <strong>HASCHEM Bharat </strong> Labs has seen remarkable
-                      growth and a surge in brand recognition.
-                    </p>
-
-                    <p>
-                      The organization is strategically poised to sustain its
-                      successful trajectory, aiming to expand its reach in
-                      global markets.
-                    </p>
-                    <h5>Our key product portfolio includes:</h5>
+                    <h5>Our comprehensive product portfolio includes:</h5>
                     <ul>
                       <li>API Standards</li>
                       <li>Impurity Standards</li>
                       <li>Metabolites</li>
                       <li>Nitrosamines</li>
+                      <li>Building Blocks</li>
+                      <li>Custom Synthesis</li>
                     </ul>
                     <p>
-                      We work hard to ensure our customers have a reliable and
-                      sustainable source of high-quality products. Every
-                      compound supplied by HASCHEM will be fully tested for
-                      quality using validated methods prior to delivering to our
-                      customers.
-                    </p>
-                    <p>
-                      At Haschem we believe in building long-term
-                      relationships-together, we can build solutions to address
-                      your specific challenges and requirements.
+                      At <strong>HASCHEM</strong>, we value long-term partnerships, working
+                      closely with our clients to address their unique
+                      challenges and requirements. Together, we develop
+                      customized solutions to drive your success.
                     </p>
                   </div>
                 </div>
@@ -88,7 +72,7 @@ export const AboutUs = () => {
                 </div>
               </Row>
 
-              <Row className="row-grid">
+              {/* <Row className="row-grid">
                 <div className="card border-0 border-bottom border-primary  ">
                   <div className="card-body p-4 p-xxl-5">
                     <h4>Vision</h4>
@@ -106,7 +90,6 @@ export const AboutUs = () => {
                   </div>
                 </div>
               </Row>
-
               <Row className="row-grid">
                 <div className="card border-0 border-bottom border-primary  ">
                   <div className="card-body p-3 p-xxl-5">
@@ -151,7 +134,6 @@ export const AboutUs = () => {
                   </div>
                 </div>
               </Row>
-
               <Row className="row-grid">
                 <div className="card border-0 border-bottom border-primary  ">
                   <div className="card-body p-3 p-xxl-5">
@@ -159,7 +141,7 @@ export const AboutUs = () => {
                     <OurServices></OurServices>
                   </div>
                 </div>
-              </Row>
+              </Row> */}
             </Col>
           </Row>
         </Container>

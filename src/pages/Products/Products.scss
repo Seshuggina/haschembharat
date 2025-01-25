@@ -247,3 +247,11 @@ $grid-container: '.wrap';
     }
   }
 }
+
+.text-nowrap {
+  white-space: nowrap;
+}
+.position-within-input {
+  position: absolute;
+  right: 0;
+}

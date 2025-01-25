@@ -5,7 +5,7 @@ import {
   Button,
   UncontrolledCollapse,
   DropdownMenu,
-  DropdownItem,
+  // DropdownItem,
   DropdownToggle,
   UncontrolledDropdown,
   NavbarBrand,
@@ -22,14 +22,23 @@ import { TypeaheadSearch } from "./../TypeaheadSearch/TypeaheadSearch";
 import { scroller } from "react-scroll";
 import "./Header.scss";
 import useGlobalStore from "./../../store/global";
+import products from "../../assets/data/products.json";
 
 const HeaderNavbar = () => {
   const [collapseClasses, setCollapseClasses] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
-  const updateProductsCategory = useGlobalStore((state) => state.updateProductsCategory);
+  const updateProductsCategory = useGlobalStore(
+    (state) => state.updateProductsCategory
+  );
   const updateSearchText = useGlobalStore((state) => state.updateSearchText);
-
+  const uniqueCategories = [
+    ...new Set(products.flatMap((item) => item.category)),
+  ];
+  const updateProductsCategoryList = useGlobalStore(
+    (state) => state.updateProductsCategoryList
+  );
+  updateProductsCategoryList(uniqueCategories);
   useEffect(() => {
     const headroom = new Headroom(document.getElementById("navbar-main"));
     headroom.init();
@@ -83,10 +92,7 @@ const HeaderNavbar = () => {
           <Container className="fullwidth">
             <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
               {/* logo CHANGE */}
-              <img
-                alt="..."
-                src={require("assets/img/brand/logo2.png")}
-              />
+              <img alt="..." src={require("assets/img/brand/logo2.png")} />
             </NavbarBrand>
             <button className="navbar-toggler" id="navbar_global">
               <span className="navbar-toggler-icon" />
@@ -132,10 +138,21 @@ const HeaderNavbar = () => {
                       className="nav-link dropdown-item"
                       role="menuitem"
                       to="/products"
-                      onClick={() => navigateToProducts("APIs")}
+                      onClick={() => navigateToProducts('All')}
                     >
-                      APIs
+                      All
                     </Link>
+                    {uniqueCategories.map((category, index) => (
+                      <Link
+                        key={index}
+                        className="nav-link dropdown-item"
+                        role="menuitem"
+                        to="/products"
+                        onClick={() => navigateToProducts(category)}
+                      >
+                        {category}
+                      </Link>
+                    ))}
                     <Link
                       className="nav-link dropdown-item"
                       role="menuitem"
@@ -177,7 +194,7 @@ const HeaderNavbar = () => {
                   </DropdownToggle>
                   <DropdownMenu>
                     {/* <DropdownItem href="/services#APIImpurities">
-                      API Impurities/Reference Standards
+                      API Impurities /Reference Standards
                     </DropdownItem> */}
                     <Link
                       className="nav-link dropdown-item"
@@ -228,49 +245,17 @@ const HeaderNavbar = () => {
                 <NavItem className="d-none d-lg-block ">
                   <NavLink
                     className="nav-link-icon"
-                    href="https://www.facebook.com/creativetim"
+                    href="#"
                     id="tooltip333589074"
                     target="_blank"
                   >
-                    <i className="fa fa-facebook-square" />
+                    <i className="fa fa-linkedin-square" />
                     <span className="nav-link-inner--text d-lg-none ml-2">
-                      Facebook
+                      Facebook 1
                     </span>
                   </NavLink>
                   <UncontrolledTooltip delay={0} target="tooltip333589074">
-                    Like us on Facebook
-                  </UncontrolledTooltip>
-                </NavItem>
-                <NavItem className="d-none d-lg-block ">
-                  <NavLink
-                    className="nav-link-icon"
-                    href="https://www.instagram.com/creativetimofficial"
-                    id="tooltip356693867"
-                    target="_blank"
-                  >
-                    <i className="fa fa-instagram" />
-                    <span className="nav-link-inner--text d-lg-none ml-2">
-                      Instagram
-                    </span>
-                  </NavLink>
-                  <UncontrolledTooltip delay={0} target="tooltip356693867">
-                    Follow us on Instagram
-                  </UncontrolledTooltip>
-                </NavItem>
-                <NavItem className="d-none d-lg-block ">
-                  <NavLink
-                    className="nav-link-icon"
-                    href="https://twitter.com/creativetim"
-                    id="tooltip184698705"
-                    target="_blank"
-                  >
-                    <i className="fa fa-twitter-square" />
-                    <span className="nav-link-inner--text d-lg-none ml-2">
-                      Twitter
-                    </span>
-                  </NavLink>
-                  <UncontrolledTooltip delay={0} target="tooltip184698705">
-                    Follow us on Twitter
+                    Follow Us LinkedIn
                   </UncontrolledTooltip>
                 </NavItem>
               </Nav>

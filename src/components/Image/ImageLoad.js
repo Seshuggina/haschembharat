@@ -1,22 +1,35 @@
 import React, { useState } from "react";
 
 const ImageLoad = ({ imageName, altTxt }) => {
-  // const imagePath = require(`./assets/images/${imageName}.jpg`).default;
-  // const imagePath = require(`./assets/images/${imageName}.jpg`).default;
-  // const imagePath = require(`./assets/images/${imageName}.jpg`).default; ./../../assets/img/products/;
-  // const imagePath = require(`./../../assets/img/products/${imageName}`);
-  // const primaryImage = require(`./../../assets/img/products/${imageName}`);
-  const secondaryImage = require(`./../../assets/img/products/1(3d).png`);
+  const secondaryImage =
+    "https://preview.free3d.com/img/2019/03/2397303548002961025/5i91fu6o.jpg";
+  const defaultImage = require(`../../assets/img/image_not_available.png`);
+  
+  // Dynamically load the primary image
+  let primaryImage;
+  try {
+    primaryImage = require(`../../assets/img/products/${imageName}`);
+  } catch (error) {
+    console.warn(`Image ${imageName} not found, falling back to default.`);
+    primaryImage = defaultImage;
+  }
 
-  const [imgSrc, setImgSrc] = useState(secondaryImage);
+  const [imgSrc, setImgSrc] = useState(primaryImage);
+
+  // Handle image load error
   const handleError = () => {
-    setImgSrc('https://preview.free3d.com/img/2019/03/2397303548002961025/5i91fu6o.jpg');
+    console.warn(`Failed to load image: ${imageName}. Falling back to secondary image.`);
+    setImgSrc(secondaryImage);
   };
 
   return (
     <figure>
-      <img src={imgSrc} alt={altTxt} onError={handleError} />
-      {/* <img src={primaryImage} alt="Description of image" onError={(e) => { e.target.src = secondaryImage; }} /> */}
+      <img
+        src={imgSrc}
+        alt={altTxt || "Image"}
+        onError={handleError}
+        style={{ width: "100%", height: "auto" }}
+      />
     </figure>
   );
 };

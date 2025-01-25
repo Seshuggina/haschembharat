@@ -1,36 +1,9 @@
-/*!
-
-=========================================================
-* Argon Design System React - v1.1.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 /*eslint-disable*/
 import React from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
-import {
-  Button,
-  Card,
-  CardImg,
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-  Row,
-  Col,
-  UncontrolledTooltip,
-} from "reactstrap";
+import { Button, Container, Row, Col, UncontrolledTooltip } from "reactstrap";
+import "./Footer.scss";
 
 class Footer extends React.Component {
   render() {
@@ -78,101 +51,62 @@ class Footer extends React.Component {
                         <a href="/">Home</a>
                       </li>
                       <li>
-                        <a href="/about-us">
-                          About Us
-                        </a>
+                        <a href="/about-us">About Us</a>
                       </li>
                       <li>
-                        <a href="/products">
-                          Products
-                        </a>
+                        <a href="/products">Products</a>
                       </li>
                       <li>
-                        <a href="/services">
-                          Services
-                        </a>
+                        <a href="/services">Services</a>
                       </li>
                       <li>
-                        <a href="/contact-us">
-                          Contact Us
-                        </a>
+                        <a href="/contact-us">Contact Us</a>
                       </li>
                     </ul>
                   </div>
                 </div>
-                
+
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 widget-area">
                   <div className="widget widget_cta clearfix">
                     <h3 className="widget-title">Quick Contacts</h3>
-                    <p>If you have any questions or need help</p>
                     <div className="d-flex">
                       <div className="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs margin_right15 margin_bottom15 ">
                         <i className="flaticon flaticon-call"></i>
                       </div>
                       <h4>
-                        <a href="tel:+917816003510">+91 7816 00 3510</a>
-                        </h4>
+                        <a href="tel:+917032925939">+91 7032925939</a> <br />
+                        <a href="tel:+918121333007">+91 8121333007</a>
+                      </h4>
                     </div>
-                    <p>#Ameerpet, Hyderabad, TS - 5000032</p>
+                    <p>
+                      Ramesh Towers, Nizampet, Hyderabad, <br />
+                      Telangana - 500090
+                    </p>
                     <div className="d-flex align-items-center justify-content-between">
                       <a
                         className="ttm-btn btn-inline ttm-btn-size-sm ttm-icon-btn-right ttm-btn-color-skincolor margin_right40 margin_bottom5"
-                        href="#"
+                        href="https://maps.app.goo.gl/rpUy2TE5B3BmTnqE7" target="_blank"
                       >
                         Get direction <i className="fa fa-chevron-right"></i>
                       </a>
                       <div className="social-icons d-inline-flex margin_top10 margin_bottom10">
                         <Col className="text-lg-center btn-wrapper">
                           <Button
-                            className="btn-icon-only rounded-circle"
-                            color="twitter"
-                            href="https://twitter.com/creativetim"
-                            id="followUsTwitter"
-                            target="_blank"
-                          >
-                            <span className="btn-inner--icon">
-                              <i className="fa fa-twitter" />
-                            </span>
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="followUsTwitter"
-                          >
-                            Follow us
-                          </UncontrolledTooltip>
-                          <Button
                             className="btn-icon-only rounded-circle ml-1"
                             color="facebook"
-                            href="https://www.facebook.com/creativetim"
+                            href="#"
                             id="likeUsFacebook"
                             target="_blank"
                           >
                             <span className="btn-inner--icon">
-                              <i className="fa fa-facebook-square" />
+                              <i className="fa fa-linkedin-square" />
                             </span>
                           </Button>
                           <UncontrolledTooltip
                             delay={0}
                             target="likeUsFacebook"
                           >
-                            Like us
-                          </UncontrolledTooltip>
-                          <Button
-                            className="btn-icon-only rounded-circle ml-1"
-                            color="dribbble"
-                            href="https://dribbble.com/creativetim"
-                            id="followUsInsta"
-                            target="_blank"
-                          >
-                            <span className="btn-inner--icon">
-                              <i className="fa fa-instagram" />
-                            </span>
-                          </Button>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="followUsInsta"
-                          >
-                            Follow us
+                            Follow Us on LinkedIn
                           </UncontrolledTooltip>
                         </Col>
                       </div>

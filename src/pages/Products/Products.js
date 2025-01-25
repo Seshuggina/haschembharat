@@ -1,31 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Product } from "./../../components/product/product";
 import products from "./../../assets/data/products.json";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  FormGroup,
-  Input,
-  Badge,
-} from "reactstrap";
+import { Container, Row, Col, Button, FormGroup, Input } from "reactstrap";
 import "./Products.scss";
 import useGlobalStore from "./../../store/global";
 import Multiselect from "multiselect-react-dropdown";
 
-const categoriesList = [
-  "APIs",
-  "Impurities",
-  "Metabolities",
-  "Nitrosamines",
-  "Building blocks",
-];
 export const Products = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const thumbnailsColors = ["primary", "danger", "info", "success", "warning"];
   const [selectedLetters, setSelectedLetters] = useState([]);
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  let categoriesList = useGlobalStore((state) => state.productsCategoryList);
   let productsCategory = useGlobalStore((state) => state.productsCategory);
   let selectedLetter = useGlobalStore((state) => state.selectedLetter);
   let searchedTxt = useGlobalStore((state) => state.searchedText);
@@ -43,7 +29,7 @@ export const Products = () => {
   }, [selectedLetters, productsCategory, selectedLetter]);
 
   useEffect(() => {
-    if (productsCategory.length > 0) {
+    if (productsCategory.length > 0 && !productsCategory.includes("All")) {
       selectedCategoriesList.current = productsCategory;
     }
     const unsubscribe = useGlobalStore.subscribe((state) => {
@@ -59,7 +45,9 @@ export const Products = () => {
   }, []);
 
   useEffect(() => {
-    setSelectedLetters([selectedLetter]);
+    if (selectedLetter) {
+      setSelectedLetters([selectedLetter]);
+    }
   }, [selectedLetter]);
 
   const handleLetterClick = (letter) => {
@@ -77,21 +65,29 @@ export const Products = () => {
   };
 
   const filterProducts = () => {
-    let filteredProductsList = products.slice(0, 1000); // Fetch more products for better demo
+    let filteredProductsList = products; // Fetch more products for better demo
+
+    // Filter by categories
     if (
       selectedCategoriesList.current &&
       selectedCategoriesList.current.length > 0
     ) {
       filteredProductsList = filteredProductsList.filter((obj) =>
-        selectedCategoriesList.current.includes(obj.category)
+        obj.category.some((category) =>
+          selectedCategoriesList.current.includes(category)
+        )
       );
     }
+
+    // Filter by selected letters
     if (selectedLetters.length > 0) {
       filteredProductsList = filterObjectsByCharacters(
         filteredProductsList,
         selectedLetters
       );
     }
+
+    // Filter by search text
     if (searchTextRef.current) {
       filteredProductsList = filteredProductsList.filter((obj) => {
         const allProperties = JSON.stringify(obj).toLowerCase();
@@ -102,19 +98,51 @@ export const Products = () => {
     setFilteredProducts(filteredProductsList);
   };
 
-  function filterObjectsByCharacters(productsList, characters) {
+  // function filterObjectsByCharacters(productsList, characters) {
+  //   return productsList.filter((obj) => {
+  //     const propertiesToCheck = [
+  //       // "casNo",
+  //       "impurityName",
+  //       // "parentAPI",
+  //       // "productStatus",
+  //       // "category",
+  //     ];
+  //     const combinedString = propertiesToCheck
+  //       .map((prop) => obj[prop] || "")
+  //       .join(" ");
+  //     return characters.some((char) => combinedString.includes(char));
+  //   });
+  // }
+
+  function filterObjectsByCharacters(productsList, selectedCharacters) {
+    // Return all objects if selectedCharacters is empty or not provided
+    if (!selectedCharacters || selectedCharacters.length === 0) {
+      return productsList;
+    }
+
     return productsList.filter((obj) => {
       const propertiesToCheck = [
-        // "casNo",
         "impurityName",
-        // "parentAPI",
-        // "productStatus",
-        // "category",
+        // Add other properties if needed
       ];
-      const combinedString = propertiesToCheck
-        .map((prop) => obj[prop] || "")
-        .join(" ");
-      return characters.some((char) => combinedString.includes(char));
+
+      // Extract the first alphabetic character from impurityName (ignoring numbers and special characters)
+      const impurityName = obj.impurityName || "";
+      const firstAlphabeticChar = impurityName
+        .split("")
+        .find((char) => /^[a-zA-Z]$/.test(char)); // Find the first alphabetic character
+
+      // Normalize case for comparison
+      const normalizedFirstChar = firstAlphabeticChar?.toLowerCase();
+      const normalizedCharacters = selectedCharacters.map((char) =>
+        char.toLowerCase()
+      );
+
+      // Return true if the first alphabet matches any of the selected characters
+      return (
+        normalizedFirstChar &&
+        normalizedCharacters.includes(normalizedFirstChar)
+      );
     });
   }
 
@@ -122,14 +150,18 @@ export const Products = () => {
     setSelectedLetters([]);
   };
 
-  const searchProducts = (e) => {
-    searchTextRef.current = e.target.value;
+  const searchProducts = (value) => {
+    searchTextRef.current = value;
     filterProducts();
   };
   const handleCategoriesSelect = (categories) => {
     selectedCategoriesList.current = categories;
     updateProductsCategory([...selectedCategoriesList.current]);
     filterProducts();
+  };
+
+  const clearCategory = () => {
+    handleCategoriesSelect([]);
   };
 
   return (
@@ -183,25 +215,25 @@ export const Products = () => {
           </Row>
 
           <Row className="justify-content-center pt-4">
-            <Col lg="8">
-              <FormGroup>
+            <Col lg="12">
+              <div className="d-flex align-items-center position-relative">
                 <Input
                   placeholder="Search Products"
-                  onChange={searchProducts}
+                  onChange={(event) => searchProducts(event.target.value)}
                   type="text"
                   value={searchTextRef.current}
                 />
-              </FormGroup>
-            </Col>
-            <Col lg="4">
-              <Button>Search</Button>
+                <Button className="position-within-input" disabled={!searchTextRef.current} color="danger" onClick={() => searchProducts("")}>
+                  x
+                </Button>
+              </div>
             </Col>
           </Row>
 
           <Row className="pt-4">
             <Col lg="10">
               <div className="d-flex align-items-center">
-                <h5 className="mb-0">Selected Category: </h5>
+                <h5 className="mb-0 text-nowrap">Selected Category: </h5>
                 &nbsp;
                 <Multiselect
                   options={categoriesList} // Options to display in the dropdown
@@ -211,6 +243,9 @@ export const Products = () => {
                   displayValue="name" // Property name to display in the dropdown options
                   isObject={false}
                 />
+                <Button color="danger" disabled={selectedCategoriesList.current.length ===0} className="ml-4" onClick={clearCategory}>
+                  CLEAR
+                </Button>
               </div>
             </Col>
           </Row>

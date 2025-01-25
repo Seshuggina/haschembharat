@@ -16,8 +16,8 @@ export const Product = memo(({ product, thumbnailColor }) => {
           imageName={product.productImage}
           altTxt={product.impurityName}
         />
-        <h6 className="text-primary text-uppercase">{product.parentAPI}</h6>
-        <p className="description mt-3">{product.impurityName}</p>
+        <h6 className="text-primary text-uppercase">{product.impurityName}</h6>
+        <p className="description mt-3">{product.parentAPI}</p>
         <div>
           <Badge color={thumbnailColor} pill className="mr-1">
             {product.casNo}
